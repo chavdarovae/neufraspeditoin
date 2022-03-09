@@ -1,3 +1,5 @@
+@import "../_app-variables";
+
 .icon {
     display: flex;
     justify-content: center;
@@ -6,14 +8,14 @@
     cursor: pointer;
 
     svg {
-        fill: $text-color;
+        fill: $text-color-secondary;
         font-size: inherit;
     }
 
     &:hover {
 
         svg {
-        fill: $primary-color;
+        fill: $text-color-primary;
         }
     }
 }

@@ -1,12 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./assets/styles/app-variables";
 
-@import "./assets/styles/settings/_settings-colors.scss";
 @import "./assets/styles/settings/_settings-animations.scss";
 @import "./assets/styles/settings/_settings-place-holders.scss";
 @import "./assets/styles/settings/_settings-breakpoints.scss";
-@import "./assets/styles/settings/_settings-shadows.scss";
-@import "./assets/styles/settings/_settings-borders.scss";
+
+
 
 @import "./assets/styles/generic/_generic-normalize.scss";
 @import "./assets/styles/generic/_generic-fonts.scss";
@@ -40,10 +39,7 @@
 
 
 
-.content-body { 
-    display: grid;
-    grid-template-rows: 120px 1fr 20px;
-}
+
 
 .backdrop {
     position: fixed;

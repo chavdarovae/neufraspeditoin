@@ -1,14 +1,15 @@
+@import "../app-variables";
+
 a {
-    font-family: "Gochi Hand", cursive;
     // font-size: 14px;
     // font-style: normal;
-    color: $text-color;
+    color: $text-color-thirdery;
     text-decoration: none;
 }
 
 a:hover {
     cursor: pointer;
     text-decoration: none;
-    color: $primary-color;
-    // transform: scale(1.01);
+    color: $text-color-primary;
+    transform: scale(1.01);
 }

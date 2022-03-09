@@ -1,8 +1,10 @@
+@import "../app-variables";
+
 .btn {
     background-color: #fff;
     box-shadow: $therdery-shadow;
     border-radius: $primary-rad;
-    color: $primary-color;
+    color: $primary;
     text-transform: uppercase;
     padding: 5px 15px;
     border: none;
@@ -11,7 +13,7 @@
 
     &:hover {
         color: #fff;
-        background-color: $secondary-color;
+        background-color: $secondary;
         box-shadow: $primary-shadow;
     }
 
