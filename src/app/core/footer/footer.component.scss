@@ -1,0 +1,81 @@
+@import "../../../assets/styles/app-variables";
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+  
+
+    &__block {
+        $block-height: 300px;
+        width: 100%;
+        height: $block-height;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        $center-pos: calc((100vw - $container-width-desktop)/2) ;
+        background-image: linear-gradient(to bottom, $primary, $secondary);
+        // background-image: linear-gradient(to bottom, #007032, #00662f, #005c2d, #005229, #004826);
+        /* The points are: centered top, left bottom, right bottom */
+        clip-path: polygon($center-pos 0, 100% calc($block-height/3), 100% 100%, 0 100%,0 calc($block-height/3));
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            transform: translate(-60%, -30%);
+            border-radius: 50%;
+            position: absolute;
+            top: 100%;
+            left: 100%;
+            z-index: 2;
+        }
+
+        &::before {
+            $radiusbef: calc($container-width-desktop/1.1);
+            width: $radiusbef;
+            height: $radiusbef;
+            background-color: $body-bg;
+        }
+
+        &::after {
+            $radiusaft: calc($container-width-desktop/1.14);
+            width: $radiusaft;
+            height: $radiusaft;
+            background-image: linear-gradient(to bottom, $primary, $secondary);
+        }
+
+        &-info{
+            margin: calc($block-height/3) 0 10px $center-pos ;
+
+            h2 {
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                font-weight: $font-weight-semi-bold;
+            }
+
+            h3 {
+                font-weight: $font-weight-normal;
+            }
+
+            & > * {
+                color: $text-color-secondary;
+                font-weight: $font-weight-thin;
+            }
+        }
+    }
+
+    &__ribbon {
+        height: 30px;
+        width: 100%;
+
+        a {
+            margin-right: 20px;
+            text-transform: capitalize;
+        }
+
+        span {
+            color: $primary;
+            margin-left: auto;
+        }
+    }
+}

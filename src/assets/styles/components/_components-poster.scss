@@ -1,0 +1,16 @@
+.poster {
+    &__img {
+        position: relative;
+        height: 400px;
+        width: 100vw;
+       
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #cccccc; /* Used if the image is unavailable */
+            width: 100vw; /* You must set a specified height */
+        }
+    }
+}

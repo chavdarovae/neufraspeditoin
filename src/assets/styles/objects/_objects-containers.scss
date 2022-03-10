@@ -1,22 +1,23 @@
+@import "../app-variables";
+
 .container {
     width: 100%;
     margin: 0 auto;
-    
 
     @include for-phone-up {
-        width: 500px;
+        width: $container-width-phone;
     }
 
     @include for-tablet-portrait-up {
-        width: 800px;
+        width: $container-width-tablet-portrait;
     }
 
     @include for-tablet-landscape-up {
-        width: 1000px;
+        width: $container-width-tablet-landscape;
     }
 
     @include for-desktop-up {
-        width: 1200px;
+        width: $container-width-desktop;
     }
 }
 
