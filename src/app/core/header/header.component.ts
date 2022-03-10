@@ -7,7 +7,8 @@ import { Component, isDevMode, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   activeTab = 'unternehmen';
-  imgPath = isDevMode() ? `../../../assets/img/poster-unternehmen.jpg` : `./assets/img/poster-unternehmen.jpg`
+  logoPath = isDevMode() ? '../../../assets/img/Logo Neufra.jpg' : './assets/img/Logo Neufra.jpg';
+  imgPath = isDevMode() ? '../../../assets/img/poster-unternehmen.jpg' : './assets/img/poster-unternehmen.jpg';
 
   constructor() { }
 
