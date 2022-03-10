@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, isDevMode, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   activeTab = 'unternehmen';
-  imgPath = `../../../assets/img/poster-unternehmen.jpg`
+  imgPath = isDevMode() ? `../../../assets/img/poster-unternehmen.jpg` : `./assets/img/poster-unternehmen.jpg`
 
   constructor() { }
 
@@ -16,6 +16,10 @@ export class HeaderComponent implements OnInit {
 
   onNavClick(selectedNavTab: string) {
     this.activeTab = selectedNavTab;
-    this.imgPath = `../../../assets/img/poster-${selectedNavTab}.jpg`
+    if (isDevMode()) {
+      this.imgPath = `../../../assets/img/poster-${selectedNavTab}.jpg`
+    } else {
+      this.imgPath = `./assets/img/poster-${selectedNavTab}.jpg`
+    }
   }
 }
