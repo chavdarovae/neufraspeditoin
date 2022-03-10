@@ -1,0 +1,39 @@
+@import "../../../assets/styles/app-variables";
+
+.header {
+    height: 540px;
+    width: 100%;
+    
+    .container {
+        height: 90px;
+        display: flex;
+        position: relative;
+    }
+    
+    &::before {
+        content: "";
+        height: 10px;
+        width: 100%;
+        background-color: $primary;
+        position: absolute;
+        top: 0;
+    }
+
+    &__logo {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        z-index: 2;
+    }
+
+    &__menu {
+        margin-left: auto;
+        height: 90px;
+    }
+
+    &__img {
+        height: 450px;
+        overflow: hidden;
+    }
+}
+

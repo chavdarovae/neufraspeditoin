@@ -2,28 +2,30 @@
 
 .menu {
     display: flex;
-    flex-flow: column nowrap;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 100;
+    flex-flow: row nowrap;
 
     &__item {
         display: flex;
-        opacity: 0;
-        background-color: $primary;
-        border-radius: $primary-rad;
+        justify-content: center;
+        align-items: center;
     }
 
     &__item-link {
         width: 100%;
         padding: 10px 30px;
-        color: #fff;
+        color: $nav-text-color;
+        text-transform: capitalize;
+        font-weight: $font-weight-bold;
         transition: transform 500ms ease-out;
+
 
         &:hover {
             transform: scale(1.05);
             color: $text-color-thirdery;
         }
+    }
+
+    &__item-link--active {
+        text-decoration: underline !important;
     }
 }

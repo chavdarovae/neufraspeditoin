@@ -5,8 +5,6 @@
 @import "./assets/styles/settings/_settings-place-holders.scss";
 @import "./assets/styles/settings/_settings-breakpoints.scss";
 
-
-
 @import "./assets/styles/generic/_generic-normalize.scss";
 @import "./assets/styles/generic/_generic-fonts.scss";
 @import "./assets/styles/generic/_generic-scrollbar.scss";
@@ -20,8 +18,9 @@
 @import "./assets/styles/elements/_elements-images.scss";
 @import "./assets/styles/elements/_elements-links.scss";
 
-@import "./assets/styles/components/_components-form.scss";
+@import "./assets/styles/components/_components-logo.scss";
 @import "./assets/styles/components/_components-menu.scss";
+@import "./assets/styles/components/_components-form.scss";
 @import "./assets/styles/components/_components-notifications.scss";
 @import "./assets/styles/components/_components-buttons.scss";
 @import "./assets/styles/components/_components-icons.scss";
