@@ -9,6 +9,8 @@ import { NichtGefundenComponent } from './nicht-gefunden/nicht-gefunden.componen
 import { StandorteComponent } from './standorte/standorte.component';
 import { TransportunternehmerComponent } from './transportunternehmer/transportunternehmer.component';
 import { UnternehmenComponent } from './unternehmen/unternehmen.component';
+import { ImpressumComponent } from './impressum/impressum.component';
+import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { UnternehmenComponent } from './unternehmen/unternehmen.component';
     DienstleistungenComponent,
     KarriereComponent,
     TransportunternehmerComponent,
-    NichtGefundenComponent
+    NichtGefundenComponent,
+    ImpressumComponent,
+    DatenschutzComponent
   ],
   imports: [
     BrowserModule,

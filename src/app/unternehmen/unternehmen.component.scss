@@ -1,0 +1,16 @@
+:host {
+    .card-holder{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 30px;
+
+        &__item--big {
+            grid-column: 1 / span 2;
+        }
+    }
+
+    .history-holder {
+        margin-top: 80px;
+    }
+}

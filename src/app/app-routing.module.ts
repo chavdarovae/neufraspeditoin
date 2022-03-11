@@ -1,5 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
+import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 import { DienstleistungenComponent } from './dienstleistungen/dienstleistungen.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 import { KarriereComponent } from './karriere/karriere.component';
 import { NichtGefundenComponent } from './nicht-gefunden/nicht-gefunden.component';
 import { StandorteComponent } from './standorte/standorte.component';
@@ -7,6 +9,11 @@ import { TransportunternehmerComponent } from './transportunternehmer/transportu
 import { UnternehmenComponent } from './unternehmen/unternehmen.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    // pathMath: 'full',
+    component: UnternehmenComponent
+  },
   {
     path: 'home',
     // pathMath: 'full',
@@ -40,6 +47,16 @@ const routes: Routes = [
   {
     path: 'transportunternehmer',
     component: TransportunternehmerComponent,
+    data: {}
+  },
+  {
+    path: 'impressum',
+    component: ImpressumComponent,
+    data: {}
+  },
+  {
+    path: 'datenschutz',
+    component: DatenschutzComponent,
     data: {}
   },
   {
