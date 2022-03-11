@@ -26,6 +26,7 @@
     }
 
     &__item-link--active {
-        text-decoration: underline !important;
+        text-decoration: underline;
+        color: $text-color-thirdery;
     }
 }

@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 import { DienstleistungenComponent } from './dienstleistungen/dienstleistungen.component';
+import { HomeComponent } from './home/home.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { KarriereComponent } from './karriere/karriere.component';
 import { NichtGefundenComponent } from './nicht-gefunden/nicht-gefunden.component';
@@ -12,7 +13,7 @@ const routes: Routes = [
   {
     path: '',
     // pathMath: 'full',
-    component: UnternehmenComponent
+    component: HomeComponent
   },
   {
     path: 'home',

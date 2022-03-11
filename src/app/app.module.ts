@@ -11,6 +11,7 @@ import { TransportunternehmerComponent } from './transportunternehmer/transportu
 import { UnternehmenComponent } from './unternehmen/unternehmen.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DatenschutzComponent } from './datenschutz/datenschutz.component';
     TransportunternehmerComponent,
     NichtGefundenComponent,
     ImpressumComponent,
-    DatenschutzComponent
+    DatenschutzComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
