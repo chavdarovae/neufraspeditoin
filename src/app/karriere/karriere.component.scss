@@ -1,0 +1,35 @@
+@import "../../assets/styles/app-variables";
+.table {
+
+    &__header {
+        display: grid;
+        padding: 20px 0;
+        grid-template-columns: 1fr 220px 60px;
+        border-bottom: 3px solid $primary;
+
+        i {
+            font-size: 2*$font-size-base;
+            color: $primary;
+        }
+    }
+}
+
+
+.position {
+    width: 100%;
+    border-bottom: 3px solid $primary;
+   
+    &__short {
+        display: grid;
+        padding: 20px 0;
+        grid-template-columns: 1fr 250px 30px;
+
+        i {
+            font-size: 2*$font-size-base;
+        }
+    }
+
+    &__long {
+        
+    }
+}

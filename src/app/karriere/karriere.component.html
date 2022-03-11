@@ -1,1 +1,76 @@
-<p>karriere under construction!</p>
+<div class="container carrier">
+    <section class="carrier__info">
+        <p>
+            Das Fundament unseres Unternehmens sind unsere Mitarbeiter/-innen. Daher sind wir immer auf der Suche nach
+            motivierten neuen Kollegen/-innen. Berufserfahrene Disponenten/-innen sind der Garant für Qualität und
+            Wachstum und
+            sind selbstverständlich herzlich willkommen bei uns die Herausforderung der eigenständigen Bearbeitung einer
+            Verkehrsrelation anzunehmen.
+            Durchstöbern Sie gerne unsere aktuellen Stellenagebote, Bewerbungen können Sie direkt an die entsprechende
+            Niederlassung senden.
+        </p>
+    </section>
+    <section class="carrier__openings table">
+        <div class="table__header row row--space-btw">
+            <h3>Position</h3>
+            <h3>Standort</h3>
+            <i class="fa fa-sort-alpha-down"></i>
+        </div>
+        <article class="table__item position">
+            <div class="position__short">
+                <h5 class="position__title">Disponent/-in für die LKW-Disposition</h5>
+                <span class="position__location">Berlin</span>
+                <i [ngClass]="{'fa-angle-up': !expanded, 'fa-angle-down': expanded }" class="fa position__toggle" (click)="togglePosition()"></i>
+            </div>
+            <div class="position__long" *ngIf="expanded">
+                <p class="position__descripion">
+                    Für unseren Standort Berlin suchen wir zum nächstmöglichen Zeitpunkt einen Disponent/-in für die
+                    LKW-Disposition.
+                </p>
+                <div class="position__tasks">
+                    <h4>Ihre Aufgaben</h4>
+                    <ul>
+                        <li>Einkauf von Transportleistungen</li>
+                        <li>Optimierung von Teilpartien</li>
+                        <li>Verkauf an unsere Transportunternehmer</li>
+                        <li>Abrechnung der Dienstleistungen</li>
+                    </ul>
+                    <p>Täglich müssen schnelle Entscheidungen getroffen werden, bei höchstmöglicher Qualität in der
+                        Ausführung.
+                        Nach einer entsprechenden Einarbeitungszeit sollen Sie diese Aufgaben eigenverantwortlich lösen.
+                    </p>
+                </div>
+                <div class="position__requirements">
+                    <h4>Unsere Anforderungen</h4>
+                    <ul>
+                        <li>Ausbildung zum Kaufmann (m/w/d) für Spedition & Logistikdienstleistung oder ähnlich</li>
+                        <li>Erste Berufserfahrung in der operativen Disposition in einer Spedition</li>
+                        <li>Gute Kenntnisse des Office-Pakets</li>
+                        <li>Kommunikations- und Teamfähigkeit sowie eine selbständige Arbeitsweise</li>
+                        <li>Englischkenntnisse</li>
+                    </ul>
+                </div>
+                <div class="position__offer">
+                    <h4>Unser Angebot</h4>
+                    <p>
+                        Die NEUFRA Speditions Gruppe ist ein international aufgestelltes mittelständisches Unternehmen
+                        mit
+                        33
+                        Niederlassungen in Europa. Mit mehr als 400 Mitarbeiter/innen leben wir eine offene
+                        Unternehmenskultur
+                        in einem persönlich geprägten Arbeitsumfeld. Unsere flachen Hierarchien fördern nicht nur ein
+                        kollegiales Miteinander, sondern auch eigenständiges Arbeiten mit eigenverantwortlichen
+                        Entscheidungen.
+                        Sie erwartet ein zukunftssicherer Arbeitsplatz mit dem Ziel einer langfristigen Zusammenarbeit.
+                        Zur
+                        Förderung Ihrer beruflichen und persönlichen Entwicklung werden Ihnen individuelle
+                        Weiterbildungsmöglichkeiten offeriert. Ferner besteht die Vergütung Ihrer Leistung aus
+                        attraktiven
+                        Gehältern, die mit weiteren Sozialleistungen ergänzt werden.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+</div>

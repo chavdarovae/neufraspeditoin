@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./karriere.component.scss']
 })
 export class KarriereComponent implements OnInit {
+  currPosition= 0;
+  expanded = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  togglePosition() {
+    this.currPosition = 1;
+    this.expanded = !this.expanded;
   }
 
 }
