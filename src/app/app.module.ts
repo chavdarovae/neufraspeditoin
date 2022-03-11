@@ -6,7 +6,6 @@ import { CoreModule } from './core/core.module';
 import { DienstleistungenComponent } from './dienstleistungen/dienstleistungen.component';
 import { KarriereComponent } from './karriere/karriere.component';
 import { NichtGefundenComponent } from './nicht-gefunden/nicht-gefunden.component';
-import { SharedModule } from './shared/shared.module';
 import { StandorteComponent } from './standorte/standorte.component';
 import { TransportunternehmerComponent } from './transportunternehmer/transportunternehmer.component';
 import { UnternehmenComponent } from './unternehmen/unternehmen.component';
@@ -25,8 +24,7 @@ import { UnternehmenComponent } from './unternehmen/unternehmen.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
-    SharedModule
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
