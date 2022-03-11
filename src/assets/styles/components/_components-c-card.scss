@@ -1,0 +1,31 @@
+@import "../app-variables";
+
+.c-card {
+    width: 300px;
+    display: grid;
+    grid-template-rows: 100px 40px 1fr;
+    row-gap: 10px;
+    box-shadow: $primary-shadow;
+
+    i {
+        font-size: 3*$font-size-base;
+    }
+    
+
+
+    &--green {
+        background-color: $primary;
+
+        i {
+            color: $text-color-secondary;
+        }
+    }
+
+    &--gray {
+        background-color: $card-bg;
+
+        i {
+            color: $text-color-thirdery; 
+        }
+    }
+}
