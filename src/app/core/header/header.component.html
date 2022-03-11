@@ -10,14 +10,14 @@
                 (click)="onNavClick('unternehmen')">unternehmen</a>
             </li>
             <li class="menu__item">
-                <a routerLink="/dienstleistungen" class="menu__item-link" 
-                [ngClass]="{'menu__item-link--active': activeTab === 'dienstleistungen'}" 
-                (click)="onNavClick('dienstleistungen')">dienstleistungen</a>
-            </li>
-            <li class="menu__item">
                 <a routerLink="/standorte" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'standorte'}" 
                 (click)="onNavClick('standorte')">standorte</a>
+            </li>
+            <li class="menu__item">
+                <a routerLink="/dienstleistungen" class="menu__item-link" 
+                [ngClass]="{'menu__item-link--active': activeTab === 'dienstleistungen'}" 
+                (click)="onNavClick('dienstleistungen')">dienstleistungen</a>
             </li>
             <li class="menu__item">
                 <a routerLink="/karriere" class="menu__item-link" 
