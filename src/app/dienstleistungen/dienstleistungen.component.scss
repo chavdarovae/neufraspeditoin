@@ -4,17 +4,18 @@
     .card-holder{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 30px;
-        row-gap: 30px;
+        column-gap: 40px;
+        row-gap: 40px;
     }
 
     .card {
         min-width: 300px;
+        max-width: 300px;
         display: grid;
-        grid-template-rows: 100px min 1fr;
+        grid-template-rows: 100px min 1fr 20px;
         row-gap: 10px;
         align-items: start;
-        justify-items: stretch;
+        justify-items: center;
         box-shadow: $primary-shadow;
         background-color: $card-bg;
         color: $text-color-primary;
@@ -30,6 +31,15 @@
             img {
                 width: 200px;
             }
+        }
+
+        h2 {
+            padding: 0 20px;
+            margin-bottom: 0px;
+        }
+
+        &__info{
+            padding: 0 20px 40px 20px;
         }
     }
 }
