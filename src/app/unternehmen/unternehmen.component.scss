@@ -1,11 +1,46 @@
+@import "../../assets/styles/app-variables";
+
 :host {
     .card-holder{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 30px;
         row-gap: 30px;
+    }
 
-        &__item--big {
+    .card {
+        min-width: 300px;
+        display: grid;
+        grid-template-rows: 100px min 1fr;
+        row-gap: 10px;
+        align-items: start;
+        box-shadow: $primary-shadow;
+    
+        i {
+            font-size: 4*$font-size-base;
+        }
+    
+        &--green {
+            background-color: $primary;
+    
+            & > * {
+                color: $text-color-secondary;
+            }
+    
+            i {
+                color: $text-color-secondary;
+            }
+        }
+    
+        &--gray {
+            background-color: $card-bg;
+    
+            i {
+                color: $text-color-thirdery; 
+            }
+        }
+
+        &--big {
             grid-column: 1 / span 2;
         }
     }
@@ -14,3 +49,5 @@
         margin-top: 80px;
     }
 }
+
+
