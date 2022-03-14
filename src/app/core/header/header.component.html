@@ -5,32 +5,46 @@
         </a>
         <ul class="header__menu menu">
             <li class="menu__item">
+                <!-- unternehmen -->
                 <a routerLink="/unternehmen" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'unternehmen'}" 
-                (click)="onNavClick('unternehmen')">unternehmen</a>
+                (click)="onNavClick('unternehmen')"
+                translate="header.aboutUs"></a>
             </li>
+            <!-- standorte -->
             <li class="menu__item">
                 <a routerLink="/standorte" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'standorte'}" 
-                (click)="onNavClick('standorte')">standorte</a>
+                (click)="onNavClick('standorte')"
+                translate="header.locations"></a>
             </li>
+            <!-- dienstleistungen -->
             <li class="menu__item">
                 <a routerLink="/dienstleistungen" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'dienstleistungen'}" 
-                (click)="onNavClick('dienstleistungen')">dienstleistungen</a>
+                (click)="onNavClick('dienstleistungen')"
+                translate="header.services"></a>
             </li>
+            <!-- karriere -->
             <li class="menu__item">
                 <a routerLink="/karriere" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'karriere'}" 
-                (click)="onNavClick('karriere')">karriere</a>
+                (click)="onNavClick('karriere')"
+                translate="header.career"></a>
             </li>
+            <!-- transportunternehmer -->
             <li class="menu__item">
                 <a routerLink="/transportunternehmer" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'transportunternehmer'}" 
-                (click)="onNavClick('transportunternehmer')">transportunternehmer</a>
+                (click)="onNavClick('transportunternehmer')"
+                translate="header.transportCompany"></a>
             </li>
             <li class="menu__item">
-                <a class="menu__item-link">DE</a>
+                <select #langBar class="lang-bar" (change)="translateLanguageTo(langBar.value)">
+                    <option value="de">DE</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
             </li>
         </ul>
     </div>

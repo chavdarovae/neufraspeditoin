@@ -1,0 +1,9 @@
+{
+    "header" : {
+        "aboutUs" : "entreprise",
+        "locations" : "locations",
+        "services" : "services",
+        "career" : "career",
+        "transportCompany" : "entreprise de transport"
+    }
+}

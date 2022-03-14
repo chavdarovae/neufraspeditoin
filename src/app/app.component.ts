@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'neufra-site';
+
+  constructor(
+    public translate: TranslateService
+  ){
+    // Register translation languages
+    translate.addLangs(['de', 'en', 'fr']);
+    // Set default language
+    translate.setDefaultLang('de');
+    translate.use('de');
+  } 
 }
