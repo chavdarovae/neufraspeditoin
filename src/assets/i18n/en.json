@@ -5,5 +5,57 @@
         "services": "services",
         "career": "career",
         "transportCompany": "transport company"
+    },
+    "aboutUs" : {
+        "expericence" : {
+            "title": "Over 40 years of freight forwarding experience",
+            "info": "Since 1979, we have been taking on full and partial loads, optimizing their composition and distributing the shipments to their respective destinations with selected vetted carriers."
+        },
+        "partner" : {
+            "title": "Neutral partner",
+            "info": " From the very beginning, our company's philosophy has been to act exclusively as a neutral forwarder for other forwarding companies, specializing in truck transports."
+        },
+        "sustainable" : {
+            "title": "Everything from one source",
+            "info": "We not only bring your shipment to its destination, we also control all loading equipment movements and ensure timely repatriation in case of loading equipment debts. Should damage ever occur, any claims for compensation are processed immediately. In the case of complicated damage events, we cooperate here with our subsidiary GSS Güter-Schaden-Service GmbH.(Please display the company name of GSS as a link to the homepage:"
+        },
+        "specialty" : {
+            "title": "Specialist in truck transports",
+            "info" : "As a specialist we are better than the global provider - to your advantage. Every day we load about 1,200 trucks, dispatched from 33 NEUFRA branches in Europe."
+        },
+        "direct-transportation" : {
+            "title": "direct-transportation without reloading",
+            "info": "Your shipments are transported directly to the recipient without reloading, so that they reach the desired destination quickly and reliably with minimized risk of damage."
+        },
+        "shipment-tracking" : {
+            "title": "Shipment tracking on request",
+            "info": "We will accompany your shipment until it has been unloaded at the recipient's premises. If you wish, you can receive status updates from us at any time."
+        }
+        ,
+        "digitalization-partner" : {
+            "title": "Partner for a digital future",
+            "info": "With our EDP team, we are always developing our programs. WithColleta, we will drive the path of digitalization."
+        },
+        "history":{
+            "first": "What started on 01.01.1979 with a total of 5 people, has developed into an internationally positioned freight forwarding service provider with more than 400 employees in 33 branches in Europe to date.",
+            "second": "The main focus in the eighties was the establishment of a nationwide network of branches in the old Federal Republic in order to meet the growing demands of forwarding customers. After the political turnaround in 1989, NEUFRA-Spedition also expanded into the new federal states. Parallel to the expansion of the German branch network, the strategic decision was made in the 1990s to develop NEUFRA into a European freight forwarding company. As a consequence, subsidiaries were founded in Italy and Hungary.",
+            "third": "After the turn of the millennium, subsidiaries followed in Austria, Poland, Spain and the Czech Republic. Currently, of course, digitization is also playing a special role. Not only have administrative processes been and are being digitally simplified for NEUFRA and its business partners, but the development of its own web application and app for freight management also secure the future of the NEUFRA Group in the digital age."
+        }
+    },
+    "locations" : {
+        "aboutUs" : "entreprise"
+    },
+    "services" : {
+        "aboutUs" : "entreprise"
+    },
+    "career" : {
+        "aboutUs" : "entreprise"
+    },
+    "transportCompany" : {
+        "aboutUs" : "entreprise"
+    },
+    "footer" : {
+        "entreprise" : "entreprise",
+        "privacy" : "privacy"
     }
 }
