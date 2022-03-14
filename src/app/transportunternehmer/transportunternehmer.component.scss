@@ -1,0 +1,43 @@
+@import "../../assets/styles/app-variables";
+
+.card {
+    box-shadow: none;
+    margin-bottom: 80px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    row-gap: 10px;
+    column-gap: 30px;
+    grid-template-areas: 
+    "icon title"
+    "icon info";      
+        
+
+
+    &__svg {
+        width: 120px;
+        height: 100px;
+        background-color: $primary;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        grid-area: icon;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        
+    }
+
+    &__info {
+        grid-area: info;
+    }
+
+}
