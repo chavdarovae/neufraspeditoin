@@ -1,9 +1,11 @@
+@import "../app-variables";
 .poster {
     &__img {
         position: relative;
         width: 100vw;
+        height: 450px;
        
-        img {
+        &-pic {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -11,5 +13,19 @@
             background-color: #cccccc; /* Used if the image is unavailable */
             width: 100vw; /* You must set a specified height */
         }
+
+        &-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            padding: 5px 30px;
+            color: $text-color-secondary;
+            text-transform: capitalize;
+            background-color: $primary;
+            clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+        }
     }
+
 }
