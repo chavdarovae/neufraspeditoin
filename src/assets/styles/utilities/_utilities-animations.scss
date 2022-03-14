@@ -9,7 +9,7 @@
 
 .animations-fancy-list {
     li {
-        animation-duration: 800ms;
+        animation-duration: 1000ms;
         animation-timing-function: ease-out;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
@@ -20,6 +20,17 @@
         li:nth-child(#{$i}) {
             animation-delay: 100ms * $i;
         }
+    }
+}
+
+
+.animations-fancy-expand {
+    & > * {
+        animation-duration: 800ms;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-name: fancy-expand;
     }
 }
 

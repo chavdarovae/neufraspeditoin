@@ -1,35 +1,112 @@
 @import "../../assets/styles/app-variables";
+
+.carrier {
+    &__info {
+
+    }
+
+    &__table{
+        
+    }
+}
+
 .table {
+    i {
+        font-size: 2*$font-size-base;
+        color: $primary;
+
+        &:hover {
+            color: $text-color-primary;
+        }
+    }
+
+    &__header,
+    .position__short,
+    .position__long {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 350px 30px;
+        justify-content: stretch;
+        align-content: center;
+        row-gap: 30px;
+        column-gap: 30px;
+    }
 
     &__header {
-        display: grid;
-        padding: 20px 0;
-        grid-template-columns: 1fr 220px 60px;
+        padding: 10px 30px;
         border-bottom: 3px solid $primary;
-
-        i {
-            font-size: 2*$font-size-base;
-            color: $primary;
+    }
+    
+    .position {
+        width: 100%;
+        border-bottom: 3px solid $primary;
+    
+        &__short {
+            padding: 20px 30px 15px 30px;
+            grid-template-areas: 
+            "title location toggle";
+        }
+    
+        &__long {
+            padding: 0 30px 30px 30px;
+            grid-template-areas: 
+            "descripion descripion descripion"
+            "tasks tasks tasks"
+            "requirements requirements requirements"
+            "offer partner partner";
+        }
+        
+        &__title {
+            grid-area: title;
+        }
+    
+        &__location {
+            grid-area: location;
+        }
+    
+        &__toggle {
+            grid-area: toggle;
+        }
+    
+        &__descripion {
+            grid-area: descripion;
+        }
+    
+        &__tasks {
+            grid-area: tasks;
+        }
+    
+        &__requirements {
+            grid-area: requirements;
+        }
+    
+        &__offer {
+            grid-area: offer;
+        }
+    
+        &__partner {
+            grid-area: partner;
         }
     }
 }
 
-
-.position {
+.card {
     width: 100%;
-    border-bottom: 3px solid $primary;
-   
-    &__short {
-        display: grid;
-        padding: 20px 0;
-        grid-template-columns: 1fr 250px 30px;
+    background-color: $primary;
+    padding: 20px;
 
-        i {
-            font-size: 2*$font-size-base;
-        }
+    &__header {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $text-color-secondary;
     }
 
-    &__long {
-        
+    i {
+        font-size: 1.5*$font-size-base;
+        color: $text-color-secondary !important;
+        margin-right: 10px;
+    }
+
+    * {
+        color: $text-color-secondary;
     }
 }

@@ -41,6 +41,10 @@
     &--space-btw {
         justify-content: space-between;
     }
+
+    &--no-wrap {
+        flex-flow: row nowrap;
+    }
 }
 
 .column {
