@@ -18,15 +18,15 @@
             <i class="fa fa-sort-alpha-down"></i>
         </div>
         <ng-container *ngFor="let position of positions; let i=index;">
-            <article class="table__item position animations-fancy-expand">
+            <article class="table__item position">
                 <div class="position__short">
                     <h5 class="position__title">{{position.title}}</h5>
                     <span class="position__location">{{position.location}}</span>
-                    <i class="fa position__toggle"
-                        [ngClass]="{'fa-angle-up': !expanded ||  i !== currPosition, 'fa-angle-down': expanded && i === currPosition}"
+                    <i class="fa fa-angle-down position__toggle"
+                        [ngClass]="{'expand': expanded && i === currPosition}"
                         (click)="togglePosition(i)"></i>
                 </div>
-                <div class="position__long" *ngIf="expanded && i === currPosition">
+                <div class="position__long animations-delayed-appaerance" *ngIf="expanded && i === currPosition">
                     <div class="position__descripion">{{position.descripion}}</div>
                     <div class="position__tasks mb-20">
                         <h6>Ihre Aufgaben</h6>

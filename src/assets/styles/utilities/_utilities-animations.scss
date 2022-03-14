@@ -23,21 +23,21 @@
     }
 }
 
-
-.animations-fancy-expand {
-    & > * {
-        animation-duration: 800ms;
-        animation-timing-function: ease-out;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-name: fancy-expand;
-    }
-}
-
 .animations-delayed-appaerance {
     animation-duration: 1000ms;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-name: delayed-apearance;
+}
+
+// icon rotation on expand
+.fa-angle-down{
+    transform: rotate(0deg);
+    transition: transform 600ms linear;
+}
+  
+.fa-angle-down.expand {
+    transform: rotate(-180deg);
+    transition: transform 600ms linear;
 }
