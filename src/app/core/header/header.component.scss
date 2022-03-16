@@ -5,15 +5,22 @@
     width: 100%;
     
     .container {
-        height: 60px;
+        height: $header-height-phone;
         display: flex;
         position: relative;
         align-items: center;
-        padding: 0 10px;
         position: relative;
 
+        @include for-tablet-portrait-up {
+            height: $header-height-tablet-portrait;
+        }
+    
+        @include for-tablet-landscape-up {
+            height: $header-height-tablet-landscape;
+        }
+    
         @include for-desktop-up {
-            height: 90px;
+            height: $header-height-desktop;
         }
     }
 
@@ -29,7 +36,6 @@
     }
 
     &__logo {
-        left: 10px;
         
         @include for-desktop-up {
             position: absolute;
@@ -108,8 +114,8 @@
     }
 
     &__img {
-        height: 450px;
         overflow: hidden;
+      
     }
 }
 

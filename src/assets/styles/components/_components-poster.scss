@@ -6,6 +6,14 @@
         width: 100vw;
         height: 180px;
 
+        @include for-tablet-portrait-up  {
+            height: 250px;
+        }
+
+        @include for-tablet-landscape-up {
+            height: 350px;
+        }
+
         @include for-desktop-up {
             height: 450px;
         }
