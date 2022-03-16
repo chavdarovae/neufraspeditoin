@@ -1,9 +1,14 @@
 @import "../app-variables";
+@import "../settings/settings-breakpoints";
 .poster {
     &__img {
         position: relative;
         width: 100vw;
-        height: 450px;
+        height: 180px;
+
+        @include for-desktop-up {
+            height: 450px;
+        }
        
         &-pic {
             position: absolute;
@@ -20,11 +25,17 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
-            padding: 5px 30px;
+            padding: 5px 20px;
             color: $text-color-secondary;
             text-transform: capitalize;
-            background-color: rgba(0, 112, 50, 0.8);
+            background-color: rgba($primary, 0.8);
             clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+            
+
+            @include for-desktop-up {
+                padding: 25px 50px;
+                font-size: 4*$font-size-base;
+            }
         }
     }
 

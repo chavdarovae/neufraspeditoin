@@ -1,27 +1,22 @@
 @import "../app-variables";
 
 .container {
-    width: 100%;
+    width: calc(100vw - 20px);
     margin: 0 auto;
 
     
     @include for-phone-up {
         // width: $container-width-phone;
-        padding: 0 10px 0 10px;
     }
 
     @include for-tablet-portrait-up {
-        // width: $container-width-tablet-portrait;
-        // margin: 0 20px 0 20px;
-        padding: 0 15px 0 15px;
-
+        width: calc(100vw - 30px);
     }
 
     @include for-tablet-landscape-up {
+        width: calc(100vw - 40px);
         // width: $container-width-tablet-landscape;
         // margin: 0 30px 0 30px;
-        padding: 0 20px 0 20px;
-
     }
 
     @include for-desktop-up {
