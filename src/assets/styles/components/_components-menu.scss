@@ -4,13 +4,22 @@
     display: flex;
     flex-flow: column nowrap;
     z-index: 10;
-    min-width: 280px;
-    max-width: 3500px;
-    min-height: 100vh;
-    max-height: 100vh;
+    width: 280px;
+    height: 100vh;
     justify-content: space-between;
     background-color: $primary;
     padding: 20px !important;
+
+    @include for-tablet-portrait-up  {
+        right: -15px;
+        width: 320px;
+        height: fit-content;
+    }
+    
+    @include for-tablet-landscape-up  {
+        right: -20px;
+        width: 350px;
+    }
    
     @include for-desktop-up {
         padding: 0;
@@ -20,6 +29,7 @@
         background-color: transparent;
         min-width: none;
         max-width: none;
+        height: $header-height-desktop;
     }
 
     &__item {
