@@ -23,22 +23,26 @@
    
     @include for-desktop-up {
         padding: 0;
-        min-width: none;
-        min-height: 50px;
         flex-flow: row nowrap;
         background-color: transparent;
-        min-width: none;
-        max-width: none;
+        width: fit-content;
+        height: fit-content;
         height: $header-height-desktop;
     }
 
     &__item {
         // background-color: $primary;
-        min-height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
 
+        @include for-tablet-portrait-up {
+            min-height: 80px;
+        }
+    
+        @include for-tablet-landscape-up {
+            min-height: 70px;
+        }
         
         @include for-desktop-up {
             background-color: transparent;
