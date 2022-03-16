@@ -7,6 +7,7 @@
     min-width: 280px;
     max-width: 3500px;
     min-height: 100vh;
+    max-height: 100vh;
     justify-content: space-between;
     background-color: $primary;
     padding: 20px !important;
@@ -23,7 +24,7 @@
 
     &__item {
         // background-color: $primary;
-        min-height: 70px;
+        min-height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -58,6 +59,10 @@
             flex-flow: row nowrap;
             min-height: 40px;
             justify-content: space-between;
+            
+            a {
+                font-weight: $font-weight-thin;
+            }
         }
     }
 
