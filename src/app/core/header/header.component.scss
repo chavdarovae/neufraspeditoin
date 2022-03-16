@@ -99,17 +99,16 @@
 
         @include for-tablet-portrait-up  {
             right: -15px;
-            box-shadow: none;
-            position: static;
         }
-
+        
         @include for-tablet-landscape-up  {
             right: -20px;
         }
-
+        
         @include for-desktop-up {
             display: flex !important;
             position: static;
+            box-shadow: none;
         }
     }
 
