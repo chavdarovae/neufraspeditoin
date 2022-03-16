@@ -9,7 +9,7 @@
         row-gap: 40px;
         justify-items: center;
 
-        @include for-tablet-landscape-up {
+        @include for-tablet-portrait-up {
             grid-template-columns: 1fr 1fr;
         }
 
