@@ -2,30 +2,96 @@
 
 .menu {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    z-index: 10;
+    min-width: 280px;
+    max-width: 3500px;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: $primary;
+    padding: 20px !important;
+   
+    @include for-desktop-up {
+        padding: 0;
+        min-width: none;
+        min-height: 50px;
+        flex-flow: row nowrap;
+        background-color: transparent;
+        min-width: none;
+        max-width: none;
+    }
 
     &__item {
+        // background-color: $primary;
+        min-height: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        
+        @include for-desktop-up {
+            background-color: transparent;
+            min-height: none;
+        }
+
+        &--lang {
+            width: 100%;
+            border-bottom: 1px solid $text-color-secondary;
+            min-height: 30px;
+            select {
+                width: 100%;
+                background-color: $primary;
+                color: $text-color-secondary !important;
+            }
+        }
+
+        &--close {
+            color: $text-color-secondary;
+            margin-left: auto;
+            font-size: 1.5*$font-size-base;
+            align-items: flex-start;
+        }
+
+        &--footer {
+            width: 100%;
+            border-top: 1px solid $text-color-secondary;
+            flex-flow: row nowrap;
+            min-height: 40px;
+            justify-content: space-between;
+        }
     }
 
     &__item-link {
         width: 100%;
-        padding: 10px 30px;
-        color: $nav-text-color;
+        color: $text-color-secondary;
         text-transform: capitalize;
         font-weight: $font-weight-bold;
         transition: transform 500ms ease-out;
+        display: flex;
+        align-items: center;
+        
+        @include for-desktop-up {
+            padding: 10px 30px;
+            color: $nav-text-color;
+
+        }
 
         &:hover {
             transform: scale(1.05);
-            color: $text-color-thirdery;
+            color: $nav-text-color;
+            
+            @include for-desktop-up {
+                color: $text-color-thirdery;
+    
+            }
         }
     }
 
     &__item-link--active {
         text-decoration: underline;
-        color: $text-color-thirdery;
+        
+        @include for-desktop-up {
+            color: $text-color-thirdery;
+        }
     }
 }

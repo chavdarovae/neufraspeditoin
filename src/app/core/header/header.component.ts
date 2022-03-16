@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   logoPath = isDevMode() ? '../../../assets/img/Logo Neufra.jpg' : './assets/img/Logo Neufra.jpg';
   imgPath = isDevMode() ? '../../../assets/img/poster-unternehmen.jpg' : './assets/img/poster-unternehmen.jpg';
 
+
   constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {

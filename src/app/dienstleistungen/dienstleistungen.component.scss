@@ -1,11 +1,21 @@
 @import "../../assets/styles/app-variables";
+@import "../../assets/styles/settings/settings-breakpoints";
 
 :host {
     .card-holder{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         column-gap: 40px;
         row-gap: 40px;
+        justify-items: center;
+
+        @include for-tablet-landscape-up {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include for-desktop-up {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 
     .card {

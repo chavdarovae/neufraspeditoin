@@ -1,6 +1,12 @@
+@import "../assets/styles/settings/settings-breakpoints";
+
 :host {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 540px 1fr 330px;
-    row-gap: 80px;
+    row-gap: 30px;
+    
+    @include for-desktop-up {
+        row-gap: 80px;
+    }
 }

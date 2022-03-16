@@ -1,4 +1,5 @@
 @import "../../assets/styles/app-variables";
+@import "../../assets/styles/settings/settings-breakpoints";
 
 .carrier {
     &__info {
@@ -25,16 +26,26 @@
     .position__long {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 350px 30px;
+        grid-template-columns: 1fr 60px;
         justify-content: stretch;
         align-content: center;
-        row-gap: 30px;
-        column-gap: 30px;
+        row-gap: 5px;
+        column-gap: 10px;
+
+        @include for-desktop-up {
+            grid-template-columns: 1fr 350px 30px;
+            row-gap: 30px;
+            column-gap: 30px;
+        }
     }
 
     &__header {
-        padding: 10px 30px;
+        padding: 10px 10px;
         border-bottom: 3px solid $primary;
+
+        @include for-desktop-up {
+            padding: 10px 30px;
+        }
     }
     
     .position {
@@ -42,18 +53,33 @@
         border-bottom: 3px solid $primary;
     
         &__short {
-            padding: 20px 30px 15px 30px;
+            padding: 20px 10px 15px 10px;
             grid-template-areas: 
-            "title location toggle";
+            "title location"
+            "title toggle";
+
+            @include for-desktop-up {
+                padding: 20px 30px 15px 30px;
+            }
         }
     
         &__long {
-            padding: 0 30px 30px 30px;
+            padding: 0 10px 30px 10px;
             grid-template-areas: 
-            "descripion descripion descripion"
-            "tasks tasks tasks"
-            "requirements requirements requirements"
-            "offer partner partner";
+            "descripion descripion"
+            "tasks tasks"
+            "requirements requirements"
+            "offer offer"
+            "partner partner";
+
+            @include for-desktop-up {
+                padding: 0 30px 30px 30px;
+                grid-template-areas: 
+                "descripion descripion descripion"
+                "tasks tasks tasks"
+                "requirements requirements requirements"
+                "offer partner partner";
+            }
         }
         
         &__title {

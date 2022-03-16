@@ -1,4 +1,5 @@
 @import "../../../assets/styles/app-variables";
+@import "../../../assets/styles/settings/settings-breakpoints";
 
 .header {
     width: 100%;
@@ -8,26 +9,92 @@
         display: flex;
         position: relative;
     }
-    
-    &::before {
-        content: "";
-        height: 10px;
-        width: 100%;
-        background-color: $primary;
-        position: absolute;
-        top: 0;
+
+    @include for-desktop-up {
+        &::before {
+            content: "";
+            height: 10px;
+            width: 100%;
+            background-color: $primary;
+            position: absolute;
+            top: 0;
+        }
     }
 
     &__logo {
         position: absolute;
         left: 0;
-        top: 10px;
+        top: 0;
         z-index: 2;
+
+        @include for-desktop-up {
+            top: 10px;
+        }
+    }
+
+    &__burger-menu {
+        display: block;
+        margin-left: auto;
+        i {
+            color: $primary;
+    
+            &:hover {
+                color: $secondary;
+            }
+        }
+    
+        @include for-desktop-up {
+            display: none !important;
+        }
+    }
+    
+    &__mini-menu-toggle {
+        display: none;
+        pointer-events: none;
+        position: absolute;
+    }
+
+    .backdrop {
+        z-index: 10;
+        // display: none;
+    }
+    
+    &__mini-menu-toggle:checked  ~ &__menu,
+    &__mini-menu-toggle:not(:checked)  + &__burger-menu,
+    &__mini-menu-toggle:checked  ~ .backdrop {
+        display: flex;
+    }
+    
+    &__mini-menu-toggle:not(:checked)  ~ &__menu,
+    &__mini-menu-toggle:checked  + &__burger-menu,
+    &__mini-menu-toggle:not(:checked)  ~ .backdrop {
+        display: none;
     }
 
     &__menu {
         margin-left: auto;
         height: 90px;
+        display: none;
+        position: relative;
+        top: 0;
+        right: -10px;
+        box-shadow: $primary-shadow;
+        z-index: 100;
+
+        @include for-tablet-portrait-up  {
+            right: -15px;
+            box-shadow: none;
+            position: static;
+        }
+
+        @include for-tablet-landscape-up  {
+            right: -20px;
+        }
+
+        @include for-desktop-up {
+            display: flex !important;
+            position: static;
+        }
     }
 
     &__img {

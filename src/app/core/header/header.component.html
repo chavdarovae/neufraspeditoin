@@ -3,50 +3,62 @@
         <a routerLink="/home" class="header__logo logo">
             <div class="logo__img"><img [src]="logoPath" alt="Logo Neufra"></div>
         </a>
+        <input type="checkbox" class="header__mini-menu-toggle" id="menu-toggle">
+        <label #menuToggle class="header__burger-menu" for="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </label>
         <ul class="header__menu menu">
+            <li class="menu__item menu__item--close show-on-mobile" (click)="menuToggle.click()">X</li>
+            <li class="menu__item menu__item--lang show-on-mobile">
+                <ng-container *ngTemplateOutlet="languageBar"></ng-container>
+            </li>
             <li class="menu__item">
                 <!-- unternehmen -->
                 <a routerLink="/unternehmen" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'unternehmen'}" 
-                (click)="onNavClick('unternehmen')"
+                (click)="onNavClick('unternehmen'); menuToggle.click()"
                 translate="header.aboutUs"></a>
             </li>
             <!-- standorte -->
             <li class="menu__item">
                 <a routerLink="/standorte" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'standorte'}" 
-                (click)="onNavClick('standorte')"
+                (click)="onNavClick('standorte'); menuToggle.click()"
                 translate="header.locations"></a>
             </li>
             <!-- dienstleistungen -->
             <li class="menu__item">
                 <a routerLink="/dienstleistungen" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'dienstleistungen'}" 
-                (click)="onNavClick('dienstleistungen')"
+                (click)="onNavClick('dienstleistungen'); menuToggle.click()"
                 translate="header.services"></a>
             </li>
             <!-- karriere -->
             <li class="menu__item">
                 <a routerLink="/karriere" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'karriere'}" 
-                (click)="onNavClick('karriere')"
+                (click)="onNavClick('karriere'); menuToggle.click()"
                 translate="header.career"></a>
             </li>
             <!-- transportunternehmer -->
             <li class="menu__item">
                 <a routerLink="/transportunternehmer" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'transportunternehmer'}" 
-                (click)="onNavClick('transportunternehmer')"
+                (click)="onNavClick('transportunternehmer'); menuToggle.click()"
                 translate="header.transportCompany"></a>
             </li>
-            <li class="menu__item">
-                <select #langBar class="lang-bar" (change)="translateLanguageTo(langBar.value)">
-                    <option value="de">DE</option>
-                    <option value="en">EN</option>
-                    <option value="fr">FR</option>
-                </select>
+            <!-- impressum - datenschutz -->
+            <li class="menu__item menu__item--footer show-on-mobile">
+                <a routerLink="/impressum" class="menu__item-link"
+                    (click)=" menuToggle.click()" translate="footer.entreprise"></a>
+                <a routerLink="/datenschutz" class="menu__item-link"
+                    (click)=" menuToggle.click()"  translate="footer.privacy"></a>
+            </li>
+            <li class="menu__item  hide-on-mobile">
+                <ng-container *ngTemplateOutlet="languageBar"></ng-container>
             </li>
         </ul>
+        <div class="backdrop" (click)="menuToggle.click()"></div>
     </div>
     <div class="header__img poster">
         <div class="poster__img">
@@ -55,3 +67,12 @@
         </div>
     </div>
 </div>
+
+<ng-template #languageBar>
+    <select #langBar class="lang-bar" (change)="translateLanguageTo(langBar.value)">
+        <option value="de">DE</option>
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+    </select>
+</ng-template>
+
