@@ -56,7 +56,10 @@
 
     .backdrop {
         z-index: 10;
-        // display: none;
+
+        @include for-desktop-up {
+            display: none !important;
+        }
     }
     
     &__mini-menu-toggle:checked  ~ &__menu,

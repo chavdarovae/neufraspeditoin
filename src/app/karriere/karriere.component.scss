@@ -60,6 +60,8 @@
 
             @include for-desktop-up {
                 padding: 20px 30px 15px 30px;
+                grid-template-areas: 
+                "title location toggle";
             }
         }
     
