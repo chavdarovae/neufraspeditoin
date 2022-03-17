@@ -91,19 +91,19 @@
 @keyframes come-from-right {
     
     0% {
-        left: 100%;
+        width: 0%;
     }
 
     25% {
-        transform: translateX(-33%); 
+        width: 25%;
     }
     
     50% {
-        transform: translateX(-33%); 
+        width: 50%;
     }
 
     100% {
-        right: -10px;
+        width: 100%;
     }
 }
 
