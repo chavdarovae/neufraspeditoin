@@ -7,10 +7,8 @@
   
 
     &__block {
-        $block-height: 300px;
-        border: 1px solid #000;
         width: 100%;
-        height: $block-height;
+        height: $footer-height-phone;
         position: relative;
         overflow: hidden;
         z-index: 1;
@@ -18,7 +16,22 @@
         background-image: linear-gradient(to bottom, $primary, $secondary);
         // background-image: linear-gradient(to bottom, #007032, #00662f, #005c2d, #005229, #004826);
         /* The points are: centered top, left bottom, right bottom */
-        clip-path: polygon($center-pos 0, 100% calc($block-height/3), 100% 100%, 0 100%,0 calc($block-height/3));
+        clip-path: polygon($center-pos 0, 100% calc($footer-height-phone/3), 100% 100%, 0 100%,0 calc($footer-height-phone/3));
+
+        @include for-tablet-portrait-up {
+            height: $footer-height-tablet-portrait;
+            clip-path: polygon($center-pos 0, 100% calc($footer-height-tablet-portrait/3), 100% 100%, 0 100%,0 calc($footer-height-tablet-portrait/3));
+        }
+    
+        @include for-tablet-landscape-up {
+            height: $footer-height-tablet-landscape;
+            clip-path: polygon($center-pos 0, 100% calc($footer-height-tablet-landscape/3), 100% 100%, 0 100%,0 calc($footer-height-tablet-landscape/3));
+        }
+
+        @include for-desktop-up {
+            height: $footer-height-desktop;
+            clip-path: polygon($center-pos 0, 100% calc($footer-height-desktop/3), 100% 100%, 0 100%,0 calc($footer-height-desktop/3));
+        }
 
         &::before,
         &::after {
@@ -29,18 +42,18 @@
             top: 100%;
             left: 100%;
             z-index: 2;
-            transform: translate(-28%, -30%);
+            transform: translate(-20%, -40%);
 
             @include for-tablet-portrait-up {
-                transform: translate(-60%, -30%);
+                transform: translate(-60%, -33%);
             }
         
             @include for-tablet-landscape-up {
-                transform: translate(-60%, -25%);
+                transform: translate(-60%, -28%);
             }
 
             @include for-desktop-up {
-                transform: translate(-60%, -20%);
+                transform: translate(-60%, -25%);
             }
         }
 
@@ -87,37 +100,9 @@
         }
 
         &-info{
-            margin: calc($block-height/3) auto 10px 10px;
-
-            @include for-tablet-portrait-up {
-                margin: calc($block-height/3) auto 10px 20px;
-
-            }
-        
-            @include for-tablet-landscape-up {
-                margin: calc($block-height/3) auto 10px 30px;
-
-            }
-
-            @include for-desktop-up {
-                margin: calc($block-height/3) auto 10px 40px;
-
-            }
-
-            h3 {
-                text-transform: uppercase;
-                margin-bottom: 20px;
-                font-weight: $font-weight-semi-bold;
-            }
-
-            h2 {
-                font-weight: $font-weight-normal;
-            }
+            margin: calc($footer-height-phone/3) auto 10px 0;
 
             & > * {
-                color: $text-color-secondary;
-                font-weight: $font-weight-thin;
-                font-size: 1*$font-size-base;
 
                 @include for-tablet-portrait-up {
                     font-size: 1*$font-size-base;
@@ -135,9 +120,10 @@
         }
     }
 
+
     &__ribbon {
         height: 30px;
-        width: 100%;
+        // width: 100%;
 
         a {
             display: none;

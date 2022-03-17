@@ -13,12 +13,13 @@
     @include for-tablet-portrait-up  {
         right: -15px;
         width: 320px;
-        height: fit-content;
+        height: 100vh;
     }
     
     @include for-tablet-landscape-up  {
         right: -20px;
         width: 350px;
+        height: 100vh;
     }
    
     @include for-desktop-up {
