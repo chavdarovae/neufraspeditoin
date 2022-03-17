@@ -25,7 +25,8 @@
                         [ngClass]="{'expand': expanded && i === currPosition}"
                         (click)="togglePosition(i)"></i>
                 </div>
-                <div class="position__long animations-delayed-appaerance" *ngIf="expanded && i === currPosition">
+                <div class="position__long" *ngIf="expanded && i === currPosition"
+                    [ngClass]="{'animations-fancy-expand': expanded, 'animations-fancy-close':!expanded }">
                     <div class="position__descripion">{{position.descripion}}</div>
                     <div class="position__tasks mb-20">
                         <h6>Ihre Aufgaben</h6>
