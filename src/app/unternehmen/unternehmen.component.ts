@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, isDevMode, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-unternehmen',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./unternehmen.component.scss']
 })
 export class UnternehmenComponent implements OnInit {
+  urlPrefix = isDevMode() ? '../../' : './';
 
   constructor() { }
 

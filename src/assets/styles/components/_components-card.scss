@@ -1,4 +1,33 @@
 @import "../app-variables";
 .card {
     box-shadow: $primary-shadow;
+
+    &__svg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        background-color: inherit;
+    
+        @include for-tablet-portrait-up {
+            width: 80px;
+            height: 80px;
+        }
+    
+        @include for-tablet-landscape-up {
+            width: 90px;
+            height: 90px;
+        }
+    
+        @include for-desktop-up {
+            width: 100px;
+            height: 100px;
+        }
+    
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }

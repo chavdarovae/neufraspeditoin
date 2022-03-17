@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'home',
     // pathMath: 'full',
-    component: UnternehmenComponent
+    component: HomeComponent
   },
   {
     path: 'unternehmen',

@@ -35,27 +35,21 @@
             max-width: unset;
         }
     
-        i {
-            font-size: 4*$font-size-base;
-        }
-    
         &--green {
             background-color: $primary;
-    
             & > * {
                 color: $text-color-secondary;
             }
-    
-            i {
-                color: $text-color-secondary;
+            path {
+                fill: $text-color-thirdery;
             }
         }
     
         &--gray {
             background-color: $card-bg;
     
-            i {
-                color: $text-color-thirdery; 
+            path {
+                fill: $text-color-thirdery;
             }
         }
 

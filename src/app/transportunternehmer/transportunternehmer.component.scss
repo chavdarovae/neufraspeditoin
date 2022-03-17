@@ -32,39 +32,35 @@
     }
 
     &__svg {
-        width: 80px;
-        height: 65px;
         background-color: $primary;
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         grid-area: icon;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
+        width: 90px;
 
         @include for-tablet-portrait-up {
-            width: 80px;
-            height: 65px;
+            width: 100px;
         }
     
         @include for-tablet-landscape-up {
-            width: 120px;
-            height: 100px;
+            width: 110px;
         }
     
         @include for-desktop-up {
-            // width: 120px;
-            // height: 100px;
+            width: 120px;
         }
 
         img {
-            width: 60px;
-            height: 60px;
-
+            width: 60;
+            @include for-tablet-portrait-up {
+                width: 70px;
+            }
+        
             @include for-tablet-landscape-up {
                 width: 80px;
-                height: 80px;
+            }
+        
+            @include for-desktop-up {
+                width: 90px;
             }
         }
     }

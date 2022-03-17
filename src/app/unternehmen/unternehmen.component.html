@@ -2,19 +2,25 @@
     <section  class="card-holder">
         <!-- Über 40 Jahre Speditionserfahrung -->
         <article class="card card--green card--big">
-            <i class="fa fa-award"></i>
+            <div class="card__svg">
+                <img [src]="urlPrefix + 'assets/icons/medal.svg'"/>
+            </div>
             <h2 translate="aboutUs.expericence.title"></h2>
             <div class="card__info" translate="aboutUs.expericence.info"></div>
         </article>
 
         <article class="card card--gray">
-            <i class="far fa-handshake"></i>
+            <div class="card__svg">
+                <img [src]="urlPrefix + 'assets/icons/handshake.svg'"/>
+            </div>
             <h2 translate="aboutUs.partner.title"></h2>
             <div class="card__info" translate="aboutUs.partner.info"></div>
         </article>
 
         <article class="card card--gray  card--big">
-            <i class="fa fa-hand-holding-heart"></i>
+            <div class="card__svg">
+                <img [src]="urlPrefix + 'assets/icons/globe.svg'"/>
+            </div>
             <h2 translate="aboutUs.sustainable.title"></h2>
             <div class="card__info" translate="aboutUs.sustainable.info">
             </div>
@@ -22,25 +28,33 @@
         </article>
         <!-- Spezialist in LKW-Verkehren -->
         <article class="card card--green">
-            <i class="fa fa-truck"></i>
+            <div class="card__svg">
+                <img [src]="urlPrefix + 'assets/icons/lorry.svg'"/>
+            </div>
             <h2 translate="aboutUs.specialty.title"></h2>
             <div class="card__info"  translate="aboutUs.specialty.info"></div>
         </article>
         <!-- Direkttransport ohne Umladung -->
         <article class="card card--green">
-            <i class="fa fa-box"></i>
+            <div class="card__svg">
+                <img [src]="urlPrefix + 'assets/icons/route.svg'"/>
+            </div>
             <h2 translate="aboutUs.direct-transportation.title"></h2>
             <div class="card__info" translate="aboutUs.direct-transportation.info"></div>
         </article>
         <!-- Auf Wunsch Sendungsverfolgung -->
         <article class="card card--gray">
-            <i class="fa fa-route"></i>
+            <div class="card__svg">
+                <img [src]="urlPrefix + 'assets/icons/tracking.svg'"/>
+            </div>
             <h2 translate="aboutUs.shipment-tracking.title"></h2>
             <div class="card__info" translate="aboutUs.shipment-tracking.info"></div>
         </article>
         <!-- Partner für eine digitale Zukunft -->
         <article class="card card--gray">
-            <i class="fa fa-globe"></i>
+            <div class="card__svg">
+                <img [src]="urlPrefix + 'assets/icons/network.svg'"/>
+            </div>
             <h2 translate="aboutUs.digitalisation-partner.title"></h2>
             <div class="card__info" translate="aboutUs.digitalisation-partner.info"></div>
         </article>
