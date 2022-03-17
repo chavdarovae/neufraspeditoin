@@ -7,7 +7,7 @@
         <label #menuToggle class="header__burger-menu" for="menu-toggle">
             <i class="fa-solid fa-bars"></i>
         </label>
-        <ul class="header__menu menu">
+        <ul class="header__menu menu animations-come-from-right">
             <li class="menu__item menu__item--close show-on-mobile" (click)="menuToggle.click()">X</li>
             <li class="menu__item menu__item--lang show-on-mobile">
                 <ng-container *ngTemplateOutlet="languageBar"></ng-container>

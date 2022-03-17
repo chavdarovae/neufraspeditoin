@@ -88,6 +88,25 @@
     }
 }
 
+@keyframes come-from-right {
+    
+    0% {
+        left: 100%;
+    }
+
+    25% {
+        transform: translateX(-33%); 
+    }
+    
+    50% {
+        transform: translateX(-33%); 
+    }
+
+    100% {
+        right: -10px;
+    }
+}
+
 // album animations
 /* first image */
 @keyframes image1 {
