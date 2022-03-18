@@ -1,0 +1,84 @@
+@import "../../assets/styles/app-variables";
+@import "../../assets/styles/settings/settings-breakpoints";
+
+.card-holder{
+    display: flex;
+    flex-flow: column nowrap;
+
+    @include for-tablet-portrait-up {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+
+.card {
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-areas: "icon title";
+    justify-content: stretch;
+    margin-bottom: 50px;
+    column-gap: 20px;
+
+    &:nth-child(2n+1) {
+        grid-template-columns:  1fr min-content ;
+        grid-template-areas: "title icon";
+    }
+    
+    @include for-tablet-portrait-up {
+        width: 250px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    @include for-tablet-landscape-up {
+        
+    }
+
+    @include for-desktop-up {
+       
+    }
+
+    &__svg {
+        background-color: $primary;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        grid-area: icon;
+        width: 90px;
+
+
+        @include for-tablet-portrait-up {
+            width: 100px;
+        }
+    
+        @include for-tablet-landscape-up {
+            width: 110px;
+        }
+    
+        @include for-desktop-up {
+            width: 120px;
+        }
+
+        img {
+            width: 60px;
+            height: auto;
+            @include for-tablet-portrait-up {
+                width: 70px;
+            }
+        
+            @include for-tablet-landscape-up {
+                width: 80px;
+            }
+        
+            @include for-desktop-up {
+                width: 90px;
+            }
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        text-align: center;
+        margin: 10px 0;
+    }
+}

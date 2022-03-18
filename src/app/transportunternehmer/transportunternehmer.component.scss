@@ -50,17 +50,18 @@
         }
 
         img {
-            width: 60;
+            width: 50;
+            height: auto;
             @include for-tablet-portrait-up {
-                width: 70px;
+                width: 60px;
             }
         
             @include for-tablet-landscape-up {
-                width: 80px;
+                width: 70px;
             }
         
             @include for-desktop-up {
-                width: 90px;
+                width: 80px;
             }
         }
     }

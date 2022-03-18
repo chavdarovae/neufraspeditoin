@@ -30,6 +30,8 @@ export class HeaderComponent implements OnInit {
 
   setPageTitle() {
     switch (this.activeTab) {
+      case 'home': this.pageTitle = 'home'
+      break;
       case 'unternehmen': this.pageTitle = 'aboutUs'
       break;
       case 'standorte': this.pageTitle = 'locations'

@@ -4,6 +4,11 @@
     width: calc(100vw - 20px);
     margin: 0 auto;
 
+    &__title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
     
     @include for-phone-up {
         // width: $container-width-phone;
