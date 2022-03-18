@@ -50,7 +50,7 @@
         }
 
         img {
-            width: 50;
+            width: 60px;
             height: auto;
             @include for-tablet-portrait-up {
                 width: 60px;
@@ -61,7 +61,7 @@
             }
         
             @include for-desktop-up {
-                width: 80px;
+                width: 70px;
             }
         }
     }

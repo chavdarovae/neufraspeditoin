@@ -16,9 +16,10 @@
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-areas: "icon title";
-    justify-content: stretch;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 50px;
-    column-gap: 20px;
+    column-gap: 10px;
 
     &:nth-child(2n+1) {
         grid-template-columns:  1fr min-content ;
@@ -44,34 +45,38 @@
         background-color: $primary;
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         grid-area: icon;
-        width: 90px;
+        width: 120px;
+        height: 105px;
 
 
         @include for-tablet-portrait-up {
-            width: 100px;
+            width: 120px;
+            height: 105px;
         }
     
         @include for-tablet-landscape-up {
-            width: 110px;
+            width: 130px;
+            height: 115px;
         }
     
         @include for-desktop-up {
-            width: 120px;
+            width: 130px;
+            height: 115px;
         }
 
         img {
             width: 60px;
             height: auto;
             @include for-tablet-portrait-up {
-                width: 70px;
+                width: 60px;
             }
         
             @include for-tablet-landscape-up {
-                width: 80px;
+                width: 70px;
             }
         
             @include for-desktop-up {
-                width: 90px;
+                width: 70px;
             }
         }
     }

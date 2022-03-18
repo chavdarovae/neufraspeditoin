@@ -38,6 +38,7 @@
             text-transform: capitalize;
             background-color: rgba($primary, 0.8);
             clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+            font-size: 1.5*$font-size-base;
             
             
             @include for-desktop-up {

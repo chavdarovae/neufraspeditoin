@@ -4,7 +4,8 @@
     display: flex;
     flex-flow: column nowrap;
     z-index: 10;
-    width: 280px;
+    width: 300px;
+    max-width: 300px;
     height: 100vh;
     justify-content: space-between;
     background-color: $primary;
@@ -13,17 +14,20 @@
     @include for-tablet-portrait-up  {
         right: -15px;
         width: 320px;
+        max-width: 320px;
         height: fit-content;
     }
     
     @include for-tablet-landscape-up  {
         right: -20px;
         width: 350px;
+        max-width: 350px;
         height: fit-content;
     }
    
     @include for-desktop-up {
         padding: 0;
+        max-width: unset;
         flex-flow: row nowrap;
         background-color: transparent;
         width: fit-content;
