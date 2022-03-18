@@ -69,6 +69,11 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-name: come-from-right;
+    
+    @include for-desktop-up {
+        animation-name: none;
+    }
+    
 }
 
 // icon rotation on expand
@@ -81,3 +86,22 @@
     transform: rotate(-180deg);
     transition: transform 600ms linear;
 }
+
+.vert-to-right {
+    transform-origin: center center;
+    animation-duration: 600ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-name: to-45-right;
+    animation-fill-mode: forwards;
+}
+
+.vert-to-left {
+    transform-origin: center center;
+    animation-duration: 600ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-name: to-45-left;
+    animation-fill-mode: forwards;
+}
+
