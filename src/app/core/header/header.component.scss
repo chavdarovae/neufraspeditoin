@@ -48,14 +48,16 @@
     &__burger-menu {
         display: block;
         margin-left: auto;
+        
         i {
+            font-weight: $font-weight-bold;
+            font-size: 2*$font-size-base;
             color: $primary;
-    
             &:hover {
                 color: $secondary;
             }
         }
-    
+
         @include for-desktop-up {
             display: none !important;
         }

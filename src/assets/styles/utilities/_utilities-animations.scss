@@ -87,21 +87,33 @@
     transition: transform 600ms linear;
 }
 
-.vert-to-right {
+// rotation
+
+.vert-to-right,
+.vert-to-left,
+.rot-to-left,
+.rot-to-right {
     transform-origin: center center;
     animation-duration: 600ms;
     animation-timing-function: linear;
     animation-iteration-count: 1;
-    animation-name: to-45-right;
     animation-fill-mode: forwards;
 }
 
-.vert-to-left {
-    transform-origin: center center;
-    animation-duration: 600ms;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-name: to-45-left;
-    animation-fill-mode: forwards;
+.vert-to-right {
+    animation-name: to-45-right;
 }
+
+.vert-to-left {
+    animation-name: to-45-left;
+}
+
+.rot-to-left {
+    animation-name: to-90-left;
+}
+
+.rot-to-right {
+    animation-name: to-90-right;
+}
+
 

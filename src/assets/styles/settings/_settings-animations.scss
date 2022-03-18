@@ -122,6 +122,23 @@
       transform: rotate(-45deg);
     }
 }
+
+@keyframes to-90-right {
+    from {
+    }
+    to {
+      transform: rotate(90deg);
+    }
+}
+
+@keyframes to-90-left {
+    from {
+    }
+    to {
+      transform: rotate(-90deg);
+    }
+}
+
 // album animations
 /* first image */
 @keyframes image1 {

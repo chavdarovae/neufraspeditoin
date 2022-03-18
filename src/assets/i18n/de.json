@@ -55,7 +55,7 @@
         "aboutUs" : "entreprise"
     },
     "footer" : {
-        "entreprise" : "entreprise",
+        "entreprise" : "impressum",
         "privacy" : "datenschutz"
     }
 }
