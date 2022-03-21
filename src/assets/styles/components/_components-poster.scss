@@ -4,18 +4,18 @@
     &__img {
         position: relative;
         width: 100vw;
-        height: 180px;
+        height: $poster-height-phone;
 
         @include for-tablet-portrait-up  {
-            height: 250px;
+            height: $poster-height-tablet-portrait;
         }
 
         @include for-tablet-landscape-up {
-            height: 350px;
+            height: $poster-height-tablet-landscape;
         }
 
         @include for-desktop-up {
-            height: 450px;
+            height: $poster-height-desktop;
         }
        
         &-pic {
@@ -24,7 +24,13 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #cccccc; /* Used if the image is unavailable */
-            width: 100vw; /* You must set a specified height */
+            width: 100%;
+            height: 100%;
+
+            @include for-tablet-portrait-up  {
+                width: 100vw;
+                height: auto;
+            }
         }
 
         &-title {

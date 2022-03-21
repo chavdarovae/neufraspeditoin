@@ -1,0 +1,22 @@
+@import "../../assets/styles/settings/settings-breakpoints";
+
+.locations__info {
+   margin-bottom: 50px;
+}
+.locations__map {
+    height: 500px;
+    width: 100%;  /* This is really important*/
+
+    @include for-tablet-portrait-up {
+   
+    }
+
+    @include for-tablet-landscape-up {
+        height: 700px;
+    
+    }
+
+    @include for-desktop-up {
+       
+    }
+}
