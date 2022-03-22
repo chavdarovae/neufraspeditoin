@@ -1,7 +1,7 @@
 <div class="header row row--centered">
     <div class="container">
         <a routerLink="/home" class="header__logo logo show-on-moobile">
-            <div class="logo__img"><img [src]="logoPath" alt="Logo Neufra" (click)="onNavClick('home')"></div>
+            <div class="logo__img"><img [src]="imgPrefix + 'Logo Neufra.jpg'" alt="Logo Neufra"></div>
         </a>
         <input type="checkbox" class="header__mini-menu-toggle" id="menu-toggle">
         <label #menuToggle class="header__burger-menu" for="menu-toggle">
@@ -19,35 +19,30 @@
                 <!-- unternehmen -->
                 <a routerLink="/unternehmen" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'unternehmen'}" 
-                (click)="onNavClick('unternehmen'); menuToggle.click()"
                 translate="header.aboutUs"></a>
             </li>
             <!-- standorte -->
             <li class="menu__item">
                 <a routerLink="/standorte" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'standorte'}" 
-                (click)="onNavClick('standorte'); menuToggle.click()"
                 translate="header.locations"></a>
             </li>
             <!-- dienstleistungen -->
             <li class="menu__item">
                 <a routerLink="/dienstleistungen" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'dienstleistungen'}" 
-                (click)="onNavClick('dienstleistungen'); menuToggle.click()"
                 translate="header.services"></a>
             </li>
             <!-- karriere -->
             <li class="menu__item">
                 <a routerLink="/karriere" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'karriere'}" 
-                (click)="onNavClick('karriere'); menuToggle.click()"
                 translate="header.career"></a>
             </li>
             <!-- transportunternehmer -->
             <li class="menu__item">
                 <a routerLink="/transportunternehmer" class="menu__item-link" 
                 [ngClass]="{'menu__item-link--active': activeTab === 'transportunternehmer'}" 
-                (click)="onNavClick('transportunternehmer'); menuToggle.click()"
                 translate="header.transportCompany"></a>
             </li>
             <!-- impressum - datenschutz -->
@@ -66,7 +61,7 @@
     <div class="header__img poster">
         <div class="poster__img">
             <h1 class="poster__img-title">{{('header.' + pageTitle) | translate}}</h1>
-            <img class="poster__img-pic"[src]="imgPath" alt="Poster photo">
+            <img class="poster__img-pic"[src]="imgPrefix + 'poster-' + activeTab + '.jpg'" alt="Poster photo">
         </div>
     </div>
 </div>

@@ -1,7 +1,9 @@
 import { AgmCoreModule } from '@agm/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { KarriereComponent } from './karriere/karriere.component';
 import { NichtGefundenComponent } from './nicht-gefunden/nicht-gefunden.component';
+import { StandortDetailsComponent } from './standorte/standort-details/standort-details.component';
 import { StandorteComponent } from './standorte/standorte.component';
 import { TransportunternehmerComponent } from './transportunternehmer/transportunternehmer.component';
 import { UnternehmenComponent } from './unternehmen/unternehmen.component';
@@ -33,10 +36,12 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     NichtGefundenComponent,
     ImpressumComponent,
     DatenschutzComponent,
-    HomeComponent
+    HomeComponent,
+    StandortDetailsComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
     HttpClientModule,
@@ -50,7 +55,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     }),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB-jVX7UdfSbG-2ikeioqnuCKhV02KQm6A'
-    })
+    }),
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

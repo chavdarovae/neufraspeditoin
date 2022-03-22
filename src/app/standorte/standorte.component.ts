@@ -1,5 +1,7 @@
 import { Component, isDevMode, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { locationList } from 'src/assets/files/loactions';
+import { StandortDetailsComponent } from './standort-details/standort-details.component';
 
 @Component({
 	selector: 'app-standorte',
@@ -9,7 +11,7 @@ import { locationList } from 'src/assets/files/loactions';
 export class StandorteComponent implements OnInit {
 	mapLat = 48.5;
 	mapLng = 13.6880;
-	mapZoom = 5.5;
+	mapZoom = 0;
 	mapStyle: any;
 	locations = locationList;
 	urlPrefix = isDevMode() ? '../../' : './';
@@ -20,13 +22,15 @@ export class StandorteComponent implements OnInit {
 	}
 	
 
-	constructor() { }
+	constructor( private matDialog: MatDialog ) {
+		
+	}
 
 	ngOnInit(): void {
+		this.mapZoom = 5.5;
 		if (window.innerWidth < 500) {
 			this.mapLat = 50.3;
 			this.mapLng = 10;
-			// this.mapZoom = 6;
 		}
 		
 		this.mapStyle = [
@@ -200,5 +204,8 @@ export class StandorteComponent implements OnInit {
 			}
 		];
 	}
-
+	
+	showLocationDetails(location: any) {
+		this.matDialog.open(StandortDetailsComponent);
+	}
 }
