@@ -10,59 +10,59 @@ import { TransportunternehmerComponent } from './transportunternehmer/transportu
 import { UnternehmenComponent } from './unternehmen/unternehmen.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    // pathMath: 'full',
-    component: HomeComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'unternehmen',
-    component: UnternehmenComponent,
-    data: {}
-  },
-  {
-    path: 'standorte',
-    component: StandorteComponent,
-    data: {}
-  },
-  {
-    path: 'unternehmen',
-    component: UnternehmenComponent,
-    data: {}
-  },
-  {
-    path: 'karriere',
-    component: KarriereComponent,
-    data: {}
-  },
-  {
-    path: 'dienstleistungen',
-    component: DienstleistungenComponent,
-    data: {}
-  },
-  {
-    path: 'transportunternehmer',
-    component: TransportunternehmerComponent,
-    data: {}
-  },
-  {
-    path: 'impressum',
-    component: ImpressumComponent,
-    data: {}
-  },
-  {
-    path: 'datenschutz',
-    component: DatenschutzComponent,
-    data: {}
-  },
-  {
-    path: '**',
-    component: NichtGefundenComponent
-  },
+	{
+		path: 'home',
+		component: HomeComponent
+	},
+	{
+		path: 'unternehmen',
+		component: UnternehmenComponent,
+		data: {}
+	},
+	{
+		path: 'standorte',
+		component: StandorteComponent,
+		data: {}
+	},
+	{
+		path: 'unternehmen',
+		component: UnternehmenComponent,
+		data: {}
+	},
+	{
+		path: 'karriere',
+		component: KarriereComponent,
+		data: {}
+	},
+	{
+		path: 'dienstleistungen',
+		component: DienstleistungenComponent,
+		data: {}
+	},
+	{
+		path: 'transportunternehmer',
+		component: TransportunternehmerComponent,
+		data: {}
+	},
+	{
+		path: 'impressum',
+		component: ImpressumComponent,
+		data: {}
+	},
+	{
+		path: 'datenschutz',
+		component: DatenschutzComponent,
+		data: {}
+	},
+	{
+		path: '',
+		pathMatch: 'prefix', //default
+		redirectTo: 'home'
+	},
+	{
+		path: '**',
+		component: NichtGefundenComponent
+	},
 ];
 
 export const AppRoutingModule = RouterModule.forRoot(routes);
