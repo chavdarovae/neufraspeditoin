@@ -1,22 +1,51 @@
 @import "../../assets/styles/settings/settings-breakpoints";
 
 .locations__info {
-   margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 .locations__map {
-    height: 500px;
-    width: 100%;  /* This is really important*/
+    height: 350px;
+    overflow: hidden;
+    position: relative;
 
     @include for-tablet-portrait-up {
-   
+        height: 400px;
     }
 
     @include for-tablet-landscape-up {
-        height: 700px;
-    
+        height: 450px;
     }
 
     @include for-desktop-up {
-       
+        height: 700px;
     }
+
+    .map {
+        width: 250%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-37%, -63%);
+
+        @include for-tablet-portrait-up {
+            width: 150%;
+            transform: translate(-50%, -60%);
+        }
+
+        @include for-tablet-landscape-up {
+            width: 125%;
+            transform: translate(-50%, -60%);
+        }
+
+        @include for-desktop-up {
+            width: 110%;
+            transform: translate(-50%, -60%);
+        }
+    }
+}
+
+.imp-wrap.imp-sticky-tooltips {
+    max-width: 2560px !important;
+    max-height: unset !important;
+    width: 100% !important;
 }
