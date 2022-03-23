@@ -1,5 +1,6 @@
-import { Component, isDevMode, OnInit } from '@angular/core';
+import { Component, isDevMode, OnInit, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ScriptService } from '../shared/script.service';
 import { StandortDetailsComponent } from './standort-details/standort-details.component';
 
 @Component({
@@ -10,14 +11,17 @@ import { StandortDetailsComponent } from './standort-details/standort-details.co
 export class StandorteComponent implements OnInit {
 	urlPrefix = isDevMode() ? '../../' : './';
 
-	constructor( private matDialog: MatDialog) {
-		
-	}
+	constructor(
+		private matDialog: MatDialog,
+		private renderer: Renderer2,
+		private scriptService: ScriptService
+	) {}
 
 	ngOnInit(): void {
-
+		// loads the map script
+		this.scriptService.loadJsScript(this.renderer, '../../assets/image-map-pro/map.js');
 	}
-	
+
 	showLocationDetails(location: any) {
 		this.matDialog.open(StandortDetailsComponent);
 	}
