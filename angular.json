@@ -43,6 +43,7 @@
             "scripts": [
               "src/assets/image-map-pro/js/lib/jquery.min.js",
               "src/assets/image-map-pro/js/image-map-pro.min.js",
+              "src/assets/image-map-pro/input.js"
             ]
           },
           "configurations": {

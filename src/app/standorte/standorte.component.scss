@@ -4,42 +4,42 @@
     margin-bottom: 50px;
 }
 .locations__map {
-    height: 350px;
+    height: 450px;
     overflow: hidden;
     position: relative;
 
     @include for-tablet-portrait-up {
-        height: 400px;
+        height: 500px;
     }
 
     @include for-tablet-landscape-up {
-        height: 450px;
+        height: 600px;
     }
 
     @include for-desktop-up {
-        height: 700px;
+        height: 750px;
     }
 
     .map {
-        width: 250%;
+        width: 400%;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-37%, -63%);
+        transform: translate(-43%, -59%);
 
         @include for-tablet-portrait-up {
-            width: 150%;
-            transform: translate(-50%, -60%);
+            width: 200%;
+            transform: translate(-40%, -63%);
         }
 
         @include for-tablet-landscape-up {
-            width: 125%;
-            transform: translate(-50%, -60%);
+            width: 175%;
+            transform: translate(-37%, -63%);
         }
 
         @include for-desktop-up {
-            width: 110%;
-            transform: translate(-50%, -60%);
+            width: 120%;
+            transform: translate(-34%, -60%);
         }
     }
 }
