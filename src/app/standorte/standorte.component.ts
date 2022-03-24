@@ -18,7 +18,8 @@ export class StandorteComponent implements OnInit {
 	) {}
 
 	ngOnInit(): void {
-		const scriptElement = this.scriptService.loadJsScript(this.renderer, (this.urlPrefix + 'assets/image-map-pro/map.js'));
+		this.scriptService.loadJsScript(this.renderer, (this.urlPrefix + 'assets/image-map-pro/input.js'));
+		this.scriptService.loadJsScript(this.renderer, (this.urlPrefix + 'assets/image-map-pro/map.js'));
 	}
 
 	showLocationDetails(location: any) {
