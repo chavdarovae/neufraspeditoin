@@ -60,5 +60,9 @@
     "footer" : {
         "aboutUs": "impressum",
         "dataPrivacy": "datenschutz"
+    },
+    "more" : {
+        "aboutUs": "impressum",
+        "dataPrivacy": "datenschutz"
     }
 }
