@@ -1,13 +1,15 @@
 {
     "header": {
         "home": "Herzlich willkommen bei NEUFRA",
-        "aboutUs": "unternehmen",
+        "company": "unternehmen",
         "locations": "standorte",
         "services": "dienstleistungen",
         "career": "karriere",
-        "transportCompany": "transportunternehmer"
+        "transportCompany": "transportunternehmer",
+        "aboutUs": "impressum",
+        "dataPrivacy": "datenschutz"
     },
-    "aboutUs" : {
+    "company" : {
         "expericence" : {
             "title": "Über 40 Jahre Speditionserfahrung",
             "info": "Seit 1979 übernehmen wir Komplett- und Teilladungen, optimieren deren Zusammenstellung und distribuieren die Sendungen mit ausgesuchten überprüften Transportunternehmen zu ihrem jeweiligen Beistimmungsort."
@@ -56,7 +58,7 @@
         "aboutUs" : "entreprise"
     },
     "footer" : {
-        "entreprise" : "impressum",
-        "privacy" : "datenschutz"
+        "aboutUs": "impressum",
+        "dataPrivacy": "datenschutz"
     }
 }

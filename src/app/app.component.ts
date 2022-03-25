@@ -30,7 +30,7 @@ export class AppComponent {
 		// Set default language
 		translate.setDefaultLang('de');
 		translate.use('de');
-		
+
 		// decide what to do when this event is triggered.
 		router.events.subscribe(() => {
 			const currUrl: string = window.location.href;
@@ -42,7 +42,7 @@ export class AppComponent {
 		switch (this.activeTab) {
 			case 'home': this.pageTitle = 'home'
 				break;
-			case 'unternehmen': this.pageTitle = 'aboutUs'
+			case 'unternehmen': this.pageTitle = 'company'
 				break;
 			case 'standorte': this.pageTitle = 'locations'
 				break;
@@ -51,6 +51,10 @@ export class AppComponent {
 			case 'karriere': this.pageTitle = 'career'
 				break;
 			case 'transportunternehmer': this.pageTitle = 'transportCompany'
+				break;
+			case 'impressum': this.pageTitle = 'aboutUs'
+				break;
+			case 'datenschutz': this.pageTitle = 'dataPrivacy'
 				break;
 		}
 	}

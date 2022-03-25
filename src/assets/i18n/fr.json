@@ -1,12 +1,15 @@
 {
     "header" : {
-        "aboutUs" : "société",
+        "home" : "Bienvenue chez NEUFRA",
+        "company" : " société ",
         "locations" : "sites",
         "services" : "services",
         "career" : "carrière",
-        "transportCompany" : "transporteur"
+        "transportCompany" : "entreprise de transport",
+        "aboutUs" : "mentions légales",
+        "dataPrivacy" : "protection des données"
     },
-    "aboutUs" : {
+    "company" : {
         "expericence" : {
             "title" : "Plus de 40 ans d'expérience dans le transport",
             "info" : "Depuis 1979, nous prenons en charge des chargements complets et partiels, optimisons leur composition et distribuons les envois avec des transporteurs sélectionnés et contrôlés vers leur destination respective."
@@ -55,7 +58,7 @@
         "aboutUs" : "entreprise"
     },
     "footer" : {
-        "entreprise" : "entreprise",
-        "privacy" : "protection des données"
+        "aboutUs" : "entreprise",
+        "dataPrivacy" : "protection des données"
     }
 }

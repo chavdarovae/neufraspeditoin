@@ -25,11 +25,6 @@ const routes: Routes = [
 		data: {}
 	},
 	{
-		path: 'unternehmen',
-		component: UnternehmenComponent,
-		data: {}
-	},
-	{
 		path: 'karriere',
 		component: KarriereComponent,
 		data: {}

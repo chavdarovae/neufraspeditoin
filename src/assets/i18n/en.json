@@ -1,12 +1,15 @@
 {
     "header": {
-        "aboutUs": "company",
+        "home": "welcome to NEUFRA",
+        "company": "company",
         "locations": "locations",
         "services": "services",
         "career": "career",
-        "transportCompany": "transport company"
+        "transportCompany": "transport company",
+        "aboutUs": "about us",
+        "dataPrivacy": "data privacy"
     },
-    "aboutUs" : {
+    "company" : {
         "expericence" : {
             "title": "Over 40 years of freight forwarding experience",
             "info": "Since 1979, we have been taking on full and partial loads, optimizing their composition and distributing the shipments to their respective destinations with selected vetted carriers."
@@ -55,7 +58,7 @@
         "aboutUs" : "entreprise"
     },
     "footer" : {
-        "entreprise" : "entreprise",
-        "privacy" : "privacy"
+        "aboutUs": "about us",
+        "dataPrivacy": "data privacy"
     }
 }
