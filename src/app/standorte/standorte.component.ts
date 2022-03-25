@@ -15,7 +15,7 @@ export class StandorteComponent implements OnInit {
 		private matDialog: MatDialog,
 		private renderer: Renderer2,
 		private scriptService: ScriptService
-	) {}
+	) { }
 
 	ngOnInit(): void {
 		// this.scriptService.loadJsScript(this.renderer, (this.urlPrefix + 'assets/image-map-pro/input.js'));
@@ -23,6 +23,9 @@ export class StandorteComponent implements OnInit {
 	}
 
 	showLocationDetails(location: any) {
-		this.matDialog.open(StandortDetailsComponent);
+		this.matDialog.open(StandortDetailsComponent, {
+			data: { location: location },
+		});
+
 	}
 }

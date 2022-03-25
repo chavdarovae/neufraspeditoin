@@ -3,7 +3,7 @@ var inputCode = {
     "editor": {
         "previewMode": 1,
         "tool": "select",
-        "zoom": 3,
+        "zoom": 2,
         "shapeCounter": {
             "ovals": 2,
             "texts": 1,
@@ -27,7 +27,7 @@ var inputCode = {
     },
     "zooming": {
         "enable_zooming": 1,
-        "max_zoom": 4,
+        "max_zoom": 2,
         "enable_zoom_buttons": 0
     },
     "spots": [{
