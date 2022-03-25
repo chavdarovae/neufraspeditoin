@@ -1,7 +1,7 @@
 <div class="header row row--centered">
     <div class="container">
         <a routerLink="/home" class="header__logo logo show-on-moobile">
-            <div class="logo__img"><img [src]="imgPrefix + 'Logo Neufra.jpg'" alt="Logo Neufra" (click)="menuToggle.click()"></div>
+            <div class="logo__img"><img [src]="imgPrefix + 'Logo Neufra.jpg'" alt="Logo Neufra"></div>
         </a>
         <input type="checkbox" class="header__mini-menu-toggle" id="menu-toggle">
         <label #menuToggle class="header__burger-menu" for="menu-toggle">
@@ -47,10 +47,8 @@
             </li>
             <!-- impressum - datenschutz -->
             <li class="menu__item menu__item--footer show-on-mobile" (click)="menuToggle.click()">
-                <a routerLink="/impressum" class="menu__item-link"
-                    (click)=" menuToggle.click()" translate="footer.entreprise"></a>
-                <a routerLink="/datenschutz" class="menu__item-link"
-                    (click)=" menuToggle.click()"  translate="footer.privacy"></a>
+                <a routerLink="/impressum" class="menu__item-link" translate="footer.aboutUs"></a>
+                <a routerLink="/datenschutz" class="menu__item-link" translate="footer.dataPrivacy"></a>
             </li>
             <li class="menu__item  hide-on-mobile" (click)="menuToggle.click()">
                 <ng-container *ngTemplateOutlet="languageBar"></ng-container>
