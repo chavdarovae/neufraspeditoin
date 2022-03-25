@@ -32,6 +32,12 @@
         row-gap: 5px;
         column-gap: 10px;
 
+        @include for-tablet-portrait-up {
+            grid-template-columns: 1fr 170px 110px;
+            row-gap: 30px;
+            column-gap: 30px;
+        }
+
         @include for-desktop-up {
             grid-template-columns: 1fr 350px 30px;
             row-gap: 30px;
@@ -42,9 +48,19 @@
     &__header {
         padding: 10px 10px;
         border-bottom: 3px solid $primary;
+        grid-template-areas: 
+            "headerTitle headerLocation";
+
+        @include for-tablet-portrait-up  {
+            padding: 10px 20px;
+            grid-template-areas: 
+            "headerTitle . headerLocation";
+        }
 
         @include for-desktop-up {
             padding: 10px 30px;
+            grid-template-areas: 
+            "headerTitle headerLocation headerLocation";
         }
 
         i {
@@ -64,6 +80,13 @@
             "title location"
             "title toggle";
 
+            @include for-tablet-portrait-up  {
+                padding: 20px 30px 15px 20px;
+                grid-template-areas: 
+                "title title location"
+                "title title toggle";
+            }
+
             @include for-desktop-up {
                 padding: 20px 30px 15px 30px;
                 grid-template-areas: 
@@ -80,6 +103,15 @@
             "offer offer"
             "partner partner";
 
+            @include for-tablet-portrait-up {
+                padding: 0 20px 30px 20px;
+                grid-template-areas: 
+                "descripion descripion descripion"
+                "tasks tasks tasks"
+                "requirements requirements requirements"
+                "offer partner partner";
+            }
+
             @include for-desktop-up {
                 padding: 0 30px 30px 30px;
                 grid-template-areas: 
@@ -88,6 +120,14 @@
                 "requirements requirements requirements"
                 "offer partner partner";
             }
+        }
+
+        &__header-title {
+            grid-area: headerTitle;
+        }
+
+        &__header-location {
+            grid-area: headerLocation;
         }
         
         &__title {
