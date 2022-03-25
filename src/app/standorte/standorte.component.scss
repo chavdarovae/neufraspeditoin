@@ -38,8 +38,13 @@
         }
 
         @include for-desktop-up {
+            width: 150%;
+            transform: translate(-43%, -62%);
+        }
+
+        @include for-big-desktop-up {
             width: 120%;
-            transform: translate(-34%, -60%);
+            transform: translate(-43%, -62%);
         }
     }
 }

@@ -1,6 +1,7 @@
 var inputCode = {
     "id": 2157,
     "editor": {
+        "previewMode": 1,
         "tool": "select",
         "zoom": 3,
         "shapeCounter": {
@@ -23,6 +24,11 @@ var inputCode = {
     "tooltips": {
         "enable_tooltips": 0,
         "sticky_tooltips": 1
+    },
+    "zooming": {
+        "enable_zooming": 1,
+        "max_zoom": 4,
+        "enable_zoom_buttons": 0
     },
     "spots": [{
         "id": "path-7644",
@@ -7507,13 +7513,13 @@ var inputCode = {
         "width_image_background": 0.4,
         "height_image_background": 0.511,
         "default_style": {
-            "background_color": "#EBEBEB",
+            "background_color": "#c0dbcb",
             "background_opacity": 1,
             "stroke_opacity": 1,
             "stroke_width": 1
         },
         "mouseover_style": {
-            "background_color": "#EBEBEB",
+            "background_color": "#c0dbcb",
             "background_opacity": 1,
             "stroke_opacity": 1,
             "stroke_width": 1
@@ -7552,13 +7558,13 @@ var inputCode = {
         "width_image_background": 0.25,
         "height_image_background": 0.297,
         "default_style": {
-            "background_color": "#EBEBEB",
+            "background_color": "#c0dbcb",
             "background_opacity": 1,
             "stroke_opacity": 1,
             "stroke_width": 1
         },
         "mouseover_style": {
-            "background_color": "#EBEBEB",
+            "background_color": "#c0dbcb",
             "background_opacity": 1,
             "stroke_opacity": 1,
             "stroke_width": 1
@@ -7669,6 +7675,114 @@ const locations = [
         x: 17.654,
         y: 77.345,
         id: 12
+    },
+    {
+        name: 'Dresden',
+        x: 41.838,
+        y: 54.924,
+        id: 13
+    },
+    {
+        name: 'Leipzig',
+        x: 39.523,
+        y: 54.532,
+        id: 14
+    },
+    {
+        name: 'Magdeburg',
+        x: 38.855,
+        y: 52.429,
+        id: 15
+    },
+    {
+        name: 'Hannover',
+        x: 36.051,
+        y: 51.133,
+        id: 16
+    },
+    {
+        name: 'Bielefeld',
+        x: 34.715,
+        y: 51.881,
+        id: 17
+    },
+    {
+        name: 'Kassel',
+        x: 35.619,
+        y: 53.236,
+        id: 18
+    },
+    {
+        name: 'Erfurt',
+        x: 37.034,
+        y: 54.544,
+        id: 19
+    },
+    {
+        name: 'Frankfurt',
+        x: 34.676,
+        y: 56.74,
+        id: 20
+    },
+    {
+        name: 'Saarbrücken',
+        x: 31.924,
+        y: 58.048,
+        id: 21
+    },
+    {
+        name: 'Mannheim',
+        x: 33.496,
+        y: 57.814,
+        id: 22
+    },
+    {
+        name: 'Kiel',
+        x: 32.985,
+        y: 62.627,
+        id: 23
+    },
+    {
+        name: 'Stuttgart',
+        x: 34.439,
+        y: 60.898,
+        id: 24
+    },
+    {
+        name: 'Memmingen',
+        x: 36.208,
+        y: 62.907,
+        id: 25
+    },
+    {
+        name: 'München',
+        x: 38.606,
+        y: 62.44,
+        id: 26
+    },
+    {
+        name: 'Deggendorf',
+        x: 40.139,
+        y: 60.478,
+        id: 27
+    },
+    {
+        name: 'Nünrberg',
+        x: 37.977,
+        y: 59.543,
+        id: 28
+    },
+    {
+        name: 'Würzburg',
+        x: 36.601,
+        y: 57.534,
+        id: 29
+    },
+    {
+        name: 'Bregenz',
+        x: 37.387,
+        y: 65.29,
+        id: 30
     }
 ]
 locations.forEach(loc => {
@@ -7678,8 +7792,8 @@ locations.forEach(loc => {
         "type": "oval",
         "x": loc.x,
         "y": loc.y,
-        "width": 1.1,
-        "height": 1.1*1.18,
+        "width": 1,
+        "height": 1*1.18,
         "x_image_background": loc.x,
         "y_image_background": loc.y,
         "width_image_background": 0.518,
@@ -7722,14 +7836,14 @@ locations.forEach(loc => {
         "id": "text-" + (4601 + loc.id),
         "title": loc.name + "Name",
         "type": "text",
-        "x": loc.x - 0.2,
-        "y": loc.y + 1.3,
-        "x_image_background": loc.x - 0.2,
-        "y_image_background": loc.y + 1.3,
+        "x": loc.x - 0.1,
+        "y": loc.y + 1.2,
+        "x_image_background": loc.x - 0.1,
+        "y_image_background": loc.y + 1.2,
         "text": {
             "text": loc.name,
             "font_family": "Roboto",
-            "font_size": 9
+            "font_size": 7
         },
         "tooltip_content": {
             "squares_settings": {
@@ -7755,4 +7869,5 @@ locations.forEach(loc => {
     inputCode.spots.push(dot)
     inputCode.spots.push(dotName)
 });
+console.log(inputCode);
 
