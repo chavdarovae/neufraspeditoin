@@ -45,13 +45,39 @@
             background-color: rgba($primary, 0.8);
             clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
             font-size: 1.5*$font-size-base;
-            
-            
+
             @include for-desktop-up {
-                padding: 25px 50px;
+                padding: 10px 50px;
                 font-size: 2.5*$font-size-base;
             }
         }
-    }
 
+        &-title--primary,
+        &-title--secondary  {
+            display: none;
+            text-transform: none;
+            left: unset;
+            right: 30px;
+            transform: translateY(-30px);
+
+            @include for-tablet-portrait-up {
+                display: block;
+                right: calc((100vw - $container-width-desktop)/2 + 50px);
+            }
+
+            @include for-desktop-up {
+                // right: calc((100vw - $container-width-desktop)/2 + 50px);
+            }
+        }
+
+        &-title--secondary {
+            transform: translateY(30px);
+            font-size: 1.1*$font-size-base;
+            font-weight: $font-weight-normal;
+
+            @include for-desktop-up {
+                font-size: 1.7*$font-size-base;
+            }
+        }
+    }
 }

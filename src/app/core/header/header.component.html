@@ -58,7 +58,8 @@
     </div>
     <div class="header__img poster">
         <div class="poster__img">
-            <h1 class="poster__img-title">{{('header.' + pageTitle) | translate}}</h1>
+            <h1 class="poster__img-title" [ngClass]="{'poster__img-title--primary': activeTab === 'home'}" >{{('header.' + pageTitle) | translate}}</h1>
+            <h1 *ngIf="activeTab === 'home'" class="poster__img-title" [ngClass]="{'poster__img-title--secondary': activeTab === 'home'}">{{'header.home-subtitle' | translate}}</h1>
             <img class="poster__img-pic"[src]="imgPrefix + 'poster-' + activeTab + '.jpg'" alt="Poster photo">
         </div>
     </div>

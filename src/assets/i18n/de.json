@@ -1,6 +1,7 @@
 {
     "header": {
-        "home": "Herzlich willkommen bei NEUFRA",
+        "home": "Herzlich willkommen bei NEUFRA,",
+        "home-subtitle": "dem Dienstleister für Spediteure.",
         "company": "unternehmen",
         "locations": "standorte",
         "services": "dienstleistungen",
@@ -20,7 +21,7 @@
         },
         "sustainable" : {
             "title": "Alles aus einer Hand",
-            "info": "Wir bringen nicht nur Ihre Sendung ans Ziel, wir kontrollieren auch alle Lademittelbewegungen und sorgen bei Lademittelschulden für eine zeitnahe Rückführung. Sollte mal ein Schaden entstehen, werden etwaige Ersatzansprüche unverzüglich bearbeitet. Bei komplizierten Schadensereignissen kooperieren wir hierbei mit unserer Tochtergesellschaft GSS Güter-Schaden-Service GmbH.(Den Firmennamen der GSS bitte als Link zur Homepage darstellen:"
+            "info": "Wir bringen nicht nur Ihre Sendung ans Ziel, wir kontrollieren auch alle Lademittelbewegungen und sorgen bei Lademittelschulden für eine zeitnahe Rückführung. Sollte mal ein Schaden entstehen, werden etwaige Ersatzansprüche unverzüglich bearbeitet. Bei komplizierten Schadensereignissen kooperieren wir hierbei mit unserer Tochtergesellschaft GSS Güter-Schaden-Service GmbH.(Den Firmennamen der GSS bitte als Link zur Homepage darstellen: <a href='http://p186026.webspaceconfig.de/home/'>http://p186026.webspaceconfig.de/home/</a>"
         },
         "specialty" : {
             "title": "Spezialist in LKW-Verkehren",

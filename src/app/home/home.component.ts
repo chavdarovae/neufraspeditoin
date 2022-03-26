@@ -10,13 +10,13 @@ export class HomeComponent implements OnInit {
   urlPrefix = isDevMode() ? '../../' : './';
 
   constructor(private router: Router) {
-    
+
   }
-  
+
   ngOnInit(): void {
   }
 
   showDetails(goToSection: string) {
-    this.router.navigate(['/unternehmen']);
+    this.router.navigate(['/unternehmen'], {queryParams: { goToSection }});
   }
 }

@@ -1,16 +1,28 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, isDevMode, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-unternehmen',
-  templateUrl: './unternehmen.component.html',
-  styleUrls: ['./unternehmen.component.scss']
+	selector: 'app-unternehmen',
+	templateUrl: './unternehmen.component.html',
+	styleUrls: ['./unternehmen.component.scss']
 })
 export class UnternehmenComponent implements OnInit {
-  urlPrefix = isDevMode() ? '../../' : './';
+	urlPrefix = isDevMode() ? '../../' : './';
+	target: string;
 
-  constructor() { }
+	constructor(
+		private activatedRoute: ActivatedRoute,
+		private scroller: ViewportScroller
+	) { }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+		this.activatedRoute.queryParams.subscribe(params => {
+			this.target = params['goToSection'] ? params['goToSection'] : '';
+		});
+	}
 
+	ngAfterViewInit(): void {
+		this.scroller.scrollToAnchor(this.target);
+	}
 }

@@ -1,7 +1,7 @@
 <div class="container">
     <section  class="card-holder">
         <!-- Über 40 Jahre Speditionserfahrung -->
-        <article class="card card--green card--big">
+        <article class="card card--green card--big" id="speditionserfahrung">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/medal.svg'"/>
             </div>
@@ -9,7 +9,7 @@
             <div class="card__info" translate="company.expericence.info"></div>
         </article>
 
-        <article class="card card--gray">
+        <article class="card card--gray" id="partner">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/handshake.svg'"/>
             </div>
@@ -17,17 +17,17 @@
             <div class="card__info" translate="company.partner.info"></div>
         </article>
 
-        <article class="card card--gray  card--big">
+        <article class="card card--gray card--big" id="hand">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/globe.svg'"/>
             </div>
             <h2 translate="company.sustainable.title"></h2>
-            <div class="card__info" translate="company.sustainable.info">
+            <div class="card__info" [innerHtml]="'company.sustainable.info' | translate">
             </div>
-            <!-- <a href="http://p186026.webspaceconfig.de/home/">http://p186026.webspaceconfig.de/home/</a> -->
+            <!--  -->
         </article>
         <!-- Spezialist in LKW-Verkehren -->
-        <article class="card card--green">
+        <article class="card card--green" id="spezialist">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/lorry.svg'"/>
             </div>
@@ -35,7 +35,7 @@
             <div class="card__info"  translate="company.specialty.info"></div>
         </article>
         <!-- Direkttransport ohne Umladung -->
-        <article class="card card--green">
+        <article class="card card--green" id="direkttransport">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/route.svg'"/>
             </div>
@@ -43,7 +43,7 @@
             <div class="card__info" translate="company.direct-transportation.info"></div>
         </article>
         <!-- Auf Wunsch Sendungsverfolgung -->
-        <article class="card card--gray">
+        <article class="card card--gray" id="sendungsverfolgung">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/tracking.svg'"/>
             </div>
@@ -51,7 +51,7 @@
             <div class="card__info" translate="company.shipment-tracking.info"></div>
         </article>
         <!-- Partner für eine digitale Zukunft -->
-        <article class="card card--gray">
+        <article class="card card--gray" id="digital">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/network.svg'"/>
             </div>

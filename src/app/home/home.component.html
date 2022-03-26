@@ -1,54 +1,57 @@
+<div class="column show-on-mobile title">
+    <h1 class="">{{'header.home' | translate}} <span>{{'header.home-subtitle' | translate}}</span></h1>
+</div>
 <div class="container">
-    <h2 class="container__title">Sieben gute Gründe für NEUFRA</h2>
+    <h2 class="container__subtitle">Sieben gute Gründe für NEUFRA</h2>
     <section  class="card-holder">
         <!-- Über 40 Jahre Speditionserfahrung -->
         <article (click)="showDetails('speditionserfahrung')" class="card">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/medal.svg'"/>
             </div>
-            <h4 class="card__title" translate="aboutUs.expericence.title"></h4>
+            <h4 class="card__title" translate="company.expericence.title"></h4>
         </article>
         <!-- Partner -->
         <article (click)="showDetails('partner')" class="card">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/handshake-white.svg'"/>
             </div>
-            <h4 class="card__title" translate="aboutUs.partner.title"></h4>
+            <h4 class="card__title" translate="company.partner.title"></h4>
         </article>
         <!-- hand -->
         <article (click)="showDetails('hand')" class="card">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/globe-white.svg'"/>
             </div>
-            <h4 class="card__title" translate="aboutUs.sustainable.title"></h4>
+            <h4 class="card__title" translate="company.sustainable.title"></h4>
         </article>
         <!-- Spezialist in LKW-Verkehren -->
         <article (click)="showDetails('spezialist')" class="card">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/lorry.svg'"/>
             </div>
-            <h4 class="card__title" translate="aboutUs.specialty.title"></h4>
+            <h4 class="card__title" translate="company.specialty.title"></h4>
         </article>
         <!-- Direkttransport ohne Umladung -->
         <article (click)="showDetails('direkttransport')" class="card">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/route.svg'"/>
             </div>
-            <h4 class="card__title" translate="aboutUs.direct-transportation.title"></h4>
+            <h4 class="card__title" translate="company.direct-transportation.title"></h4>
         </article>
         <!-- Auf Wunsch Sendungsverfolgung -->
         <article (click)="showDetails('sendungsverfolgung')" class="card">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/tracking-white.svg'"/>
             </div>
-            <h4 class="card__title" translate="aboutUs.shipment-tracking.title"></h4>
+            <h4 class="card__title" translate="company.shipment-tracking.title"></h4>
         </article>
         <!-- Partner für eine digitale Zukunft -->
         <article (click)="showDetails('digital')" class="card">
             <div class="card__svg">
                 <img [src]="urlPrefix + 'assets/icons/network-white.svg'"/>
             </div>
-            <h4 class="card__title" translate="aboutUs.digitalisation-partner.title"></h4>
+            <h4 class="card__title" translate="company.digitalisation-partner.title"></h4>
         </article>
     </section>
 </div>
