@@ -1,16 +1,16 @@
 @import "../settings/settings-breakpoints";
 
 .show-on-mobile {
-    display: flex;
+    display: flex !important;
 
-    @include for-desktop-up {
-        display: none;
+    @include for-tablet-portrait-up {
+        display: none !important;
     }
 }
 
 .hide-on-mobile {
-    display: none;
-    @include for-desktop-up {
-        display: flex;
+    display: none !important;
+    @include for-tablet-portrait-up {
+        display: flex !important;
     }
 }

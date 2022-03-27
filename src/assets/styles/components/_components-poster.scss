@@ -1,12 +1,17 @@
 @import "../app-variables";
 @import "../settings/settings-breakpoints";
+
 .poster {
     &__img {
         position: relative;
         width: 100vw;
         height: $poster-height-phone;
 
-        @include for-tablet-portrait-up  {
+        &--home {
+            height: calc(100vh - $header-height-phone);
+        }
+
+        @include for-tablet-portrait-up {
             height: $poster-height-tablet-portrait;
         }
 
@@ -17,17 +22,18 @@
         @include for-desktop-up {
             height: $poster-height-desktop;
         }
-       
+
         &-pic {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #cccccc; /* Used if the image is unavailable */
+            background-color: #cccccc;
+            /* Used if the image is unavailable */
             height: 100%;
             width: auto;
 
-            @include for-tablet-portrait-up  {
+            @include for-tablet-portrait-up {
                 width: 100vw;
                 height: auto;
             }
@@ -44,16 +50,16 @@
             text-transform: capitalize;
             background-color: rgba($primary, 0.8);
             clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-            font-size: 1.5*$font-size-base;
+            // font-size: 1.5 * $font-size-base;
 
             @include for-desktop-up {
                 padding: 10px 50px;
-                font-size: 2.5*$font-size-base;
+                font-size: 2.5 * $font-size-base;
             }
         }
 
         &-title--primary,
-        &-title--secondary  {
+        &-title--secondary {
             display: none;
             text-transform: none;
             left: unset;
@@ -62,21 +68,47 @@
 
             @include for-tablet-portrait-up {
                 display: block;
-                right: calc((100vw - $container-width-desktop)/2 + 50px);
+                right: 50px;
             }
 
             @include for-desktop-up {
-                // right: calc((100vw - $container-width-desktop)/2 + 50px);
+                right: calc((100vw - $container-width-desktop)/2 + 50px);
             }
         }
 
         &-title--secondary {
             transform: translateY(30px);
-            font-size: 1.1*$font-size-base;
+            font-size: 1.1 * $font-size-base;
             font-weight: $font-weight-normal;
 
             @include for-desktop-up {
-                font-size: 1.7*$font-size-base;
+                font-size: 1.7 * $font-size-base;
+            }
+        }
+
+        &-title--home {
+            min-height: 40vh;
+            background-color: rgba($primary, 0.8);
+            padding: 20px 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-flow: column nowrap;
+
+            * {
+                color: $text-color-secondary;
+                text-align: start;
+            }
+
+            *:nth-child(2) {
+                font-weight: $font-weight-normal;
+            }
+
+            i {
+                font-size: 4 * $font-size-base;
+                font-weight: $font-weight-normal;
+                align-self: center;
             }
         }
     }

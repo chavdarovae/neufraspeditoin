@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, isDevMode, OnInit } from '@angular/core';
+import { AfterViewInit, Component, isDevMode, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 	templateUrl: './unternehmen.component.html',
 	styleUrls: ['./unternehmen.component.scss']
 })
-export class UnternehmenComponent implements OnInit {
+export class UnternehmenComponent implements OnInit, AfterViewInit {
 	urlPrefix = isDevMode() ? '../../' : './';
 	target: string;
 

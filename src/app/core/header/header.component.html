@@ -17,33 +17,30 @@
             </li>
             <li class="menu__item" (click)="menuToggle.click()">
                 <!-- unternehmen -->
-                <a routerLink="/unternehmen" class="menu__item-link" 
-                [ngClass]="{'menu__item-link--active': activeTab === 'unternehmen'}" 
-                translate="header.company"></a>
+                <a routerLink="/unternehmen" class="menu__item-link"
+                    [ngClass]="{'menu__item-link--active': activeTab === 'unternehmen'}" translate="header.company"></a>
             </li>
             <!-- standorte -->
             <li class="menu__item" (click)="menuToggle.click()">
-                <a routerLink="/standorte" class="menu__item-link" 
-                [ngClass]="{'menu__item-link--active': activeTab === 'standorte'}" 
-                translate="header.locations"></a>
+                <a routerLink="/standorte" class="menu__item-link"
+                    [ngClass]="{'menu__item-link--active': activeTab === 'standorte'}" translate="header.locations"></a>
             </li>
             <!-- dienstleistungen -->
             <li class="menu__item" (click)="menuToggle.click()">
-                <a routerLink="/dienstleistungen" class="menu__item-link" 
-                [ngClass]="{'menu__item-link--active': activeTab === 'dienstleistungen'}" 
-                translate="header.services"></a>
+                <a routerLink="/dienstleistungen" class="menu__item-link"
+                    [ngClass]="{'menu__item-link--active': activeTab === 'dienstleistungen'}"
+                    translate="header.services"></a>
             </li>
             <!-- karriere -->
             <li class="menu__item" (click)="menuToggle.click()">
-                <a routerLink="/karriere" class="menu__item-link" 
-                [ngClass]="{'menu__item-link--active': activeTab === 'karriere'}" 
-                translate="header.career"></a>
+                <a routerLink="/karriere" class="menu__item-link"
+                    [ngClass]="{'menu__item-link--active': activeTab === 'karriere'}" translate="header.career"></a>
             </li>
             <!-- transportunternehmer -->
             <li class="menu__item" (click)="menuToggle.click()">
-                <a routerLink="/transportunternehmer" class="menu__item-link" 
-                [ngClass]="{'menu__item-link--active': activeTab === 'transportunternehmer'}" 
-                translate="header.transportCompany"></a>
+                <a routerLink="/transportunternehmer" class="menu__item-link"
+                    [ngClass]="{'menu__item-link--active': activeTab === 'transportunternehmer'}"
+                    translate="header.transportCompany"></a>
             </li>
             <!-- impressum - datenschutz -->
             <li class="menu__item menu__item--footer show-on-mobile" (click)="menuToggle.click()">
@@ -57,10 +54,19 @@
         <div class="backdrop" (click)="menuToggle.click()"></div>
     </div>
     <div class="header__img poster">
-        <div class="poster__img">
-            <h1 class="poster__img-title" [ngClass]="{'poster__img-title--primary': activeTab === 'home'}" >{{('header.' + pageTitle) | translate}}</h1>
-            <h1 *ngIf="activeTab === 'home'" class="poster__img-title" [ngClass]="{'poster__img-title--secondary': activeTab === 'home'}">{{'header.home-subtitle' | translate}}</h1>
-            <img class="poster__img-pic"[src]="imgPrefix + 'poster-' + activeTab + '.jpg'" alt="Poster photo">
+        <div class="poster__img" [ngClass]="{'poster__img--home': activeTab === 'home'}">
+            <h1 class="poster__img-title" [ngClass]="{'poster__img-title--primary': activeTab === 'home'}">
+                {{('header.' + pageTitle) | translate}}</h1>
+            <h1 *ngIf="activeTab === 'home'" class="poster__img-title"
+                [ngClass]="{'poster__img-title--secondary': activeTab === 'home'}">
+                {{'header.home-subtitle' | translate}}
+            </h1>
+            <img class="poster__img-pic" [src]="imgPrefix + 'poster-' + activeTab + '.jpg'" alt="Poster photo">
+        </div>
+        <div *ngIf="activeTab === 'home'" class="poster__img-title--home show-on-mobile">
+            <h1>{{'header.home' | translate}}</h1>
+            <h1>{{'header.home-subtitle' | translate}}</h1>
+            <i class="fa fa-angle-down" (click)="showDetails('reasons')"></i>
         </div>
     </div>
 </div>
@@ -72,4 +78,3 @@
         <option value="fr">FR</option>
     </select>
 </ng-template>
-

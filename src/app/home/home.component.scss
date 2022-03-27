@@ -1,111 +1,91 @@
 @import "../../assets/styles/app-variables";
 @import "../../assets/styles/settings/settings-breakpoints";
-
 .title {
-    background-color: rgba($primary, 0.8);
-
-    * {
-      color: $text-color-secondary;
-	  padding: 50px 20px;
-      font-size: 1.5*$font-size-base;
-	  text-align: end;
-
-      @include for-desktop-up {
-        padding: 10px 50px;
-        font-size: 2.5*$font-size-base;
-      }
-    }
-
-	span {
-		font-size: 1*$font-size-base;
-
-		@include for-desktop-up {
-			font-size: 1.5*$font-size-base;
-		  }
-
-	}
-  }
+	text-align: center;
+	margin-bottom: 50px;
+}
 
 .card-holder {
-  display: flex;
-  flex-flow: column nowrap;
+	display: flex;
+	flex-flow: column nowrap;
 
-  @include for-tablet-portrait-up {
-    flex-flow: row wrap;
-    justify-content: center;
-  }
+	@include for-tablet-portrait-up {
+		flex-flow: row wrap;
+		justify-content: center;
+	}
 }
 
 .card {
-  box-shadow: none;
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-template-areas: "icon title";
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  column-gap: 10px;
+	box-shadow: none;
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	grid-template-areas: "icon title";
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+	column-gap: 10px;
 
-  &:nth-child(2n+1) {
-    grid-template-columns: 1fr min-content;
-    grid-template-areas: "title icon";
-  }
+	&:nth-child(2n + 1) {
+		grid-template-columns: 1fr min-content;
+		grid-template-areas: "title icon";
+	}
 
-  @include for-tablet-portrait-up {
-    width: 250px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
+	@include for-tablet-portrait-up {
+		width: 250px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+	}
 
-  @include for-tablet-landscape-up {}
+	@include for-tablet-landscape-up {
+	}
 
-  @include for-desktop-up {}
+	@include for-desktop-up {
+	}
 
-  &__svg {
-    background-color: $primary;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    grid-area: icon;
-    width: 120px;
-    height: 105px;
+	&__svg {
+		background-color: $primary;
+		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+		grid-area: icon;
+		width: 120px;
+		height: 105px;
 
+		@include for-tablet-portrait-up {
+			width: 120px;
+			height: 105px;
+		}
 
-    @include for-tablet-portrait-up {
-      width: 120px;
-      height: 105px;
-    }
+		@include for-tablet-landscape-up {
+			width: 130px;
+			height: 115px;
+		}
 
-    @include for-tablet-landscape-up {
-      width: 130px;
-      height: 115px;
-    }
+		@include for-desktop-up {
+			width: 130px;
+			height: 115px;
+		}
 
-    @include for-desktop-up {
-      width: 130px;
-      height: 115px;
-    }
+		img {
+			width: 60px;
+			height: auto;
 
-    img {
-      width: 60px;
-      height: auto;
+			@include for-tablet-portrait-up {
+				width: 60px;
+			}
 
-      @include for-tablet-portrait-up {
-        width: 60px;
-      }
+			@include for-tablet-landscape-up {
+				width: 70px;
+			}
 
-      @include for-tablet-landscape-up {
-        width: 70px;
-      }
+			@include for-desktop-up {
+				width: 70px;
+			}
+		}
+	}
 
-      @include for-desktop-up {
-        width: 70px;
-      }
-    }
-  }
-
-  &__title {
-    grid-area: title;
-    text-align: center;
-    margin: 10px 0;
-  }
+	&__title {
+		grid-area: title;
+		text-align: center;
+		margin: 10px 0;
+	}
 }
