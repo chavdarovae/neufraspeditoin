@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, Input, isDevMode } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -14,11 +15,13 @@ export class HeaderComponent {
 
 	constructor(
 		private translate: TranslateService,
-		private router: Router
+		private router: Router,
+		private scroller: ViewportScroller
 	) { }
 
 	showDetails(goToSection: string) {
-		this.router.navigate(['/home'], { queryParams: { goToSection } });
+		// this.router.navigate(['/home'], { queryParams: { goToSection } });
+		this.scroller.scrollToPosition([0, window.innerHeight])
 	}
 
 	//Switch language
