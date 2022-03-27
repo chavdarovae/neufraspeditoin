@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { AfterViewInit, Component, isDevMode, OnInit } from '@angular/core';
+import { Component, isDevMode, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 	templateUrl: './home.component.html',
 	styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
 	urlPrefix = isDevMode() ? '../../' : './';
 	target: string;
 
@@ -18,13 +18,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 	}
 
 	ngOnInit(): void {
-		this.activatedRoute.queryParams.subscribe(params => {
-			this.target = params['goToSection'] ? params['goToSection'] : '';
-		});
-	}
-
-	ngAfterViewInit(): void {
-		this.scroller.scrollToAnchor(this.target);
 	}
 
 	showDetails(goToSection: string) {
