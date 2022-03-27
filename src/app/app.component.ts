@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -22,8 +22,7 @@ export class AppComponent {
 
 	constructor(
 		public translate: TranslateService,
-		private router: Router,
-		private activatedRoute: ActivatedRoute
+		private router: Router
 	) {
 		// Register translation languages
 		translate.addLangs(['de', 'en', 'fr']);
@@ -33,7 +32,7 @@ export class AppComponent {
 
 		// decide what to do when this event is triggered.
 		router.events.subscribe(() => {
-			const currUrl: string = window.location.href;
+			const currUrl: string = window.location.href.split('?goToSection=')[0];
 			this.activeTab = (currUrl?.split('/').pop() !== undefined) ? currUrl.split('/').pop() : 'unternehmen';
 		});
 	}
