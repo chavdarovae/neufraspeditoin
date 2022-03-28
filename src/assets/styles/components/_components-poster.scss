@@ -8,8 +8,7 @@
         height: $poster-height-phone;
 
         &--home {
-            min-height: calc(100vh - $header-height-phone);
-            // height: 100%;
+            height: calc((var(--vh, 1vh) * 100) - $header-height-phone);
         }
 
         @include for-tablet-portrait-up {

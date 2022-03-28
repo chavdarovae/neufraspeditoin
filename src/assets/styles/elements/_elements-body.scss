@@ -1,8 +1,7 @@
 @import "../app-variables";
 @import "../settings/settings-breakpoints";
 
-body,
-* {
+body, * {
 	margin: 0;
 	padding: 0;
 	font-family: "Montserrat", sans-serif;
@@ -10,20 +9,3 @@ body,
 	color: $text-color-primary;
 }
 
-body {
-	display: flex; 
-	flex-direction: column;
-	min-height: 100vh;
-	/* mobile viewport bug fix */
-	min-height: -webkit-fill-available;
-
-	@include for-tablet-portrait-up {
-		height: unset;
-		display: unset;
-		flex-direction: unset;
-	}
-}
-
-html {
-	height: -webkit-fill-available;
-}

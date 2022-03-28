@@ -3,7 +3,6 @@
 
 :host {
     min-height: 100vh;
-    min-height: -webkit-fill-available;
     display: grid;
     grid-template-rows: min-content 1fr 130px;
     row-gap: 30px;
