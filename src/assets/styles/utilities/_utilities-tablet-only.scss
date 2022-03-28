@@ -1,0 +1,16 @@
+
+.show-on-tablet {
+    display: flex !important;
+
+    @include for-desktop-up {
+        display: none !important;
+    }
+}
+
+.hide-on-tablet {
+    display: none !important;
+
+    @include for-desktop-up {
+        display: flex !important;
+    }
+}
