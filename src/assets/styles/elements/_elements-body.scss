@@ -1,19 +1,29 @@
 @import "../app-variables";
 @import "../settings/settings-breakpoints";
 
-body,* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    color: $text-color-primary;
+body,
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	color: $text-color-primary;
 }
 
 body {
-    height: 100%;
-    height: -webkit-fill-available;
+	display: flex; 
+	flex-direction: column;
+	min-height: 100vh;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
 
-    @include for-tablet-portrait-up {
-        height: unset;
-    }
+	@include for-tablet-portrait-up {
+		height: unset;
+		display: unset;
+		flex-direction: unset;
+	}
+}
+
+html {
+	height: -webkit-fill-available;
 }

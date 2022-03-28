@@ -2,7 +2,7 @@
 @import "../assets/styles/settings/settings-breakpoints";
 
 :host {
-    min-height: 100vh;
+    // min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr 130px;
     row-gap: 30px;
