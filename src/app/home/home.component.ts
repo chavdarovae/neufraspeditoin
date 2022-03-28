@@ -21,6 +21,6 @@ export class HomeComponent implements OnInit {
 	}
 
 	showDetails(goToSection: string) {
-		this.router.navigate(['/unternehmen'], { queryParams: { goToSection } });
+		this.router.navigate(['/unternehmen'], { fragment: goToSection });
 	}
 }

@@ -2,68 +2,77 @@
 @import "../../assets/styles/settings/settings-breakpoints";
 
 :host {
-    .card-holder{
-        display: grid;
-        grid-template-columns: 1fr;
-        column-gap: 30px;
-        row-gap: 30px;
-        justify-items: center;
+  .card-holder {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-items: center;
 
-        @include for-tablet-portrait-up {
-            grid-template-columns: 1fr 1fr;
-            // justify-items: stretch;
-        }
-
-        @include for-tablet-landscape-up {
-            grid-template-columns: 1fr 1fr 1fr;
-            // justify-items: stretch;
-        }
+    @include for-tablet-portrait-up {
+      grid-template-columns: 1fr 1fr;
+      // justify-items: stretch;
     }
 
-    .card {
-        min-width: 200px;
-        max-width: 600px;
-        padding: 20px;
-        display: grid;
-        grid-template-rows: 100px min 1fr;
-        row-gap: 10px;
-        align-items: start;
-        box-shadow: $primary-shadow;
+    @include for-tablet-landscape-up {
+      grid-template-columns: 1fr 1fr 1fr;
+      // justify-items: stretch;
+    }
+  }
 
-        @include for-tablet-landscape-up {
-            min-width: 300px;
-            max-width: unset;
-        }
-    
-        &--green {
-            background-color: $primary;
-            & > * {
-                color: $text-color-secondary;
-            }
-            path {
-                fill: $text-color-thirdery;
-            }
-        }
-    
-        &--gray {
-            background-color: $card-bg;
-    
-            path {
-                fill: $text-color-thirdery;
-            }
-        }
+  .card {
+    min-width: 200px;
+    max-width: 600px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 100px min 1fr;
+    row-gap: 10px;
+    align-items: start;
+    box-shadow: $primary-shadow;
 
-        &--big {
-            
-            @include for-tablet-landscape-up {
-                grid-column: 1 / span 2;
-            }
-        }
+    & > * {
+      word-break: break-word;
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
     }
 
-    .history-holder {
-        margin-top: 80px;
+    @include for-tablet-landscape-up {
+      min-width: 300px;
+      max-width: unset;
     }
+
+    &--green {
+      background-color: $primary;
+
+      &>* {
+        color: $text-color-secondary;
+      }
+
+      path {
+        fill: $text-color-thirdery;
+      }
+    }
+
+    &--gray {
+      background-color: $card-bg;
+
+      path {
+        fill: $text-color-thirdery;
+      }
+    }
+
+    &--big {
+
+      @include for-tablet-landscape-up {
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+
+  .history-holder {
+    margin-top: 80px;
+  }
 }
-
-

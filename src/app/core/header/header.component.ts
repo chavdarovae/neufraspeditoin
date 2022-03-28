@@ -20,8 +20,7 @@ export class HeaderComponent {
 	) { }
 
 	showDetails(goToSection: string) {
-		// this.router.navigate(['/home'], { queryParams: { goToSection } });
-		this.scroller.scrollToPosition([0, window.innerHeight])
+		this.scroller.scrollToPosition([0, document.documentElement.clientHeight])
 	}
 
 	//Switch language
