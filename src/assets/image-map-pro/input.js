@@ -26,9 +26,10 @@ var inputCode = {
         "sticky_tooltips": 1
     },
     "zooming": {
-        "enable_zooming": 1,
+        "enable_zooming": 0,
         "max_zoom": 2,
-        "enable_zoom_buttons": 0
+        "enable_zoom_buttons": 1,
+        "enable_navigator":0
     },
     "spots": [{
         "id": "path-7644",
