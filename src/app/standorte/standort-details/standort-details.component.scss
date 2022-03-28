@@ -1,0 +1,82 @@
+@import "../../../assets/styles/app-variables";
+.loc ::ng-deep {
+    display: grid;
+    grid-template-columns: 300px 800px;
+    column-gap: 20px;
+
+    .card {
+        background-color: $secondary;
+        padding: 20px;
+        margin-bottom: 10px;
+
+        &--light {
+            background-color: $primary;
+        }
+
+        > * {
+            color: $text-color-secondary;
+        }
+    }
+
+    mat-tab-group.tab {
+        .mat-tab-label {
+            width: min-content;
+            opacity: 1;
+            border: 1px solid $text-color-thirdery;
+            margin: 0 5px;
+            padding: 5px;
+
+            .mat-tab-label-content {
+                background-color: $body-bg;
+                color: $text-color-thirdery;
+                font-family: "Roboto";
+                font-size: 0.8 * $font-size-base;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .mat-tab-label.mat-tab-label-active {
+            border: 1px solid $text-color-secondary;
+            background-color: $primary;
+
+            .mat-tab-label-content {
+                background-color: $primary;
+                color: $text-color-secondary;
+                font-weight: $font-weight-bold;
+            }
+        }
+
+        .mat-ink-bar {
+            background-color: transparent;
+        }
+    }
+
+    table.table {
+        width: 100%;
+        margin-top: 30px;
+        border: none;
+
+        * {
+            font-size: 0.7 * $font-size-base;
+            font-family: "Roboto";
+            border: none;
+        }
+
+        tr:nth-child(2n + 1) {
+            background-color: #f0f0f0;
+        }
+
+        td {
+            min-width: 50px;
+            padding: 10px 10px;
+        }
+    }
+
+    &__left-panel {
+    }
+
+    &__right-panel {
+        max-width: 100%;
+    }
+}
