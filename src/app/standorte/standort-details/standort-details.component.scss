@@ -3,13 +3,19 @@
 .loc ::ng-deep {
     display: flex;
     flex-flow: column;
+    overflow-y: scroll;
+    max-height: 80vh;
+    max-height: calc(var(--vh, 1vh) * 80);
 
     @include for-tablet-portrait-up  {
+        max-height: unset;
+        overflow-y: unset;
            
     }
 
     @include for-tablet-landscape-up  {
         flex-flow: column nowrap;
+        
     }
 
     @include for-desktop-up {
