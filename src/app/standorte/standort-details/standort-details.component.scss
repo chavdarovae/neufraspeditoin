@@ -1,20 +1,116 @@
 @import "../../../assets/styles/app-variables";
+@import "../../../assets/styles/settings/settings-breakpoints";
 .loc ::ng-deep {
-    display: grid;
-    grid-template-columns: 300px 800px;
-    column-gap: 20px;
+    display: flex;
+    flex-flow: column;
+
+    @include for-tablet-portrait-up  {
+           
+    }
+
+    @include for-tablet-landscape-up  {
+        flex-flow: column nowrap;
+    }
+
+    @include for-desktop-up {
+        flex-flow: row;
+        
+    }
+
+    .loc__left-panel {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-bottom: 20px;
+
+        * {
+            word-break: break-word;
+        }
+
+        @include for-tablet-portrait-up  {
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+
+        @include for-tablet-landscape-up  {
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+
+        @include for-desktop-up {
+            flex-flow: column nowrap;
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
+    }
+
+    .loc__right-panel {
+        flex-grow: 1;
+    }
 
     .card {
         background-color: $secondary;
-        padding: 20px;
+        padding: 10px;
         margin-bottom: 10px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
 
-        &--light {
+        > * {
+            display: flex;
+            flex-flow: column nowrap;
+            margin-bottom: 10px;
+        }
+
+        * {
+            color: $text-color-secondary;
+        }
+
+        &--person {
             background-color: $primary;
         }
 
-        > * {
-            color: $text-color-secondary;
+        &--branch {
+
+            @include for-tablet-portrait-up  {
+                flex-grow: 1;
+                margin-right: 20px;
+            }
+
+            @include for-tablet-landscape-up  {
+                margin-right: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 10px;
+                grid-template-areas: 
+                    "title title"
+                    "address phone"
+                    "email fax";
+            }
+
+            @include for-desktop-up  {
+                display: flex;
+                margin-right: 0;
+                flex-grow: unset;
+                height: 100%;
+            }
+        }
+
+        &__title {
+            grid-area: title;
+            margin-bottom: 20px;
+        }
+
+        &__address {
+            grid-area: address;
+        }
+        &__email {
+            grid-area: email;
+        }
+        &__phone {
+            grid-area: phone;
+        }
+        &__fax {
+            grid-area: fax;
         }
     }
 
@@ -23,7 +119,7 @@
             width: min-content;
             opacity: 1;
             border: 1px solid $text-color-thirdery;
-            margin: 0 5px;
+            margin: 0 5px 0 0;
             padding: 0 10px;
             min-width: 120px;
 
@@ -38,7 +134,6 @@
         }
 
         .mat-tab-label.mat-tab-label-active {
-            border: 1px solid $text-color-secondary;
             background-color: $primary;
 
             .mat-tab-label-content {
@@ -64,20 +159,27 @@
             border: none;
         }
 
+        tr {
+            display: flex;
+            flex-flow: column;
+
+            @include for-tablet-portrait-up  {
+                display: table-row;
+            }
+
+        }
+
         tr:nth-child(2n + 1) {
             background-color: #f0f0f0;
         }
 
         td {
             min-width: 50px;
-            padding: 10px 10px;
+            padding: 5px 10px;
+
+            @include for-tablet-portrait-up  {
+                padding: 10px 10px;
+            }
         }
-    }
-
-    &__left-panel {
-    }
-
-    &__right-panel {
-        max-width: 100%;
     }
 }

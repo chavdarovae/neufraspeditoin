@@ -10,6 +10,7 @@ import { LocationService } from 'src/app/shared/location.service';
 })
 export class StandortDetailsComponent implements OnInit {
 	branch: BranchInfo[] = [];
+	branchPhonePrefix: string | undefined;
 	nationalDisposition: PersonelInfo[] = [];
 	internationalDisposition: PersonelInfo[] = [];
 	management: PersonelInfo[] = [];
@@ -26,6 +27,7 @@ export class StandortDetailsComponent implements OnInit {
 			const stringList = data.split('new line,');
 			stringList.shift();
 			this.branch = stringList.filter(x => x.includes('Niederlassungsleitung')).map(x => this.getBranchInfo(x));
+			this.branchPhonePrefix = this.branch[0].phone?.slice(0,this.branch[0].phone.length-2);
 
 			const dataList = stringList.filter(x => !x.includes('Niederlassungsleitung')).map(x => x.split(','));
 			const departments = new Set(dataList.map(x => x[1]));
