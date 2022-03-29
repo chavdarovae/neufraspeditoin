@@ -3,19 +3,20 @@
     <div class="loc__left-panel">
         <div class="card column">
             <h4 class="mb-5">NEUFRA Speditions GmbH</h4>
-            <span class="mb-20">{{branch[0].department}}</span>
+            <span class="mb-5">{{branch[0]?.address}}</span>
+            <span class="mb-20">{{branch[0]?.city}}</span>
             <span>E-Mail</span>
-            <a class="bold mb-20" [href]="'mailto:' + branch[0].email">{{branch[0].email}}</a>
+            <a class="bold mb-20" [href]="'mailto:' + branch[0]?.email">{{branch[0]?.email}}</a>
             <span>Telefon</span>
-            <a class="bold mb-20" [href]="'tel:' + branch[0].phone">{{branch[0].phone}}</a>
+            <a class="bold mb-20" [href]="'tel:' + branch[0]?.phone">{{branch[0]?.phone}}</a>
             <span>Telefax</span>
-            <a class="bold mb-20">{{branch[0].hotline}}</a>
+            <a class="bold mb-20">{{branch[0]?.fax}}</a>
         </div>
         <div class="card card--light column">
             <h5 class="mb-20">Niederlassungsleitung</h5>
-            <span class="mb-10">{{branch[1].name}}</span>
-            <a class="mb-10" [href]="'tel:' + branch[1].phone">{{branch[1].phone}}</a>
-            <a class="mb-10" [href]="'mailto:' + branch[1].email">{{branch[1].email}}</a>
+            <span class="mb-10">{{branch[1]?.branchLeader}}</span>
+            <a class="mb-10" [href]="'tel:' + branch[1]?.phone">{{branch[1]?.phone}}</a>
+            <a class="mb-10" [href]="'mailto:' + branch[1]?.email">{{branch[1]?.email}}</a>
         </div>
     </div>
 
@@ -46,9 +47,9 @@
     <table class="table" cellspacing="0" cellpadding="0">
         <tr calss="row" *ngFor="let row of personelList; let i=index">
             <td>{{row.department}}</td>
-            <td>{{row.name}}</td>
-            <td>{{row.phone}}</td>
-            <td><a [href]="'mailto:'+row.email">{{row.email}}</a></td>
+            <td><div *ngFor="let name of row.name">{{name}}</div></td>
+            <td><div *ngFor="let phone of row.phone">{{phone}}</div></td>
+            <td><div *ngFor="let email of row.email" [href]="'mailto:'+email">{{email}}</div></td>
         </tr>
     </table>
 </ng-template>

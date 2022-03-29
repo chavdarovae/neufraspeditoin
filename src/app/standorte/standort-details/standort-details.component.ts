@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { LocationGenInfo, PersonelInfo } from 'src/app/model/location-gen-info';
+import { BranchInfo, PersonelInfo } from 'src/app/model/data.model';
 import { LocationService } from 'src/app/shared/location.service';
 
 @Component({
@@ -9,43 +9,56 @@ import { LocationService } from 'src/app/shared/location.service';
 	styleUrls: ['./standort-details.component.scss']
 })
 export class StandortDetailsComponent implements OnInit {
-	branchInfo = new LocationGenInfo();
-	branch: PersonelInfo[] = [];
+	branch: BranchInfo[] = [];
 	nationalDisposition: PersonelInfo[] = [];
 	internationalDisposition: PersonelInfo[] = [];
 	management: PersonelInfo[] = [];
 	humanResources: PersonelInfo[] = [];
 	accounting: PersonelInfo[] = [];
 
-	displayedColumns: string[] = ['department', 'name', 'phone', 'email'];
-
-
 	constructor(
-		@Inject(MAT_DIALOG_DATA) public data: { location: string },
-		private locationService: LocationService) {
-
-	}
+				@Inject(MAT_DIALOG_DATA) public data: { location: string },
+				private locationService: LocationService
+				) {}
 
 	ngOnInit(): void {
 		this.locationService.getLocationDetails(this.data.location).subscribe(data => {
-			let dataList = data.split('new line,');
-			this.branch = dataList.filter(x => x.includes('Niederlassungsleitung')).map(x => this.getPersonalInfo( x, 'Niederlassungsleitung'));
-			this.nationalDisposition = dataList.filter(x => x.includes('Disposition National')).map(x => this.getPersonalInfo( x, 'Disposition National'));
-			this.internationalDisposition = dataList.filter(x => x.includes('Disposition International')).map(x => this.getPersonalInfo( x, 'Disposition International'));
-			this.management = dataList.filter(x => x.includes('Verwaltung')).map(x => this.getPersonalInfo( x, 'Verwaltung'));
-			this.humanResources = dataList.filter(x => x.includes('Personalabteilung')).map(x => this.getPersonalInfo( x, 'Personalabteilung'));
-			this.accounting = dataList.filter(x => x.includes('Zentralbuchhaltung')).map(x => this.getPersonalInfo( x, 'Zentralbuchhaltung'));
-		}); 
+			const stringList = data.split('new line,');
+			stringList.shift();
+			this.branch = stringList.filter(x => x.includes('Niederlassungsleitung')).map(x => this.getBranchInfo(x));
+
+			const dataList = stringList.filter(x => !x.includes('Niederlassungsleitung')).map(x => x.split(','));
+			const departments = new Set(dataList.map(x => x[1]));
+			const sortedList: any[] = [];
+			departments.forEach(x => {
+				sortedList.push({ department: x, section: '', name: [], email: [], phone: [], hotline: [] })
+			});
+
+			dataList.forEach(x => {
+				const member = sortedList.find(m => m.department === x[1]);
+				member.section = x[0];
+				member.name.push(x[2]);
+				member.email.push(x[2].replace('Hr. ', '').replace('Fr. ', '').replace(' ', '.').toLowerCase() + '@neufra.eu');
+				member.phone.push(x[3]);
+			})
+
+			this.nationalDisposition = sortedList.filter(x => x.section === 'Disposition National');
+			this.internationalDisposition = sortedList.filter(x => x.section === 'Disposition International');
+			this.management = sortedList.filter(x => x.section === 'Verwaltung');
+			this.humanResources = sortedList.filter(x => x.section === 'Personalabteilung');
+			this.accounting = sortedList.filter(x => x.section === 'Zentralbuchhaltung');
+		});
 	}
 
-	getPersonalInfo(info: string, section: string) {
-		const person = info.replace(`${section},`,'').split(',');
+	getBranchInfo(info: string) {
+		const branch = info.replace(`Niederlassungsleitung,`, '').split(',');
 		return {
-			department: person[0],
-			name: person[1],
-			phone: person[2],
-			email: person[1].replace('Hr. ','').replace('Fr. ','').replace(' ','.').toLowerCase() + '@neufra.eu',
-			hotline: person[3]
+			address: branch[0].split('/')[0].trim(),
+			city: branch[0].split('/')[1],
+			branchLeader: branch[1],
+			email: branch[1].replace('Hr. ', '').replace('Fr. ', '').replace(' ', '.').toLowerCase() + '@neufra.eu',
+			phone: branch[2],
+			fax: branch[3]
 		}
 	}
 }

@@ -24,7 +24,8 @@
             opacity: 1;
             border: 1px solid $text-color-thirdery;
             margin: 0 5px;
-            padding: 5px;
+            padding: 0 10px;
+            min-width: 120px;
 
             .mat-tab-label-content {
                 background-color: $body-bg;
