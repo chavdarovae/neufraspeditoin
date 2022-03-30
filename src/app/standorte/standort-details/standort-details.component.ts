@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { BranchInfo, PersonelInfo } from 'src/app/model/data.model';
-import { LocationService } from 'src/app/shared/location.service';
+import { CsvService } from 'src/app/shared/csv.service';
 
 @Component({
 	selector: 'app-standort-details',
@@ -21,11 +21,11 @@ export class StandortDetailsComponent implements OnInit {
 
 	constructor(
 				@Inject(MAT_DIALOG_DATA) public data: { location: string },
-				private locationService: LocationService
+				private csvService: CsvService
 				) {}
 
 	ngOnInit(): void {
-		this.locationService.getLocationDetails(this.data.location).subscribe(data => {
+		this.csvService.getLocationDetails(this.data.location).subscribe(data => {
 			const stringList = data.split('new line,');
 			stringList.shift();
 			this.branch = stringList.filter(x => x.includes('Niederlassungsleitung')).map(x => this.getBranchInfo(x));

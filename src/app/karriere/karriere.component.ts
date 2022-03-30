@@ -1,32 +1,79 @@
 import { Component, OnInit } from '@angular/core';
-import { openings } from 'src/assets/files/carriers';
+import { TranslateService } from '@ngx-translate/core';
+import { PositionInfo } from '../model/data.model';
+import { CsvService } from '../shared/csv.service';
 
 @Component({
-  selector: 'app-karriere',
-  templateUrl: './karriere.component.html',
-  styleUrls: ['./karriere.component.scss']
+	selector: 'app-karriere',
+	templateUrl: './karriere.component.html',
+	styleUrls: ['./karriere.component.scss']
 })
 export class KarriereComponent implements OnInit {
-  currPosition= 0;
-  expanded = false;
-  positions: any[] = openings;
-  asc = true;
+	currPosition = 0;
+	expanded = false;
+	positions: any[] = [];
+	asc = true;
+	currentLanguage = 'DE';
 
-  constructor() { }
+	constructor(
+		private csvService: CsvService,
+		private translate: TranslateService
+	) { }
 
-  ngOnInit(): void {
-    if(this.positions?.length > 0) {
-      this.positions.forEach((x, index )=> x.number = index);
-    }
-  }
+	ngOnInit(): void {
+		this.currentLanguage = this.translate.currentLang;
+		this.csvService.getPositionsList(this.currentLanguage.toUpperCase()).subscribe(data => {
+			const stringList = data.split('new position,');
+			stringList.shift();
+			stringList.forEach(x => {
+				this.positions.push(this.getPosition(x))
+			})
+		});
+	}
 
-  togglePosition(index: number) {
-    this.currPosition = index;
-    this.expanded = !this.expanded;
-  }
+	getPosition(positionString: string) {
+		const position = positionString.split('new line,').filter(x => x !== '');
+		const posObj: any = new PositionInfo();
+		posObj.tasks = [];
+		posObj.requirements = [];
 
-  sortPositions() {
-    this.asc = !this.asc
-    this.positions.sort((a,b) => this.asc ? a.location.localeCompare(b.location) : b.location.localeCompare(a.location));
-  }
+		position.forEach(x => {
+			const position = x.split(',');
+			const label = position[0];
+			position.shift();
+			const text = position.join(',');
+			const simpleLabels = ['title', 'location', 'description', 'offer', 'other', 'partnerName', 'partnerMobile', 'partnerCity', 'partnerStreet', 'partnerPhone'];
+			const complexLabels = ['tasks', 'requirements'];
+			if (label === 'partnerName') {
+				posObj.partnerEmail = this.getEmail(text);
+			}
+			if (complexLabels.includes(label)) {
+				posObj[`${label}`].push(text);
+			} else if (simpleLabels.includes(label)) {
+				posObj[`${label}`] = text;
+			}
+		})
+		return posObj;
+	}
+
+	togglePosition(index: number) {
+		this.currPosition = index;
+		this.expanded = !this.expanded;
+	}
+
+	sortPositions() {
+		this.asc = !this.asc
+		this.positions.sort((a, b) => this.asc ? a.location.localeCompare(b.location) : b.location.localeCompare(a.location));
+	}
+
+	getEmail(input: string) {
+		const name = input.trim().replace('Hr. ', '')
+			.replace('Fr. ', '')
+			.toLowerCase()
+			.replace('ö', 'oe')
+			.replace('ü', 'ue')
+			.replace('ä', 'ae')
+			.replace(' ', '.');
+		return (name + '@neufra.eu');
+	}
 }

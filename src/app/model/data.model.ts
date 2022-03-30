@@ -5,7 +5,7 @@ export class PersonelInfo {
         public email?: string,
         public phone?: string,
         public hotline?: string,
-    ) {}
+    ) { }
 }
 
 export class BranchInfo {
@@ -16,5 +16,22 @@ export class BranchInfo {
         public email?: string,
         public phone?: string,
         public fax?: string,
-    ) {}
+    ) { }
+}
+export class PositionInfo {
+    constructor(
+        public title?: string,
+        public location?: string,
+        public description?: string,
+        public tasks?: string[],
+        public requirements?: string[],
+        public offer?: string,
+        public other?: string,
+        public partnerName?: string,
+        public partnerMobile?: string,
+        public partnerCity?: string,
+        public partnerStreet?: string,
+        public partnerPhone?: string,
+        public partnerEmail?: string
+    ) { }
 }

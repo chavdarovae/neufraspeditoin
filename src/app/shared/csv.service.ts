@@ -4,12 +4,16 @@ import { Injectable, isDevMode } from '@angular/core';
 @Injectable({
 	providedIn: 'root'
 })
-export class LocationService {
+export class CsvService {
 	urlPrefix = isDevMode() ? '../../' : './';
 
 	constructor(private http: HttpClient) { }
 
 	getLocationDetails(location: string) {
 		return this.http.get(`${this.urlPrefix}assets/files/locations/Personal.xlsx - ${location}.csv`, { responseType: 'text' });
+	}
+
+	getPositionsList(language: 'DE' | 'EN' | string) {
+		return this.http.get(`${this.urlPrefix}assets/files/carreer/Career.xlsx - ${language}.csv`, { responseType: 'text' });
 	}
 }
