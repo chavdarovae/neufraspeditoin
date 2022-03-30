@@ -7738,7 +7738,7 @@ const locations = [
         id: 22
     },
     {
-        name: 'Kiel',
+        name: 'Kehl',
         x: 32.985,
         y: 62.627,
         id: 23

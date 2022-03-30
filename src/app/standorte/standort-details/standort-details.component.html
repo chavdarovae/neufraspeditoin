@@ -30,25 +30,28 @@
 
     <div class="loc__right-panel">
         <mat-tab-group class="tab">
-            <mat-tab [label]="'locations.nationalDisposition' | translate">
+            <mat-tab *ngIf="nationalDisposition.length > 0" class="tab__section" [label]="'locations.nationalDisposition' | translate">
                 <ng-container *ngTemplateOutlet="personelTable; context: { personelData: nationalDisposition }">
                 </ng-container>
             </mat-tab>
-            <mat-tab class="tab__section" [label]="'locations.internationalDisposition' | translate">
+            <mat-tab *ngIf="internationalDisposition.length > 0" class="tab__section" [label]="'locations.internationalDisposition' | translate">
                 <ng-container *ngTemplateOutlet="personelTable; context: { personelData: internationalDisposition }">
                 </ng-container>
             </mat-tab>
-            <mat-tab class="tab__section" [label]="'locations.management' | translate">
+            <mat-tab *ngIf="management.length > 0" class="tab__section" [label]="'locations.management' | translate">
                 <ng-container *ngTemplateOutlet="personelTable; context: { personelData: management }"></ng-container>
             </mat-tab>
-            <mat-tab class="tab__section" [label]="'locations.accounting' | translate">
+            <mat-tab *ngIf="accounting.length > 0" class="tab__section" [label]="'locations.accounting' | translate">
                 <ng-container *ngTemplateOutlet="personelTable; context: { personelData: accounting }"></ng-container>
             </mat-tab>
-            <mat-tab class="tab__section" [label]="'locations.humanResources' | translate">
+            <mat-tab *ngIf="centralAccounting.length > 0" class="tab__section" [label]="'locations.centralAccounting' | translate">
+                <ng-container *ngTemplateOutlet="personelTable; context: { personelData: centralAccounting }"></ng-container>
+            </mat-tab>
+            <mat-tab *ngIf="humanResources.length > 0" class="tab__section" [label]="'locations.humanResources' | translate">
                 <ng-container *ngTemplateOutlet="personelTable; context: { personelData: humanResources }">
                 </ng-container>
             </mat-tab>
-            <mat-tab class="tab__section" [label]="'locations.executiveManagement' | translate">
+            <mat-tab *ngIf="executiveManagement.length > 0" class="tab__section" [label]="'locations.executiveManagement' | translate">
                 <ng-container *ngTemplateOutlet="personelTable; context: { personelData: executiveManagement }">
                 </ng-container>
             </mat-tab>

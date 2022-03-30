@@ -55,7 +55,8 @@
         "internationalDisposition" : "Disposition International",
         "management" : "Verwaltung",
         "humanResources" : "Personalabteilung",
-        "accounting" : "Zentralbuchhaltung",
+        "accounting" : "Buchhaltung",
+        "centralAccounting" : "Zentralbuchhaltung",
         "executiveManagement" : "Geschäftsleitung"
     },
     "services" : {

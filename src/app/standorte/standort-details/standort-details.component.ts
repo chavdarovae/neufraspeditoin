@@ -17,6 +17,7 @@ export class StandortDetailsComponent implements OnInit {
 	executiveManagement: PersonelInfo[] = [];
 	humanResources: PersonelInfo[] = [];
 	accounting: PersonelInfo[] = [];
+	centralAccounting: PersonelInfo[] = [];
 
 	constructor(
 				@Inject(MAT_DIALOG_DATA) public data: { location: string },
@@ -50,7 +51,8 @@ export class StandortDetailsComponent implements OnInit {
 			this.management = sortedList.filter(x => x.section === 'Verwaltung');
 			this.executiveManagement = sortedList.filter(x => x.section === 'Geschäftsleitung');
 			this.humanResources = sortedList.filter(x => x.section === 'Personalabteilung');
-			this.accounting = sortedList.filter(x => x.section === 'Zentralbuchhaltung');
+			this.accounting = sortedList.filter(x => x.section === 'Buchhaltung');
+			this.centralAccounting = sortedList.filter(x => x.section === 'Zentralbuchhaltung');
 		});
 	}
 
