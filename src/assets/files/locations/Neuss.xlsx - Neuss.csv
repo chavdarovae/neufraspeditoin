@@ -1,6 +1,9 @@
-Break,Section,  Ort/Abteilung,Person,Telefon,Hotline/Telefax
+Break,Section,Location/Department,Person,Telefon,Hotline/Telefax
 new line,Niederlassungsleitung,Moselstr. 8 / 41464 Neuss,Neuss,0 21 31 - 40 75-0,0 21 31 - 40 75 - 924
 new line,Niederlassungsleitung,Neuss,Hr. Markus Drillges,0 21 31 - 40 75-201,
+new line,Geschäftsleitung,Geschäftsleitung,Hr. Wolfgang Hast,-110,
+new line,Geschäftsleitung,Geschäftsleitung,Fr. Sandra Hast-Herrendorf,-150,
+new line,Geschäftsleitung,Assistenz der Geschäftsführung,Fr. Cornelia Leusch,-351,
 new line,Disposition National,Halle / Leipzig /Chemnitz / Dresden,Hr. Jonas Fricke,-215,
 new line,Disposition National,Berlin / Magdeburg,Hr. Armin Meyer,-203,
 new line,Disposition National,Thüringen / Nordbayern / Kassel,Hr. Niklas Kurth,-210,0172-3185207

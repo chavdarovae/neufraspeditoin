@@ -47,7 +47,16 @@
         }
     },
     "locations" : {
-        "aboutUs" : "entreprise"
+        "email" : "E-Mail",
+        "phone" : "Telefon",
+        "fax" : "Telefax",
+        "branchManagement" : "Niederlassungsleitung",
+        "nationalDisposition" : "Disposition National",
+        "internationalDisposition" : "Disposition International",
+        "management" : "Verwaltung",
+        "humanResources" : "Personalabteilung",
+        "accounting" : "Zentralbuchhaltung",
+        "executiveManagement" : "Geschäftsleitung"
     },
     "services" : {
         "aboutUs" : "entreprise"

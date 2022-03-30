@@ -14,6 +14,7 @@ export class StandortDetailsComponent implements OnInit {
 	nationalDisposition: PersonelInfo[] = [];
 	internationalDisposition: PersonelInfo[] = [];
 	management: PersonelInfo[] = [];
+	executiveManagement: PersonelInfo[] = [];
 	humanResources: PersonelInfo[] = [];
 	accounting: PersonelInfo[] = [];
 
@@ -40,13 +41,14 @@ export class StandortDetailsComponent implements OnInit {
 				const member = sortedList.find(m => m.department === x[1]);
 				member.section = x[0];
 				member.name.push(x[2]);
-				member.email.push(x[2].replace('Hr. ', '').replace('Fr. ', '').replace(' ', '.').toLowerCase() + '@neufra.eu');
+				member.email.push(this.getEmail(x[2]));
 				member.phone.push(x[3]);
 			})
 
 			this.nationalDisposition = sortedList.filter(x => x.section === 'Disposition National');
 			this.internationalDisposition = sortedList.filter(x => x.section === 'Disposition International');
 			this.management = sortedList.filter(x => x.section === 'Verwaltung');
+			this.executiveManagement = sortedList.filter(x => x.section === 'Geschäftsleitung');
 			this.humanResources = sortedList.filter(x => x.section === 'Personalabteilung');
 			this.accounting = sortedList.filter(x => x.section === 'Zentralbuchhaltung');
 		});
@@ -58,9 +60,20 @@ export class StandortDetailsComponent implements OnInit {
 			address: branch[0].split('/')[0].trim(),
 			city: branch[0].split('/')[1],
 			branchLeader: branch[1],
-			email: branch[1].replace('Hr. ', '').replace('Fr. ', '').replace(' ', '.').toLowerCase() + '@neufra.eu',
+			email: this.getEmail(branch[1]),
 			phone: branch[2],
 			fax: branch[3]
 		}
+	}
+
+	getEmail (input: string) {
+		const name = input.replace('Hr. ', '')
+						.replace('Fr. ', '')
+						.toLowerCase() 
+						.replace('ö', 'oe')
+						.replace('ü', 'ue')
+						.replace('ä', 'ae')
+						.replace(' ', '.');
+		return (name + '@neufra.eu');
 	}
 }

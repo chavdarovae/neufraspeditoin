@@ -7,20 +7,17 @@
     max-height: 80vh;
     max-height: calc(var(--vh, 1vh) * 80);
 
-    @include for-tablet-portrait-up  {
+    @include for-tablet-portrait-up {
         max-height: unset;
         overflow-y: unset;
-           
     }
 
-    @include for-tablet-landscape-up  {
+    @include for-tablet-landscape-up {
         flex-flow: column nowrap;
-        
     }
 
     @include for-desktop-up {
         flex-flow: row;
-        
     }
 
     .loc__left-panel {
@@ -32,20 +29,23 @@
             word-break: break-word;
         }
 
-        @include for-tablet-portrait-up  {
+        @include for-tablet-portrait-up {
             flex-flow: row nowrap;
             justify-content: space-between;
         }
 
-        @include for-tablet-landscape-up  {
-            flex-flow: row nowrap;
-            justify-content: space-between;
+        @include for-tablet-landscape-up {
         }
 
         @include for-desktop-up {
             flex-flow: column nowrap;
             margin-right: 20px;
             margin-bottom: 0;
+            min-width: 250px;
+        }
+
+        @include for-big-desktop-up {
+            min-width: 300px;
         }
     }
 
@@ -71,29 +71,31 @@
             color: $text-color-secondary;
         }
 
+        @include for-tablet-portrait-up {
+            padding: 20px;
+        }
+
         &--person {
             background-color: $primary;
+            @include for-tablet-portrait-up {
+                flex-grow: 1;
+            }
         }
 
         &--branch {
-
-            @include for-tablet-portrait-up  {
-                flex-grow: 1;
-                margin-right: 20px;
-            }
-
-            @include for-tablet-landscape-up  {
+            @include for-tablet-portrait-up {
+                flex-grow: 1.5;
                 margin-right: 20px;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 column-gap: 10px;
-                grid-template-areas: 
+                grid-template-areas:
                     "title title"
                     "address phone"
                     "email fax";
             }
 
-            @include for-desktop-up  {
+            @include for-desktop-up {
                 display: flex;
                 margin-right: 0;
                 flex-grow: unset;
@@ -133,7 +135,7 @@
                 background-color: $body-bg;
                 color: $text-color-thirdery;
                 font-family: "Roboto";
-                font-size: 0.8 * $font-size-base;
+                font-size: 1 * $font-size-base;
                 padding: 0;
                 margin: 0;
             }
@@ -160,7 +162,7 @@
         border: none;
 
         * {
-            font-size: 0.7 * $font-size-base;
+            font-size: 1 * $font-size-base;
             font-family: "Roboto";
             border: none;
         }
@@ -169,10 +171,9 @@
             display: flex;
             flex-flow: column;
 
-            @include for-tablet-portrait-up  {
+            @include for-tablet-portrait-up {
                 display: table-row;
             }
-
         }
 
         tr:nth-child(2n + 1) {
@@ -183,7 +184,7 @@
             min-width: 50px;
             padding: 5px 10px;
 
-            @include for-tablet-portrait-up  {
+            @include for-tablet-portrait-up {
                 padding: 10px 10px;
             }
         }

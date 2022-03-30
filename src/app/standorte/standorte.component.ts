@@ -25,6 +25,7 @@ export class StandorteComponent implements OnInit {
 	showLocationDetails(location: any) {
 		this.matDialog.open(StandortDetailsComponent, {
 			data: { location: location },
+			panelClass: 'dialog'
 		});
 
 	}
