@@ -23,6 +23,7 @@
             <h5 class="mb-20" translate="locations.branchManagement"></h5>
             <span class="mb-10">{{branch[1]?.branchLeader}}</span>
             <a class="mb-10" [href]="'tel:' + branch[1]?.phone">{{branch[1]?.phone}}</a>
+            <a class="mb-10" [href]="'tel:' + branch[1]?.fax">{{branch[1]?.fax}}</a>
             <a class="mb-10" [href]="'mailto:' + branch[1]?.email">{{branch[1]?.email}}</a>
         </div>
     </div>
@@ -40,15 +41,16 @@
             <mat-tab class="tab__section" [label]="'locations.management' | translate">
                 <ng-container *ngTemplateOutlet="personelTable; context: { personelData: management }"></ng-container>
             </mat-tab>
+            <mat-tab class="tab__section" [label]="'locations.accounting' | translate">
+                <ng-container *ngTemplateOutlet="personelTable; context: { personelData: accounting }"></ng-container>
+            </mat-tab>
             <mat-tab class="tab__section" [label]="'locations.humanResources' | translate">
                 <ng-container *ngTemplateOutlet="personelTable; context: { personelData: humanResources }">
                 </ng-container>
             </mat-tab>
-            <mat-tab class="tab__section" [label]="'locations.accounting' | translate">
-                <ng-container *ngTemplateOutlet="personelTable; context: { personelData: accounting }"></ng-container>
-            </mat-tab>
             <mat-tab class="tab__section" [label]="'locations.executiveManagement' | translate">
-                <ng-container *ngTemplateOutlet="personelTable; context: { personelData: executiveManagement }"></ng-container>
+                <ng-container *ngTemplateOutlet="personelTable; context: { personelData: executiveManagement }">
+                </ng-container>
             </mat-tab>
         </mat-tab-group>
     </div>
@@ -56,20 +58,28 @@
 
 <ng-template #personelTable let-personelList="personelData">
     <table class="table" cellspacing="0" cellpadding="0">
-        <tr calss="row" *ngFor="let row of personelList; let i=index">
+        <tr class="table__row--tablet" *ngFor="let row of personelList">
             <td>{{row.department}}</td>
-            <td>
-                <div *ngFor="let name of row.name">{{name}}</div>
-            </td>
-            <td>
-                <a class="row" *ngFor="let phone of row.phone" [href]="'tel:'+ branchPhonePrefix + phone">
-                    <span class="show-on-mobile">{{'locations.phone' | translate}}&nbsp;{{branchPhonePrefix}}&nbsp;</span>{{phone}}
-                </a>
-            </td>
-            <td>
-                <a class="row" *ngFor="let email of row.email" [href]="'mailto:'+email">
-                    <span class="show-on-mobile">{{'locations.email' | translate}}:&nbsp;</span> {{email}}
-                </a>
+            <td><div *ngFor="let name of row.name" class="mb-5">{{name}}</div></td>
+            <td><div *ngFor="let phone of row.phone" class="mb-5"><a [href]="'tel:'+ branchPhonePrefix + phone">{{phone}}</a></div></td>
+            <td><div *ngFor="let email of row.email" class="mb-5"><a [href]="'mailto:'+email">{{ email }}</a></div></td>
+        </tr>
+
+        <tr class="table__row--mobile" *ngFor="let row of personelList">
+            <td class="column">
+                <h4>{{row.department}}</h4>
+                <div *ngFor="let name of row.name; let i=index" class="column mb-10">
+                    <span class="mb-5">{{name}} </span>
+                    <span class="mb-5">
+                        {{'locations.phone' | translate}}:&nbsp;
+                        <a [href]="'tel:' + branchPhonePrefix + row?.phone[i]">{{ branchPhonePrefix + ' '
+                            +row?.phone[i]}}</a>
+                    </span>
+                    <span *ngIf="row?.email[i]" class="mb-5">
+                        {{'locations.email' | translate}}:&nbsp;
+                        <a [href]="'mailto:' + branchPhonePrefix + row?.email[i]">{{row?.email[i]}}</a>
+                    </span>
+                </div>
             </td>
         </tr>
     </table>

@@ -41,7 +41,7 @@ export class StandortDetailsComponent implements OnInit {
 				const member = sortedList.find(m => m.department === x[1]);
 				member.section = x[0];
 				member.name.push(x[2]);
-				member.email.push(this.getEmail(x[2]));
+				member.email.push(x[1] !== 'Geschäftsleitung' ? this.getEmail(x[2]) : '');
 				member.phone.push(x[3]);
 			})
 

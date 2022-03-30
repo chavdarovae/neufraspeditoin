@@ -72,7 +72,7 @@
         }
 
         @include for-tablet-portrait-up {
-            padding: 20px;
+            padding: 15px;
         }
 
         &--person {
@@ -126,7 +126,7 @@
         .mat-tab-label {
             width: min-content;
             opacity: 1;
-            border: 1px solid $text-color-thirdery;
+            border: 3px solid $text-color-thirdery;
             margin: 0 5px 0 0;
             padding: 0 10px;
             min-width: 120px;
@@ -167,12 +167,20 @@
             border: none;
         }
 
-        tr {
-            display: flex;
-            flex-flow: column;
+
+        .table__row--tablet {
+            display: none !important;
 
             @include for-tablet-portrait-up {
-                display: table-row;
+                display: table-row !important;
+            }
+        }
+
+        .table__row--mobile {
+            display: table-row  !important;
+
+            @include for-tablet-portrait-up {
+                display: none  !important;
             }
         }
 
