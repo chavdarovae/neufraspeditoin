@@ -47,6 +47,9 @@ export class KarriereComponent implements OnInit {
 			if (label === 'partnerName') {
 				posObj.partnerEmail = this.getEmail(text);
 			}
+			if (label === 'partnerPhone') {
+				posObj.partnerPhone = this.formatNumber(text);
+			}
 			if (complexLabels.includes(label)) {
 				posObj[`${label}`].push(text);
 			} else if (simpleLabels.includes(label)) {
@@ -77,7 +80,8 @@ export class KarriereComponent implements OnInit {
 		return (name + '@neufra.eu');
 	}
 
-	formatNumber(number: string) {
+	formatNumber(numberStr: string) {
+		const number = numberStr.split(' ').join('').split('-').join('');
 		return number.replace(/(\d{1})(\d{2})(\d{2})(\d{2})(\d{2})/g, "$1 $2 $3 - $4 $5 - ");
 	}
 }
