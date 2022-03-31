@@ -10,13 +10,13 @@ import { CsvService } from 'src/app/shared/csv.service';
 })
 export class StandortDetailsComponent implements OnInit {
 	branch: BranchInfo[] = [];
-	branchPhonePrefix: string | undefined;
 	nationalDisposition: PersonelInfo[] = [];
 	internationalDisposition: PersonelInfo[] = [];
 	management: PersonelInfo[] = [];
 	executiveManagement: PersonelInfo[] = [];
 	humanResources: PersonelInfo[] = [];
 	accounting: PersonelInfo[] = [];
+	branchPhonePrefix: string | undefined;
 	centralAccounting: PersonelInfo[] = [];
 
 	constructor(
@@ -29,13 +29,13 @@ export class StandortDetailsComponent implements OnInit {
 			const stringList = data.split('new line,');
 			stringList.shift();
 			this.branch = stringList.filter(x => x.includes('Niederlassungsleitung')).map(x => this.getBranchInfo(x));
-			this.branchPhonePrefix = this.branch[0].phone?.slice(0,this.branch[0].phone.length-2);
+			this.branchPhonePrefix = this.branch[0].phone?.slice(0, -1);
 
 			const dataList = stringList.filter(x => !x.includes('Niederlassungsleitung')).map(x => x.split(','));
 			const departments = new Set(dataList.map(x => x[1]));
 			const sortedList: any[] = [];
 			departments.forEach(x => {
-				sortedList.push({ department: x, section: '', name: [], email: [], phone: [], hotline: [] })
+				sortedList.push({ department: x, section: '', name: [], email: [], phone: [], hotline: [], phoneSuffix: [] })
 			});
 
 			dataList.forEach(x => {
@@ -43,7 +43,8 @@ export class StandortDetailsComponent implements OnInit {
 				member.section = x[0];
 				member.name.push(x[2]);
 				member.email.push(x[1] !== 'Geschäftsleitung' ? this.getEmail(x[2]) : '');
-				member.phone.push(x[3]);
+				member.phoneSuffix.push(x[3]);
+				member.phone.push(this.formatNumber((this.branchPhonePrefix + x[3])));
 			})
 
 			this.nationalDisposition = sortedList.filter(x => x.section === 'Disposition National');
@@ -77,5 +78,10 @@ export class StandortDetailsComponent implements OnInit {
 						.replace('ä', 'ae')
 						.replace(' ', '.');
 		return (name + '@neufra.eu');
+	}
+
+	formatNumber(numberStr: string) {
+		const number = numberStr.split(' ').join('').split('-').join('');
+		return number.replace(/(\d{1})(\d{2})(\d{2})(\d{2})(\d{2})/g, "$1 $2 $3 - $4 $5 - ");
 	}
 }

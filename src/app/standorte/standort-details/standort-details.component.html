@@ -64,7 +64,7 @@
         <tr class="table__row--tablet" *ngFor="let row of personelList">
             <td>{{('locations.department.' + row.department) | translate }}</td>
             <td><div *ngFor="let name of row.name" class="mb-5">{{name}}</div></td>
-            <td><div *ngFor="let phone of row.phone" class="mb-5"><a [href]="'tel:'+ branchPhonePrefix + phone">{{phone}}</a></div></td>
+            <td><div *ngFor="let phone of row.phone" class="mb-5"><a [href]="'tel:' + phone">{{phoneSuffix}}</a></div></td>
             <td><div *ngFor="let email of row.email" class="mb-5"><a [href]="'mailto:'+email">{{ email }}</a></div></td>
         </tr>
 
@@ -75,12 +75,11 @@
                     <span class="mb-5">{{name}} </span>
                     <span class="mb-5">
                         {{'locations.phone' | translate}}:&nbsp;
-                        <a [href]="'tel:' + branchPhonePrefix + row?.phone[i]">{{ branchPhonePrefix + ' '
-                            +row?.phone[i]}}</a>
+                        <a [href]="'tel:' + row?.phone[i]">{{ row?.phone[i] }}</a>
                     </span>
                     <span *ngIf="row?.email[i]" class="mb-5">
                         {{'locations.email' | translate}}:&nbsp;
-                        <a [href]="'mailto:' + branchPhonePrefix + row?.email[i]">{{row?.email[i]}}</a>
+                        <a [href]="'mailto:' + row?.email[i]">{{row?.email[i]}}</a>
                     </span>
                 </div>
             </td>

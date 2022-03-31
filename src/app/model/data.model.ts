@@ -4,6 +4,7 @@ export class PersonelInfo {
         public name?: string,
         public email?: string,
         public phone?: string,
+        public phoneSuffix?: string,
         public hotline?: string,
     ) { }
 }

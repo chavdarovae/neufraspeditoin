@@ -76,4 +76,8 @@ export class KarriereComponent implements OnInit {
 			.replace(' ', '.');
 		return (name + '@neufra.eu');
 	}
+
+	formatNumber(number: string) {
+		return number.replace(/(\d{1})(\d{2})(\d{2})(\d{2})(\d{2})/g, "$1 $2 $3 - $4 $5 - ");
+	}
 }
