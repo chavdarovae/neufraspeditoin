@@ -7,8 +7,11 @@
         "services": "dienstleistungen",
         "career": "karriere",
         "transportCompany": "transportunternehmer",
-        "aboutUs": "impressum",
+        "legalNotice": "impressum",
         "dataPrivacy": "datenschutz"
+    },
+    "home" : {
+        "reasons": "Sieben gute Gründe für NEUFRA"
     },
     "company" : {
         "expericence" : {
@@ -47,6 +50,7 @@
         }
     },
     "locations" : {
+        "info": "Über unser dichtes Niederlassungsnetz stellen wir größtmögliche geografische Nähe zu unseren Geschäftspartnern sicher. Klicken Sie für Detailinformationen zu Relationen und Ansprechpartnern einfach auf eine NEUFRA-Niederlassung in der Karte.",
         "email" : "E-Mail",
         "phone" : "Telefon",
         "fax" : "Telefax",
@@ -119,27 +123,63 @@
             "Verona": "Verona",
             "Wien": "Vienna",
             "Linz": "Linz",
-            "Poznan": "Poznan",
+            "Poznan": "Posen",
             "Barcelona": "Barcelona",
             "Budapest": "Budapest",
             "Bregenz": "Bregenz"
         }
     },
     "services" : {
-        "aboutUs" : "entreprise"
+        "national" : {
+            "title": "Nationale Linienverkehre",
+            "info": "Über unser dicht gespanntes Niederlassungsnetz in Deutschland realisieren wir Ihre Teil- oder Komplettladung im täglichen Linienverkehr."
+        },
+        "european" : {
+            "title": "Europaweite Transporte",
+            "info": "Ob innerhalb der Staatsgebiete unserer europäischen Nachbarn oder über deren Grenzen hinaus, wir sind der richtige Ansprechpartner."
+        },
+        "international" : {
+            "title": "Internationale Transporte",
+            "info": "Wir transportieren ihre Güter auch außerhalb der Grenzen Europas. Unsere Experten für den vorderen Orient finden Sie z.B. in der Niederlassung Frankfurt."
+        },
+        "temperatureControlled" : {
+            "title": "Temperaturgeführte Transporte",
+            "info": "Unsere Spezialisten für temperaturgeführte Transporte finden Sie an unserem Standort in Leipzig."
+        },
+        "dangerGoodss" : {
+            "title": "Gefahrguttransporte",
+            "info": "Selbstverständlich bringen wir nach Absprache auch Ihre Gefahrgüter zu allen Destinationen."
+        }
     },
     "career" : {
-        "aboutUs" : "entreprise"
+        "info" : {
+            "pr1": "Das Fundament unseres Unternehmens sind unsere Mitarbeiter/-innen. Daher sind wir immer auf der Suche nach motivierten neuen Kollegen/-innen. Berufserfahrene Disponenten/-innen sind der Garant für Qualität und Wachstum und sind selbstverständlich herzlich willkommen bei uns die Herausforderung der eigenständigen Bearbeitung einer Verkehrsrelation anzunehmen.",
+            "pr2": "Durchstöbern Sie gerne unsere aktuellen Stellenagebote, Bewerbungen können Sie direkt an die entsprechende Niederlassung senden."
+        },
+        "position": "Position",
+        "location": "Standort",
+        "tasks": "Ihre Aufgaben",
+        "requirements": "Unsere Anforderungen",
+        "offer": "Unser Angebot",
+        "contactPerson": "Ihr Ansprechspartner"
     },
     "transportCompany" : {
-        "aboutUs" : "entreprise"
+        "capacityExploitation" : {
+            "title": "Sie suchen eine optimale Auslastung für Ihre Fahrzeuge?",
+            "info": "Dann lassen Sie uns individuell über eine für beide Parteien maßgeschneiderte Zusammenarbeit reden. Alle Punkte werden mit Ihnen abgestimmt, von der Anzahl der Lade- und Abladestellen über das Zielgebiet bis hin zum Frachtpreis."
+        },
+        "cooperation" : {
+            "title": "Sie haben Interesse an einer partnerschaftlichen Zusammenarbeit?",
+            "info": "Unser Ziel ist eine langfristige Geschäftsbeziehung mit Planungssicherheit für beide Seiten, denn zuverlässige Geschäftspartner sind das A und O in unserer Branche."
+        },
+        "interest" : {
+            "title": "Haben wir Ihr Interesse geweckt?",
+            "info": "Dann setzen Sie sich mit uns in Verbindung; kontaktieren Sie einfach die Ihnen nächstgelegene Niederlassung."
+        },
+        "toOurLocations": "Zu unseren Staandorten"
     },
     "footer" : {
-        "aboutUs": "impressum",
-        "dataPrivacy": "datenschutz"
-    },
-    "more" : {
-        "aboutUs": "impressum",
+        "legalNotice": "impressum",
         "dataPrivacy": "datenschutz"
     }
 }

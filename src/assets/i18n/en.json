@@ -1,13 +1,17 @@
 {
     "header": {
-        "home": "welcome to NEUFRA",
+        "home": "Welcome to NEUFRA,",
+        "home-subtitle": "the freight shippers service provider.",
         "company": "company",
         "locations": "locations",
         "services": "services",
         "career": "career",
         "transportCompany": "transport company",
-        "aboutUs": "about us",
+        "legalNotice": "legal notice",
         "dataPrivacy": "data privacy"
+    },
+    "home" : {
+        "reasons": "Seven Reasons to choose NEUFRA"
     },
     "company" : {
         "expericence" : {
@@ -27,7 +31,7 @@
             "info" : "As a specialist we are better than the global provider - to your advantage. Every day we load about 1,200 trucks, dispatched from 33 NEUFRA branches in Europe."
         },
         "direct-transportation" : {
-            "title": "direct-transportation without reloading",
+            "title": "Direct-transportation without reloading",
             "info": "Your shipments are transported directly to the recipient without reloading, so that they reach the desired destination quickly and reliably with minimized risk of damage."
         },
         "shipment-tracking" : {
@@ -46,14 +50,15 @@
         }
     },
     "locations" : {
+        "info": "Through our dense network of branches, we ensure the greatest possible geographical proximity to our business partners. Simply click on a NEUFRA branch in the map for detailed information on relations and contact persons.",
         "email" : "email",
         "phone" : "telephone",
         "fax" : "fax",
-        "branchManagement" : "BranchManagement",
-        "nationalDisposition" : "Disposition National",
-        "internationalDisposition" : "Disposition International",
+        "branchManagement" : "Branch Management",
+        "nationalDisposition" : "National Disposition",
+        "internationalDisposition" : "International Disposition",
         "management" : "Administration",
-        "humanResources" : "Human Resources Department",
+        "humanResources" : "Human Resources",
         "accounting" : "Accounting",
         "centralAccounting" : "Central Accounting",
         "executiveManagement" : "Executive Management",
@@ -114,9 +119,9 @@
             "Warendorf": "Warendorf",
             "Kehl": "Kehl",
             "Deggendorf": "Deggendorf",
-            "Mailand": "Milan",
+            "Milano": "Milan",
             "Verona": "Verona",
-            "Wien": "Vienna",
+            "Wien": "Wien",
             "Linz": "Linz",
             "Poznan": "Poznan",
             "Barcelona": "Barcelona",
@@ -125,16 +130,56 @@
         }
     },
     "services" : {
-        "aboutUs" : "entreprise"
+        "national" : {
+            "title" : "National services",
+            "info": "Through our dense network of branches in Germany, we realize your partial or full load in daily scheduled transport."
+        },
+        "european" : {
+            "title": "Europe-wide transports",
+            "info": "Whether within the national territories of our European neighbors or beyond their borders, we are the right contact."
+        },
+        "international" : {
+            "title": "International transports",
+            "info": "We also transport your goods outside the borders of Europe. You can find our experts for the Middle East in the Frankfurt branch, for example."
+        },
+        "temperatureControlled" : {
+            "title": "Temperature-controlled transports",
+            "info": "You can find our specialists for temperature-controlled transports at our Leipzig location."
+        },
+        "dangerGoodss" : {
+            "title": "Dangerous Goods Transports",
+            "info": "Of course, we also transport your dangerous goods to all destinations by arrangement."
+        }
     },
     "career" : {
-        "aboutUs" : "entreprise"
+        "info" : {
+            "pr1": "Our employees are the foundation of our company. Therefore we are always looking for motivated new colleagues. Experienced dispatchers are the guarantor for quality and growth and are of course welcome to take on the challenge of independently processing a traffic relation.",
+            "pr2": "Feel free to browse our current job offers, applications can be sent directly to the corresponding branch."
+        },
+        "position": "Position",
+        "location": "Location",
+        "tasks": "Your tasks",
+        "requirements": "Our requirements",
+        "offer": "We offer",
+        "contactPerson": "Contact person"
     },
     "transportCompany" : {
-        "aboutUs" : "entreprise"
+        "capacityExploitation" : {
+            "title": "Are you looking for optimal capacity utilization for your vehicles?",
+            "info": "Then let's talk individually about a collaboration tailored for both parties. All points will be agreed with you, from the number of loading and unloading points to the destination and freight price."
+        },
+        "cooperation" : {
+            "title": "Are you interested in cooperation as a partner?",
+            "info": "Our goal is a long-term business relationship with planning security for both sides, because reliable business partners are the be-all and end-all in our industry."
+        },
+        "interest" : {
+            "title": "Did we arouse your interest?",
+            "info": "Then get in touch with us; simply contact the branch nearest you."
+        },
+        "toOurLocations": "Our Locations"
     },
     "footer" : {
-        "aboutUs": "about us",
+        "legalNotice": "legal notice",
         "dataPrivacy": "data privacy"
     }
 }

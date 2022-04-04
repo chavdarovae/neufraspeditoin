@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
 	title = 'neufra-site';
-	pageTitle = 'aboutUs';
+	pageTitle = 'legalNotice';
 	_activeTab: any = 'unternehmen';
 	public get activeTab(): any {
 		return this._activeTab;
@@ -51,7 +51,7 @@ export class AppComponent {
 				break;
 			case 'transportunternehmer': this.pageTitle = 'transportCompany'
 				break;
-			case 'impressum': this.pageTitle = 'aboutUs'
+			case 'impressum': this.pageTitle = 'legalNotice'
 				break;
 			case 'datenschutz': this.pageTitle = 'dataPrivacy'
 				break;

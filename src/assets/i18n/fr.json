@@ -6,7 +6,7 @@
         "services" : "services",
         "career" : "carrière",
         "transportCompany" : "entreprise de transport",
-        "aboutUs" : "mentions légales",
+        "legalNotice" : "mentions légales",
         "dataPrivacy" : "protection des données"
     },
     "company" : {
@@ -46,19 +46,19 @@
         }
     },
     "locations" : {
-        "aboutUs" : "entreprise"
+        "legalNotice" : "entreprise"
     },
     "services" : {
-        "aboutUs" : "entreprise"
+        "legalNotice" : "entreprise"
     },
     "career" : {
-        "aboutUs" : "entreprise"
+        "legalNotice" : "entreprise"
     },
     "transportCompany" : {
-        "aboutUs" : "entreprise"
+        "legalNotice" : "entreprise"
     },
     "footer" : {
-        "aboutUs" : "mentions légales",
+        "legalNotice" : "mentions légales",
         "dataPrivacy" : "protection des données"
     }
 }

@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
 	@Input() activeTab: any = 'unternehmen';
-	@Input() pageTitle = 'aboutUs';
+	@Input() pageTitle = 'legalNotice';
 	imgPrefix = isDevMode() ? '../../../assets/img/' : './assets/img/';
 
 	constructor(

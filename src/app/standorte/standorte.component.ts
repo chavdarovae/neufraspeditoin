@@ -5,6 +5,8 @@ import { CsvService } from '../shared/csv.service';
 import { ScriptService } from '../shared/script.service';
 import { StandortDetailsComponent } from './standort-details/standort-details.component';
 declare let locations: any;
+declare let inputData: any;
+declare let inputCode: any;
 @Component({
 	selector: 'app-standorte',
 	templateUrl: './standorte.component.html',
@@ -25,14 +27,18 @@ export class StandorteComponent implements OnInit {
 		this.csvService.getLocationList().subscribe(data => {
 			const locationsList = data.split('\r\n');
 			locationsList.shift();
+			locations = [];
+			inputCode = JSON.parse(JSON.stringify(inputData));
 			locationsList.forEach((x, index)=> {
+				const translatedName = this.translate.instant('locations.branch.' + x.split(',')[0]);
 				locations.push({
-					name: this.translate.instant('locations.branch.' + x.split(',')[0]),
+					name: translatedName,
 					x: + x.split(',')[1],
 					y: + x.split(',')[2],
 					id: index
 				})
 			});
+			
 			const inputMapObj = this.scriptService.loadJsScript(this.renderer, (this.urlPrefix + 'assets/image-map-pro/location-list.js'));
 			inputMapObj.onload = () => {
 				this.scriptService.loadJsScript(this.renderer, (this.urlPrefix + 'assets/image-map-pro/map.js'));
