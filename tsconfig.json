@@ -22,7 +22,9 @@
       "es2020",
       "dom"
     ],
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "allowJs": true,
+    "checkJs": false,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

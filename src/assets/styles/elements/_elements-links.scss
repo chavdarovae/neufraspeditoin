@@ -13,3 +13,8 @@ a:hover {
     color: $text-color-primary;
     transform: scale(1.01);
 }
+
+
+a:focus-visible {
+    outline: none;
+}

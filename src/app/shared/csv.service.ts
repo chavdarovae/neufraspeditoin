@@ -16,4 +16,8 @@ export class CsvService {
 	getPositionsList(language: 'DE' | 'EN' | string) {
 		return this.http.get(`${this.urlPrefix}assets/files/carreer/Career.xlsx - ${language}.csv`, { responseType: 'text' });
 	}
+
+	getLocationList() {
+		return this.http.get(`${this.urlPrefix}assets/files/locations/Locations.xlsx - coordinates.csv`, { responseType: 'text' });
+	}
 }
