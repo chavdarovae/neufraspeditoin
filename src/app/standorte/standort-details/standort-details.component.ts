@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, isDevMode, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { BranchInfo, PersonelInfo } from 'src/app/model/data.model';
 import { CsvService } from 'src/app/shared/csv.service';
@@ -18,12 +18,13 @@ export class StandortDetailsComponent implements OnInit {
 	accounting: PersonelInfo[] = [];
 	branchPhonePrefix: string | undefined;
 	centralAccounting: PersonelInfo[] = [];
+	urlPrefix = isDevMode() ? '../../../' : './';
 
 
 	constructor(
-				@Inject(MAT_DIALOG_DATA) public data: { location: string },
-				private csvService: CsvService
-				) {}
+		@Inject(MAT_DIALOG_DATA) public data: { location: string },
+		private csvService: CsvService
+	) { }
 
 	ngOnInit(): void {
 		this.csvService.getLocationDetails(this.data.location).subscribe(data => {
@@ -70,14 +71,14 @@ export class StandortDetailsComponent implements OnInit {
 		}
 	}
 
-	getEmail (input: string) {
+	getEmail(input: string) {
 		const name = input.replace('Hr. ', '')
-						.replace('Fr. ', '')
-						.toLowerCase() 
-						.replace('ö', 'oe')
-						.replace('ü', 'ue')
-						.replace('ä', 'ae')
-						.replace(' ', '.');
+			.replace('Fr. ', '')
+			.toLowerCase()
+			.replace('ö', 'oe')
+			.replace('ü', 'ue')
+			.replace('ä', 'ae')
+			.replace(' ', '.');
 		return (name + '@neufra.eu');
 	}
 

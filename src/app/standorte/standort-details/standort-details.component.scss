@@ -84,6 +84,17 @@
         }
 
         &--branch {
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 2px;
+            }
+
+            & > * {
+                display: flex;
+                flex-flow: row wrap;
+            }
+
             @include for-tablet-portrait-up {
                 flex-grow: 1.5;
                 margin-right: 20px;
@@ -94,6 +105,10 @@
                     "title title"
                     "address phone"
                     "email fax";
+
+                & > * {
+                    flex-flow: column wrap;
+                }
             }
 
             @include for-desktop-up {
@@ -168,7 +183,6 @@
             border: none;
         }
 
-
         .table__row--tablet {
             display: none !important;
 
@@ -178,10 +192,10 @@
         }
 
         .table__row--mobile {
-            display: table-row  !important;
+            display: table-row !important;
 
             @include for-tablet-portrait-up {
-                display: none  !important;
+                display: none !important;
             }
         }
 

@@ -3,19 +3,23 @@
         <div class="card card--branch">
             <h4 class="card__title mb-5">NEUFRA Speditions GmbH</h4>
             <div class="card__address">
+                <img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/location.svg'"/>
                 <span>{{branch[0]?.address}}</span>
                 <span>{{branch[0]?.city}}</span>
             </div>
             <div class="card__email">
-                <span translate="locations.email"></span>
+                <span  class="hide-on-mobile" translate="locations.email"></span>
+                <img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/email.svg'"/>
                 <a [href]="'mailto:' + branch[0]?.email">{{branch[0]?.email}}</a>
             </div>
             <div class="card__phone">
-                <span translate="locations.phone"></span>
+                <span class="hide-on-mobile" translate="locations.phone"></span>
+                <img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/phone.svg'"/>
                 <a [href]="'tel:' + branch[0]?.phone">{{branch[0]?.phone}}</a>
             </div>
             <div class="card__fax">
-                <span translate="locations.fax"></span>
+                <span class="hide-on-mobile" translate="locations.fax"></span>
+                <img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/fax.svg'"/>
                 <a>{{branch[0]?.fax}}</a>
             </div>
         </div>
