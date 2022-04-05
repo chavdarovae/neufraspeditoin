@@ -68,8 +68,8 @@
         <tr class="table__row--tablet" *ngFor="let row of personelList">
             <td>{{('locations.department.' + row.department.trim()) | translate }}</td>
             <td><div *ngFor="let name of row.name" class="mb-5">{{name}}</div></td>
-            <td><div *ngFor="let phone of row.phone" class="mb-5"><a [href]="'tel:' + phone">{{phoneSuffix}}</a></div></td>
-            <td><div *ngFor="let email of row.email" class="mb-5"><a [href]="'mailto:'+email">{{ email }}</a></div></td>
+            <td><div *ngFor="let phoneSuffix of row.phoneSuffix" class="mb-5"><a [href]="'tel:' + row.phone">{{ phoneSuffix }}</a></div></td>
+            <td><div *ngFor="let email of row.email" class="mb-5"><a [href]="'mailto:' + email">{{ email }}</a></div></td>
         </tr>
 
         <tr class="table__row--mobile" *ngFor="let row of personelList">
