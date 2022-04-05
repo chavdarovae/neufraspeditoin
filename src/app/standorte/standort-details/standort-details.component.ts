@@ -72,7 +72,7 @@ export class StandortDetailsComponent implements OnInit {
 	}
 
 	getEmail(input: string) {
-		const name = input.replace('Hr. ', '')
+		const name = input.trim().replace('Hr. ', '')
 			.replace('Fr. ', '')
 			.toLowerCase()
 			.replace('ö', 'oe')
