@@ -5039,13 +5039,13 @@ const inputData = {
     "width_image_background": 9.625,
     "height_image_background": 6.979,
     "default_style": {
-      "background_color": "#EBEBEB",
+      "background_color": "#c0dbcb",
       "background_opacity": 1,
       "stroke_opacity": 1,
       "stroke_width": 1
     },
     "mouseover_style": {
-      "background_color": "#EBEBEB",
+      "background_color": "#c0dbcb",
       "background_opacity": 1,
       "stroke_opacity": 1,
       "stroke_width": 1
