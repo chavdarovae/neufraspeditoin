@@ -1,6 +1,6 @@
 import { Component, isDevMode, OnInit, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { CsvService } from '../shared/csv.service';
 import { ScriptService } from '../shared/script.service';
 import { StandortDetailsComponent } from './standort-details/standort-details.component';
@@ -21,9 +21,17 @@ export class StandorteComponent implements OnInit {
 		private scriptService: ScriptService,
 		private csvService: CsvService,
 		private translate: TranslateService
-	) { }
+	) {
+		translate.onLangChange.subscribe((event: LangChangeEvent) => {
+			this.loadMap();
+        });
+	}
 
 	ngOnInit(): void {
+		this.loadMap();
+	}
+
+	loadMap() {
 		this.csvService.getLocationList().subscribe(data => {
 			const locationsList = data.split('\r\n');
 			locationsList.shift();

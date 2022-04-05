@@ -19,6 +19,7 @@ export class StandortDetailsComponent implements OnInit {
 	branchPhonePrefix: string | undefined;
 	centralAccounting: PersonelInfo[] = [];
 
+
 	constructor(
 				@Inject(MAT_DIALOG_DATA) public data: { location: string },
 				private csvService: CsvService

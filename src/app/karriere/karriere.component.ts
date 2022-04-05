@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { PositionInfo } from '../model/data.model';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { Language, PositionInfo } from '../model/data.model';
 import { CsvService } from '../shared/csv.service';
 
 @Component({
@@ -13,15 +13,24 @@ export class KarriereComponent implements OnInit {
 	expanded = false;
 	positions: any[] = [];
 	asc = true;
-	currentLanguage = 'DE';
+	currentLanguage: string = Language.DE;
 
 	constructor(
 		private csvService: CsvService,
 		private translate: TranslateService
-	) { }
+	) { 
+		translate.onLangChange.subscribe((event: LangChangeEvent) => {
+            this.currentLanguage = event.lang
+			this.loadPositions();
+        });
+	}
 
 	ngOnInit(): void {
-		this.currentLanguage = this.translate.currentLang;
+		this.loadPositions();
+	}
+
+	loadPositions() {
+		this.positions = [];
 		this.csvService.getPositionsList(this.currentLanguage.toUpperCase()).subscribe(data => {
 			const stringList = data.split('new position,');
 			stringList.shift();

@@ -36,3 +36,11 @@ export class PositionInfo {
         public partnerEmail?: string
     ) { }
 }
+
+export enum Language {
+    EN = 'en',
+    DE = 'de',
+    FR = 'fr',
+    IT = 'it',
+    PL = 'pl'
+}
