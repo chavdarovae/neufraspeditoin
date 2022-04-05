@@ -288,8 +288,8 @@
 		"toOurLocations": "Our Locations"
 	},
 	"legalNotice": {
-		"legalNotice": "",
-		"court": "",
+		"legalNotice": "Legal notice",
+		"court": "Court",
 		"taxNumber": "Tax number",
 		"vatId": "VAT identification number",
 		"responsible": "Responsible for the content",
