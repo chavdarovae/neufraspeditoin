@@ -62,7 +62,7 @@
 <ng-template #personelTable let-personelList="personelData">
     <table class="table" cellspacing="0" cellpadding="0">
         <tr class="table__row--tablet" *ngFor="let row of personelList">
-            <td>{{('locations.department.' + row.department) | translate }}</td>
+            <td>{{('locations.department.' + row.department.trim()) | translate }}</td>
             <td><div *ngFor="let name of row.name" class="mb-5">{{name}}</div></td>
             <td><div *ngFor="let phone of row.phone" class="mb-5"><a [href]="'tel:' + phone">{{phoneSuffix}}</a></div></td>
             <td><div *ngFor="let email of row.email" class="mb-5"><a [href]="'mailto:'+email">{{ email }}</a></div></td>
