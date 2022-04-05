@@ -56,7 +56,7 @@ locations.forEach(loc => {
         "text": {
             "text": loc.name,
             "font_family": "Roboto",
-            "font_size": mobileVersion ? 6 : 9
+            "font_size": mobileVersion ? 5 : 9
         },
         "tooltip_content": {
             "squares_settings": {

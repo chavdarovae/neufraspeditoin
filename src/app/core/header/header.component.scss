@@ -125,5 +125,9 @@
     color: $nav-text-color;
     font-weight: $font-weight-bold;
     outline: none;
-    background-color: $body-bg;
+    background-color: $primary;
+
+    @include for-desktop-up {
+        background-color: $body-bg;
+    }
 }
