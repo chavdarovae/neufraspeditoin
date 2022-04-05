@@ -20,7 +20,7 @@
 	display: grid;
 	grid-template-columns: min-content 1fr;
 	grid-template-areas: "icon title";
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	margin-bottom: 50px;
 	column-gap: 10px;

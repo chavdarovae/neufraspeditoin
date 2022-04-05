@@ -55,10 +55,6 @@ export class StandorteComponent implements OnInit {
 	}
 
 	showLocationDetails(location: any) {
-		// document.body.style.webkitTransform =scale(1)    // Chrome, Opera, Safari
-		// document.body.style.msTransform = scale(1);       // IE 9
-		// document.body.style.transform = scale(1);     // General
-		// document.body.style.zoom = 1.0
 		this.matDialog.open(StandortDetailsComponent, {
 			data: { location: location },
 			panelClass: 'dialog'

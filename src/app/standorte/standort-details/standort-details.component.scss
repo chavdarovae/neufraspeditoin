@@ -62,12 +62,6 @@
         flex-flow: column nowrap;
         justify-content: flex-start;
 
-        > * {
-            display: flex;
-            flex-flow: column nowrap;
-            margin-bottom: 10px;
-        }
-
         * {
             color: $text-color-secondary;
         }
@@ -76,23 +70,25 @@
             padding: 15px;
         }
 
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 2px;
+        }
+
         &--person {
             background-color: $primary;
+
             @include for-tablet-portrait-up {
                 flex-grow: 1;
             }
         }
 
         &--branch {
-            img {
-                width: 20px;
-                height: 20px;
-                margin-right: 2px;
-            }
-
             & > * {
                 display: flex;
                 flex-flow: row wrap;
+                margin-bottom: 10px;
             }
 
             @include for-tablet-portrait-up {

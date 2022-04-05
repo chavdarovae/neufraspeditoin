@@ -4,8 +4,10 @@
             <h4 class="card__title mb-5">NEUFRA Speditions GmbH</h4>
             <div class="card__address">
                 <img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/location.svg'"/>
-                <span>{{branch[0]?.address}}</span>
-                <span>{{branch[0]?.city}}</span>
+                <span class="column">
+                    <span>{{branch[0]?.address}}</span>
+                    <span>{{branch[0]?.city}}</span>
+                </span>
             </div>
             <div class="card__email">
                 <span  class="hide-on-mobile" translate="locations.email"></span>
@@ -26,9 +28,9 @@
         <div class="card card--person">
             <h5 class="mb-20" translate="locations.branchManagement"></h5>
             <span class="mb-10">{{branch[1]?.branchLeader}}</span>
-            <a class="mb-10" [href]="'tel:' + branch[1]?.phone">{{branch[1]?.phone}}</a>
-            <a class="mb-10" [href]="'tel:' + branch[1]?.fax">{{branch[1]?.fax}}</a>
-            <a class="mb-10" [href]="'mailto:' + branch[1]?.email">{{branch[1]?.email}}</a>
+            <a class="link-with-icon mb-10" [href]="'tel:' + branch[1]?.phone"><img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/phone.svg'"/> {{branch[1]?.phone}}</a>
+            <a class="link-with-icon mb-10" [href]="'tel:' + branch[1]?.fax"><img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/mobile.svg'"/>{{branch[1]?.fax}}</a>
+            <a class="link-with-icon mb-10" [href]="'mailto:' + branch[1]?.email"><img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/email.svg'"/> {{branch[1]?.email}}</a>
         </div>
     </div>
 
