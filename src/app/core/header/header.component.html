@@ -15,8 +15,8 @@
             <li class="menu__item menu__item--lang show-on-tablet">
                 <ng-container *ngTemplateOutlet="languageBar"></ng-container>
             </li>
+            <!-- unternehmen -->
             <li class="menu__item" (click)="menuToggle.click()">
-                <!-- unternehmen -->
                 <a routerLink="/unternehmen" class="menu__item-link"
                     [ngClass]="{'menu__item-link--active': activeTab === 'unternehmen'}" translate="header.company"></a>
             </li>

@@ -59,6 +59,28 @@ export class StandortDetailsComponent implements OnInit {
 		});
 	}
 
+	getNameOfTheCompany(location: string) {
+		switch (location) {
+			case 'Milano':
+			case 'Verona':
+				return 'Neufra Spedizioni Italia s.r.l.';
+			case 'Wien':
+			case 'Bregenz':
+			case 'Linz':
+				return 'NEUFRA Speditions Ges.m.b.H.';
+			case 'Poznan':
+				return 'NEUFRA Spedition Polska sp. z o.o.';
+			case 'Barcelona':
+				return 'Neufra Logistica Espana S.L.';
+			case 'Budapest':
+				return 'NEUFRA Hungary  Szállítmányozási KFT';
+				case 'Decin':
+				return 'NEUFRA spedice s.r.o.';
+			default:
+				return 'NEUFRA Speditions GmbH';
+		}
+	}
+
 	getBranchInfo(info: string) {
 		const branch = info.replace(`Niederlassungsleitung,`, '').split(',');
 		return {
