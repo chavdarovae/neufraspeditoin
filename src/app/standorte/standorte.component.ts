@@ -43,6 +43,7 @@ export class StandorteComponent implements OnInit {
 					name: translatedName,
 					x: + x.split(',')[1],
 					y: + x.split(',')[2],
+					abr: x.split(',')[3].trim(),
 					id: index
 				})
 			});

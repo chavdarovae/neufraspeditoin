@@ -9,8 +9,9 @@ export class CsvService {
 
 	constructor(private http: HttpClient) { }
 
-	getLocationDetails(location: string) {
-		return this.http.get(`${this.urlPrefix}assets/files/locations/Personal.xlsx - ${location}.csv`, { responseType: 'text' });
+	getLocationDetails(abr: string) {
+		const inlandOrAbroad = abr.length === 3 ? 'DE' : 'Ausland'
+		return this.http.get(`${this.urlPrefix}assets/files/locations/Personal ${inlandOrAbroad}.xlsx - ${abr}.csv`, { responseType: 'text' });
 	}
 
 	getPositionsList(language: 'DE' | 'EN' | string) {

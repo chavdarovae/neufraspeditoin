@@ -138,3 +138,56 @@ Türkei / Spezialverkehre / Vorderasien
 Vertretungen
 West 
 West- und Nordeuropa
+Würzburg / Nürnberg / Regensburg 
+West / Hannover 
+West 
+Vertretungen 
+Süden / Nahverkehr 
+Südbayern / Allgäu / Nürnberg / Nordbayern 
+Süd 
+Spanien / Frankreich / Portugal 
+Schäden / Lademittel 
+Schäden 
+Sachsen / Sachsen-anhalt 
+Rheinland / Ruhrgebiet / Bielefeld / Münster 
+Rhein-Ruhr / Siegerland 
+Rhein-Main / Saarland / Baden-Württemberg 
+Rhein-Main / Rheinland-Pfalz / Baden-Württemberg / Saarland 
+Rhein / Ruhr / Hannover / Kassel 
+Polen / Baltikum 
+Österreich / Schweiz / Balkan 
+Osten / Nahverkehr / Meck-Pom / 
+Osten / Berlin / Polen 
+Osten / Bayern 
+Osten 
+Ost 
+Nordrhein-Westfalen 
+Norden / Export 
+Norden / Export 
+Nordbayern / Thüringen / Südbayern / Allgäu 
+Nordbayern / Thüringen 
+Nord 
+Niedersachsen / Ostdeutschland 
+Nahverkehr 
+Meck-Pom / Berlin / Brandenburg / Thüringen / Sachsen / Sachsen-Anhalt 
+Magdeburg 
+Lademittel / Schäden 
+Lademittel / Abrechnung 
+Lademittel
+Kassel / Hannover / Bremen / Bielefeld 
+Italien 
+Hamburg / Schleswig-Holstein / Niedersachsen 
+Hamburg / Schleswig-Holstein
+Hamburg / Bremen / Schleswig-Holstein 
+Hamburg 
+Großbritannien / Skandinavien 
+Chemnitz / Leipzig / Dresden 
+Bremen / Westfalen / Kassel / Hannover 
+Bremen / Emsland / Hannover 
+Meck-Pom / Berlin / Brandenburg / Thüringen / Sachsen / Sachsen-Anhalt 
+Hessen / Rheinland-Pfalz (PLZ 54/55/56/57)
+Saarland / Baden-Württemberg / Rheinland Pfalz (PLZ 66/67)
+Hamburg / Bremen / Schleswig-Holstein 
+Nordrhein-Westfalen 
+Hannover / Ostwestfalen 
+Auszubildender 

@@ -59,9 +59,9 @@ export class StandortDetailsComponent implements OnInit {
 		});
 	}
 
-	getNameOfTheCompany(location: string) {
-		switch (location) {
-			case 'Milano':
+	getNameOfTheCompany() {
+		switch (this.data.location) {
+			case 'Mailand':
 			case 'Verona':
 				return 'Neufra Spedizioni Italia s.r.l.';
 			case 'Wien':

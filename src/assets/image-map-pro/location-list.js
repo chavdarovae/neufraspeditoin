@@ -13,7 +13,7 @@ locations.forEach(loc => {
         "height_image_background": 0.655,
         "actions": {
             "click": "run-script",
-            "script": `$(\"#showDetailsBtn\").html(\"${loc.name}\"); $(\"#showDetailsBtn\").click();`
+            "script": `$(\"#showDetailsBtn\").html(\"${loc.abr}\"); $(\"#showDetailsBtn\").click();`
         },
         "default_style": {
             "background_color": "#007032",
