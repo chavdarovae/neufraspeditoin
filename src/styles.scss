@@ -48,6 +48,11 @@
     max-width: 90vw !important;
     min-height: 70vh !important;
     max-height: 90vh !important;
+
+    @include for-desktop-up {
+        // height: 80vh !important;
+        width: 90vw !important;
+    }
 }
 
 .backdrop {

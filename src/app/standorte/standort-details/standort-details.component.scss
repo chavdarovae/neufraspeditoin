@@ -8,8 +8,7 @@
     max-height: calc(var(--vh, 1vh) * 80);
 
     @include for-tablet-portrait-up {
-        // max-height: unset;
-        // overflow-y: unset;
+    
     }
 
     @include for-tablet-landscape-up {
@@ -42,11 +41,11 @@
             flex-flow: column nowrap;
             margin-right: 20px;
             margin-bottom: 0;
-            min-width: 250px;
+            min-width: 300px;
         }
 
         @include for-big-desktop-up {
-            min-width: 300px;
+            min-width: 350px;
         }
     }
 
