@@ -47,7 +47,7 @@
 .dialog {
     max-width: 85vw !important;
     max-height: 85vh;
-    max-height: calc(var(--vh, 1vh) * 85);
+    max-height: calc(var(--vh, 1vh) * 90);
 
     @include for-desktop-up {
         max-width: 95vw !important;
