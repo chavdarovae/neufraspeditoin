@@ -8,7 +8,7 @@
     max-height: calc(var(--vh, 1vh) * 80);
 
     @include for-tablet-portrait-up {
-        max-height: unset;
+        // max-height: unset;
         // overflow-y: unset;
     }
 
@@ -81,6 +81,7 @@
 
             @include for-tablet-portrait-up {
                 flex-grow: 1;
+                min-width: 250px;
             }
         }
 
