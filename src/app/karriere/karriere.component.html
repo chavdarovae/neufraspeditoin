@@ -6,7 +6,9 @@
     <section class="carrier__table table">
         <div class="table__header row row--space-btw">
             <h3 class="position__header-title no-margin" translate="career.position"></h3>
-            <h3 class="position__header-location no-margin row row--no-wrap" translate="career.location"><i class="fa fa-sort-alpha-down" (click)="sortPositions()"></i></h3>
+            <h3 class="position__header-location no-margin row row--no-wrap" translate="career.location">
+                <i class="fa" [ngClass]="{'fa-sort-alpha-down': asc, 'fa-sort-alpha-up': !asc}" (click)="sortPositions()"></i>
+            </h3>
         </div>
         <ng-container *ngFor="let position of positions; let i=index;">
             <article class="table__item position">
