@@ -1,20 +1,22 @@
 @import "../app-variables";
 
 a {
-    // font-size: 14px;
-    // font-style: normal;
     color: $text-color-thirdery;
     text-decoration: none;
+    outline : none;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: $text-color-primary;
+        transform: scale(1.01);
+    }
+    
+    &:focus-visible {
+        outline: none;
+    }
 }
 
-a:hover {
-    cursor: pointer;
-    text-decoration: none;
-    color: $text-color-primary;
-    transform: scale(1.01);
-}
-
-
-a:focus-visible {
+*:focus {
     outline: none;
 }
