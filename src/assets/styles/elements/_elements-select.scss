@@ -1,0 +1,17 @@
+// select {
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none; /* Remove default arrow */
+//     // background-image: url(...); /* Add custom arrow */
+// }
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
