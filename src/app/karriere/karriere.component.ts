@@ -30,10 +30,10 @@ export class KarriereComponent implements OnInit {
 	}
 
 	loadPositions() {
-		this.positions = [];
 		this.csvService.getPositionsList(this.currentLanguage.toUpperCase()).subscribe(data => {
 			const stringList = data.split('new position,');
 			stringList.shift();
+			this.positions = [];
 			stringList.forEach(x => {
 				this.positions.push(this.getPosition(x))
 			})
