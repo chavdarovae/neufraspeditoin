@@ -239,7 +239,10 @@
       "Hamburg / Bremen / Schleswig-Holstein": "Hamburg / Bremen / Schleswig-Holstein",
       "Hannover / Ostwestfalen": "Hannover / Ostwestfalen",
       "Auszubildender": "Auszubildender",
-      "Bremen / Bielefeld": "Bremen / Bielefeld"
+      "Bremen / Bielefeld": "Bremen / Bielefeld",
+      "Service": "Service",
+      "Spezialtransporte / Nahverkehr": "Spezialtransporte / Nahverkehr",
+      "Berlin / Meck-Pom / Magdeburg": "Berlin / Meck-Pom / Magdeburg"
     },
     "branch": {
       "Berlin": "Berlin",

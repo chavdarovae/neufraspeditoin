@@ -28,12 +28,14 @@ export class StandortDetailsComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.csvService.getLocationDetails(this.data.location).subscribe(data => {
+			data = data.split('new line ,').join('new line,');
 			const stringList = data.split('new line,');
 			stringList.shift();
+			
 			this.branch = stringList.filter(x => x.includes('Niederlassungsleitung')).map(x => this.getBranchInfo(x));
 			this.branchPhonePrefix = this.branch[0].phone?.trim().slice(0, -1);
-
 			const dataList = stringList.filter(x => !x.includes('Niederlassungsleitung')).map(x => x.split(','));
+			
 			const departments = new Set(dataList.map(x => x[1]));
 			const sortedList: any[] = [];
 			departments.forEach(x => {
@@ -44,7 +46,8 @@ export class StandortDetailsComponent implements OnInit {
 				const member = sortedList.find(m => m.department === x[1]);
 				member.section = x[0];
 				member.name.push(x[2]);
-				member.email.push(x[1] !== 'Geschäftsleitung' ? this.getEmail(x[2]) : '');
+				member.email.push(!(x[2].includes('Wolfgang Hast') || x[2].includes('Sandra Hast-Herrendorf'))?
+										this.getEmail(x[2]) : '');
 				member.phoneSuffix.push(x[3]);
 				member.phone.push(this.formatNumber((this.branchPhonePrefix + x[3])));
 			});
