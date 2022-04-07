@@ -14,7 +14,7 @@
     }
 
     @include for-desktop-up {
-        flex-flow: row;
+        flex-flow: row nowrap;
         overflow-y: unset;
     }
 
@@ -49,6 +49,9 @@
 
     .loc__right-panel {
         flex-grow: 1;
+        @include for-desktop-up {
+            min-width: 900px;
+        }
     }
 
     .card {

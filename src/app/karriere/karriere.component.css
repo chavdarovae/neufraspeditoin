@@ -1,0 +1,206 @@
+.table i {
+  font-size: 2rem;
+  color: #007032;
+}
+
+.table i:hover {
+  color: #0A0F0F;
+}
+
+.table__header,
+.table .position__short,
+.table .position__long {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 110px;
+      grid-template-columns: 1fr 110px;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  row-gap: 5px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+@media (min-width: 600px) {
+  .table__header,
+  .table .position__short,
+  .table .position__long {
+    -ms-grid-columns: 1fr 170px 110px;
+        grid-template-columns: 1fr 170px 110px;
+    row-gap: 30px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .table__header,
+  .table .position__short,
+  .table .position__long {
+    -ms-grid-columns: 1fr 350px 30px;
+        grid-template-columns: 1fr 350px 30px;
+    row-gap: 30px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+  }
+}
+
+.table__header {
+  padding: 10px 10px;
+  border-bottom: 3px solid #007032;
+      grid-template-areas: "headerTitle headerLocation";
+}
+
+@media (min-width: 600px) {
+  .table__header {
+    padding: 10px 20px;
+        grid-template-areas: "headerTitle . headerLocation";
+  }
+}
+
+@media (min-width: 1200px) {
+  .table__header {
+    padding: 10px 30px;
+        grid-template-areas: "headerTitle headerLocation headerLocation";
+  }
+}
+
+.table__header i {
+  margin-left: 5px;
+  font-size: 1.5rem;
+}
+
+.table .position {
+  width: 100%;
+  border-bottom: 3px solid #007032;
+}
+
+.table .position__short {
+  padding: 20px 10px 15px 10px;
+      grid-template-areas: "title location" "title toggle";
+}
+
+@media (min-width: 600px) {
+  .table .position__short {
+    padding: 20px 30px 15px 20px;
+        grid-template-areas: "title title location" "title title toggle";
+  }
+}
+
+@media (min-width: 1200px) {
+  .table .position__short {
+    padding: 20px 30px 15px 30px;
+        grid-template-areas: "title location toggle";
+  }
+}
+
+.table .position__long {
+  padding: 0 10px 30px 10px;
+      grid-template-areas: "descripion descripion" "tasks tasks" "requirements requirements" "offer offer" "partner partner";
+}
+
+@media (min-width: 600px) {
+  .table .position__long {
+    padding: 0 20px 30px 20px;
+        grid-template-areas: "descripion descripion descripion" "tasks tasks tasks" "requirements requirements requirements" "offer partner partner";
+  }
+}
+
+@media (min-width: 1200px) {
+  .table .position__long {
+    padding: 0 30px 30px 30px;
+        grid-template-areas: "descripion descripion descripion" "tasks tasks tasks" "requirements requirements requirements" "offer partner partner";
+  }
+}
+
+.table .position__header-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: headerTitle;
+}
+
+.table .position__header-location {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: headerLocation;
+}
+
+.table .position__title {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+.table .position__location {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: location;
+}
+
+.table .position__toggle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: toggle;
+  width: 30px;
+}
+
+.table .position__descripion {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: descripion;
+}
+
+.table .position__tasks {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: tasks;
+}
+
+.table .position__requirements {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: requirements;
+}
+
+.table .position__offer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: offer;
+}
+
+.table .position__partner {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: partner;
+}
+
+.card {
+  width: 100%;
+  background-color: #007032;
+  padding: 20px;
+}
+
+.card__header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.card i {
+  font-size: 1.5rem;
+  color: #FFFFFF !important;
+  margin-right: 10px;
+}
+
+.card * {
+  color: #FFFFFF;
+}

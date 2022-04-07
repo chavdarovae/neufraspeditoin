@@ -52,14 +52,13 @@
 
     @include for-desktop-up {
         max-width: 95vw !important;
-        min-width: 70vw !important;
+        min-width: 1300px !important;
         width: 80vw !important;
     }
 
     @include for-big-desktop-up {
         min-height: 60vh;
         max-width: 80vw !important;
-        min-width: 60vw !important;
     }
 }
 

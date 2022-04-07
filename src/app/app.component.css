@@ -1,0 +1,38 @@
+:host {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content 1fr 130px;
+      grid-template-rows: -webkit-min-content 1fr 130px;
+      grid-template-rows: min-content 1fr 130px;
+  row-gap: 30px;
+}
+
+@media (min-width: 600px) {
+  :host {
+    -ms-grid-rows: calc($poster-height-tablet-portrait + $header-height-tablet-portrait) 1fr 130px;
+        grid-template-rows: calc($poster-height-tablet-portrait + $header-height-tablet-portrait) 1fr 130px;
+  }
+}
+
+@media (min-width: 900px) {
+  :host {
+    -ms-grid-rows: calc($poster-height-tablet-landscape + $header-height-tablet-landscape) 1fr 130px;
+        grid-template-rows: calc($poster-height-tablet-landscape + $header-height-tablet-landscape) 1fr 130px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :host {
+    -ms-grid-rows: calc($poster-height-desktop + $header-height-desktop) 1fr 130px;
+        grid-template-rows: calc($poster-height-desktop + $header-height-desktop) 1fr 130px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :host {
+    -ms-grid-rows: 540px 1fr 330px;
+        grid-template-rows: 540px 1fr 330px;
+    row-gap: 80px;
+  }
+}

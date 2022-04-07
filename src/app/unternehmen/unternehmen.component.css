@@ -1,0 +1,87 @@
+:host .card-holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+  justify-items: center;
+}
+
+@media (min-width: 600px) {
+  :host .card-holder {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  :host .card-holder {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+:host .card {
+  min-width: 200px;
+  max-width: 600px;
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px min 1fr;
+      grid-template-rows: 100px min 1fr;
+  row-gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+:host .card > * {
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@media (min-width: 900px) {
+  :host .card {
+    min-width: 300px;
+    max-width: unset;
+  }
+}
+
+:host .card--green {
+  background-color: #007032;
+}
+
+:host .card--green > * {
+  color: #FFFFFF;
+}
+
+:host .card--green path {
+  fill: #007032;
+}
+
+:host .card--gray {
+  background-color: #EBEBEB;
+}
+
+:host .card--gray path {
+  fill: #007032;
+}
+
+@media (min-width: 900px) {
+  :host .card--big {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+}
+
+:host .history-holder {
+  margin-top: 80px;
+}
