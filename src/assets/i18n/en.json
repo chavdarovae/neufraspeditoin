@@ -236,13 +236,11 @@
       "Chemnitz / Leipzig / Dresden": "Chemnitz / Leipzig / Dresden",
       "Bremen / Westfalen / Kassel / Hannover": "Bremen / Westphalia / Kassel / Hanover",
       "Bremen / Emsland / Hannover": "Bremen / Emsland / Hanover",
-      "Meck-Pom / Berlin / Brandenburg / Thüringen / Sachsen / Sachsen-Anhalt ": "Meck-Pom / Berlin / Brandenburg / Thuringia / Saxony / Saxony-Anhalt ",
       "Hessen / Rheinland-Pfalz (PLZ 54/55/56/57)": "Hesse / Rhineland-Palatinate (postal codes 54/55/56/57)",
       "Saarland / Baden-Württemberg / Rheinland Pfalz (PLZ 66/67)": "Saarland / Baden-Wuerttemberg / Rhineland-Palatinate (postal code 66/67)",
-      "Hamburg / Bremen / Schleswig-Holstein ": "Hamburg / Bremen / Schleswig-Holstein ",
-      "Nordrhein-Westfalen ": "North Rhine-Westphalia ",
-      "Hannover / Ostwestfalen ": "Hanover / East Westphalia ",
-      "Auszubildender ": "Trainee "
+      "Hannover / Ostwestfalen": "Hanover / East Westphalia",
+      "Auszubildender": "Trainee",
+      "Bremen / Bielefeld": "Bremen / Bielefeld"
     },
     "branch": {
       "Berlin": "Berlin",

@@ -49,13 +49,13 @@ export class StandortDetailsComponent implements OnInit {
 				member.phone.push(this.formatNumber((this.branchPhonePrefix + x[3])));
 			});
 
-			this.nationalDisposition = sortedList.filter(x => x.section === 'Disposition National');
-			this.internationalDisposition = sortedList.filter(x => x.section === 'Disposition International');
-			this.management = sortedList.filter(x => x.section === 'Verwaltung');
-			this.executiveManagement = sortedList.filter(x => x.section === 'Geschäftsleitung');
-			this.humanResources = sortedList.filter(x => x.section === 'Personalabteilung');
-			this.accounting = sortedList.filter(x => x.section === 'Buchhaltung');
-			this.centralAccounting = sortedList.filter(x => x.section === 'Zentralbuchhaltung');
+			this.nationalDisposition = sortedList.filter(x => x.section.trim() === 'Disposition National');
+			this.internationalDisposition = sortedList.filter(x => x.section.trim() === 'Disposition International');
+			this.management = sortedList.filter(x => x.section.trim() === 'Verwaltung');
+			this.executiveManagement = sortedList.filter(x => x.section.trim() === 'Geschäftsleitung');
+			this.humanResources = sortedList.filter(x => x.section.trim() === 'Personalabteilung');
+			this.accounting = sortedList.filter(x => x.section.trim() === 'Buchhaltung');
+			this.centralAccounting = sortedList.filter(x => x.section.trim() === 'Zentralbuchhaltung');
 		});
 	}
 
@@ -94,13 +94,14 @@ export class StandortDetailsComponent implements OnInit {
 	}
 
 	getEmail(input: string) {
-		const name = input.trim().replace('Hr. ', '')
+		const name = input.trim()
+			.replace('Hr. ', '')
 			.replace('Fr. ', '')
 			.toLowerCase()
-			.replace('ö', 'oe')
-			.replace('ü', 'ue')
-			.replace('ä', 'ae')
-			.replace(' ', '.');
+			.split('ö').join('oe')
+			.split('ü').join('ue')
+			.split('ä').join('ae')
+			.split(' ').join('.');
 		return (name + '@neufra.eu');
 	}
 
