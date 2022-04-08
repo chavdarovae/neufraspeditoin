@@ -1,6 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { AfterViewChecked, Component, isDevMode, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ScrollHelper } from '../shared/scrollHelper';
 
 @Component({
@@ -15,21 +15,26 @@ export class UnternehmenComponent implements OnInit, AfterViewChecked {
 
 	constructor(
 		private router: Router,
-		private scroller: ViewportScroller
+		private scroller: ViewportScroller,
+		private activatedRoute: ActivatedRoute
 	) { }
 
 	ngOnInit(): void {
-		this.router.events.subscribe(() => {
-			this.target = window.location.href.split('?goToSection=')[1];
-			if (this.target) {
-				this.scroller.scrollToAnchor(this.target);
-			}
-		});
+		this.activatedRoute.queryParams.subscribe(params => {
+            if (params['goToSection']) {
+				this.scroller.scrollToAnchor(params['goToSection']);
+            }
+        });
+		// this.router.events.subscribe(() => {
+		// 	this.target = window.location.href.split('?goToSection=')[1];
+		// 	console.log(this.target);
+		// 	if (this.target) {
+		// 		this.scroller.scrollToAnchor(this.target);
+		// 	}
+		// });
 	}
 
 	ngAfterViewChecked() {
-		console.log(this.target);
-		
 		if (this.target) {
 			this.scrollHelper.scrollToFirst(this.target);
 			this.scrollHelper.doScroll();
