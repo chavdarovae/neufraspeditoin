@@ -49,6 +49,7 @@
 		grid-area: icon;
 		width: 120px;
 		height: 105px;
+		cursor: pointer;
 
 		@include for-tablet-portrait-up {
 			width: 120px;
