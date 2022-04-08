@@ -1,78 +1,53 @@
 @import "../../assets/styles/app-variables";
 @import "../../assets/styles/settings/settings-breakpoints";
+.container {
+    padding: 0 10px;
+}
 
 .card {
     box-shadow: none;
     margin-bottom: 80px;
     width: 100%;
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 120px 1fr;
     row-gap: 10px;
-    column-gap: 30px;
-    grid-template-areas: 
-    "icon title"
-    "info info"; 
-    
-    @include for-tablet-portrait-up {
-        grid-template-columns: 80px 1fr;
-        width: 600px;
-        grid-template-areas: 
+    column-gap: 20px;
+    grid-template-areas:
         "icon title"
-        "icon info"; 
+        "info info";
+    justify-content: center;
+    align-content: center;
+
+    @include for-tablet-portrait-up {
+        grid-template-columns: 120px 1fr;
+        width: 600px;
+        grid-template-areas:
+            "icon title"
+            "icon info";
     }
 
     @include for-tablet-landscape-up {
-        grid-template-columns: 120px 1fr;
+        grid-template-columns: 130px 1fr;
         width: 800px;
     }
 
     @include for-desktop-up {
-        grid-template-columns: 120px 1fr;
+        grid-template-columns: 130px 1fr;
         // width: 800px;
     }
 
     &__svg {
         background-color: $primary;
-        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         grid-area: icon;
-        width: 90px;
-
-        @include for-tablet-portrait-up {
-            width: 100px;
-        }
-    
-        @include for-tablet-landscape-up {
-            width: 110px;
-        }
-    
-        @include for-desktop-up {
-            width: 120px;
-        }
-
-        img {
-            width: 60px;
-            height: auto;
-            @include for-tablet-portrait-up {
-                width: 60px;
-            }
-        
-            @include for-tablet-landscape-up {
-                width: 70px;
-            }
-        
-            @include for-desktop-up {
-                width: 70px;
-            }
-        }
     }
 
     &__title {
         grid-area: title;
-        
+        align-self: center;
+        margin: 0;
     }
 
     &__info {
         grid-area: info;
     }
-
 }

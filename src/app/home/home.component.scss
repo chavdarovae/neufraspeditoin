@@ -44,44 +44,8 @@
 	}
 
 	&__svg {
-		background-color: $primary;
-		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 		grid-area: icon;
-		width: 120px;
-		height: 105px;
 		cursor: pointer;
-
-		@include for-tablet-portrait-up {
-			width: 120px;
-			height: 105px;
-		}
-
-		@include for-tablet-landscape-up {
-			width: 130px;
-			height: 115px;
-		}
-
-		@include for-desktop-up {
-			width: 130px;
-			height: 115px;
-		}
-
-		img {
-			width: 60px;
-			height: auto;
-
-			@include for-tablet-portrait-up {
-				width: 60px;
-			}
-
-			@include for-tablet-landscape-up {
-				width: 70px;
-			}
-
-			@include for-desktop-up {
-				width: 70px;
-			}
-		}
 	}
 
 	&__title {

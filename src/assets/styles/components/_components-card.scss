@@ -6,28 +6,108 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    &__svg--square {
         width: 70px;
         height: 70px;
         background-color: inherit;
-    
+
         @include for-tablet-portrait-up {
             width: 80px;
             height: 80px;
         }
-    
+
         @include for-tablet-landscape-up {
             width: 90px;
             height: 90px;
         }
-    
+
         @include for-desktop-up {
             width: 100px;
             height: 100px;
         }
-    
+
         img {
             width: 100%;
             height: 100%;
+        }
+    }
+
+    &__svg--hexgonal {
+        background-color: $primary;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        width: 120px;
+        height: 105px;
+
+        @include for-tablet-portrait-up {
+            width: 120px;
+            height: 105px;
+        }
+
+        @include for-tablet-landscape-up {
+            width: 130px;
+            height: 115px;
+        }
+
+        @include for-desktop-up {
+            width: 130px;
+            height: 115px;
+        }
+
+        img {
+            width: 60px;
+            height: auto;
+
+            @include for-tablet-portrait-up {
+                width: 60px;
+            }
+
+            @include for-tablet-landscape-up {
+                width: 70px;
+            }
+
+            @include for-desktop-up {
+                width: 70px;
+            }
+        }
+    }
+
+    &__svg--small {
+        background-color: inherit;
+        width: 70px;
+        height: 70px;
+
+        @include for-tablet-portrait-up {
+            width: 80px;
+            height: 80px;
+        }
+
+        @include for-tablet-landscape-up {
+            width: 90px;
+            height: 90px;
+        }
+
+        @include for-desktop-up {
+            width: 100px;
+            height: 100px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+
+            // @include for-tablet-portrait-up {
+            //     width: 100px;
+            // }
+
+            // @include for-tablet-landscape-up {
+            //     width: 100px;
+            // }
+
+            // @include for-desktop-up {
+            //     width: 100px;
+            // }
         }
     }
 }
