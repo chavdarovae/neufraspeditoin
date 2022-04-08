@@ -21,10 +21,15 @@ export class UnternehmenComponent implements OnInit, AfterViewChecked {
 	ngOnInit(): void {
 		this.router.events.subscribe(() => {
 			this.target = window.location.href.split('?goToSection=')[1];
+			if (this.target) {
+				this.scroller.scrollToAnchor(this.target);
+			}
 		});
 	}
 
 	ngAfterViewChecked() {
+		console.log(this.target);
+		
 		if (this.target) {
 			this.scrollHelper.scrollToFirst(this.target);
 			this.scrollHelper.doScroll();
