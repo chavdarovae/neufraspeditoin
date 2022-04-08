@@ -32,7 +32,7 @@ export class AppComponent {
 
 		// decide what to do when this event is triggered.
 		router.events.subscribe(() => {
-			const currUrl: string = window.location.href.split('#')[0];
+			const currUrl: string = window.location.href.split('?goToSection=')[0];
 			this.activeTab = (currUrl?.split('/').pop() !== undefined) ? currUrl.split('/').pop() : 'unternehmen';
 		});
 	}

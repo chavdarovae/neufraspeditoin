@@ -45,9 +45,11 @@
         grid-area: title;
         align-self: center;
         margin: 0;
+        word-break: break-word;
     }
 
     &__info {
         grid-area: info;
+        word-break: break-word;
     }
 }
