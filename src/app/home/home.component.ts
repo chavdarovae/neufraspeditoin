@@ -1,6 +1,5 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, isDevMode, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
 	selector: 'app-home',
@@ -9,18 +8,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 	urlPrefix = isDevMode() ? '../../' : './';
-	target: string;
+	baseUrl = environment.urlNeufra;
 
-	constructor(
-		private router: Router,
-		private activatedRoute: ActivatedRoute,
-		private scroller: ViewportScroller) {
-	}
+	constructor() {}
 
 	ngOnInit(): void {
-	}
-
-	showDetails(goToSection: string) {
-		this.router.navigate(['/unternehmen'], { queryParams: {goToSection} });
 	}
 }
