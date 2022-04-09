@@ -20,11 +20,11 @@ export class UnternehmenComponent implements OnInit, AfterViewChecked {
 	) { }
 
 	ngOnInit(): void {
-		this.activatedRoute.queryParams.subscribe(params => {
-            if (params['goToSection']) {
-				this.scroller.scrollToAnchor(params['goToSection']);
-            }
-        });
+		// this.activatedRoute.queryParams.subscribe(params => {
+        //     if (params['goToSection']) {
+		// 		this.scroller.scrollToAnchor(params['goToSection']);
+        //     }
+        // });
 		// this.router.events.subscribe(() => {
 		// 	this.target = window.location.href.split('?goToSection=')[1];
 		// 	console.log(this.target);
@@ -35,10 +35,15 @@ export class UnternehmenComponent implements OnInit, AfterViewChecked {
 	}
 
 	ngAfterViewChecked() {
-		if (this.target) {
-			this.scrollHelper.scrollToFirst(this.target);
-			this.scrollHelper.doScroll();
-			this.scroller.scrollToAnchor(this.target);
-		}
+		// if (this.target) {
+		// 	this.scrollHelper.scrollToFirst(this.target);
+		// 	this.scrollHelper.doScroll();
+		// 	this.scroller.scrollToAnchor(this.target);
+		// }
+		this.activatedRoute.queryParams.subscribe(params => {
+            if (params['goToSection']) {
+				this.scroller.scrollToAnchor(params['goToSection']);
+            }
+        });
 	}
 }

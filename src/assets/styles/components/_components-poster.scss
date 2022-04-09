@@ -54,7 +54,11 @@
             white-space: nowrap; 
 
             @include for-tablet-portrait-up {
-                font-size: unset;
+                font-size: 2.2 * $font-size-base;
+            }
+
+            @include for-tablet-landscape-up {
+                font-size: 2.4 * $font-size-base;
             }
 
             @include for-desktop-up {
