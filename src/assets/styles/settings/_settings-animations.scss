@@ -128,6 +128,14 @@
     }
 }
 
+@keyframes to-90-left {
+    from {
+    }
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
 @keyframes from-45-to-vert {
     from {
         transform: rotate(-135deg);
@@ -152,14 +160,6 @@
     }
     to {
         transform: rotate(0);
-    }
-}
-
-@keyframes to-90-left {
-    from {
-    }
-    to {
-        transform: rotate(-90deg);
     }
 }
 
