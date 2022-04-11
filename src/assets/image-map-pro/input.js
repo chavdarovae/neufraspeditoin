@@ -26,7 +26,7 @@ const inputData = {
     "sticky_tooltips": 1
   },
   "zooming": {
-    "enable_zooming": 0,
+    "enable_zooming": 1,
     "max_zoom": 2,
     "enable_zoom_buttons": 1,
     "enable_navigator": 0
