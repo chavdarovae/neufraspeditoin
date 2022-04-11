@@ -1,4 +1,5 @@
 import { Component, isDevMode, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-transportunternehmer',
@@ -7,10 +8,10 @@ import { Component, isDevMode, OnInit } from '@angular/core';
 })
 export class TransportunternehmerComponent implements OnInit {
   urlPrefix = isDevMode() ? '../../' : './';
+  baseUrl = environment.urlNeufra;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
