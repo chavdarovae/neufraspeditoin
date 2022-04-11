@@ -1,4 +1,5 @@
-import { Component, isDevMode, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { AfterViewInit, Component, isDevMode } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -6,13 +7,13 @@ import { environment } from 'src/environments/environment';
 	templateUrl: './home.component.html',
 	styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
 	urlPrefix = isDevMode() ? '../../' : './';
 	baseUrl = environment.urlNeufra;
 
-	constructor() {}
+	constructor(private scroller: ViewportScroller) {}
 
-	ngOnInit(): void {
-		// window.scrollTo(0, 0)
+	ngAfterViewInit(): void {
+		this.scroller.scrollToPosition([0,0])
 	}
 }

@@ -21,6 +21,10 @@ export class HeaderComponent {
 		this.scroller.scrollToPosition([0, document.documentElement.clientHeight])
 	}
 
+	scrollToTop() {
+		this.scroller.scrollToPosition([0,0]);
+	}
+
 	//Switch language
 	translateLanguageTo(lang: string) {
 		this.translate.use(lang);
