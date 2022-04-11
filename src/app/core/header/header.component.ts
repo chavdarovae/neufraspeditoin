@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, Input, isDevMode } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
 	selector: 'app-header',
@@ -11,6 +12,7 @@ export class HeaderComponent {
 	@Input() activeTab: any = 'unternehmen';
 	@Input() pageTitle = 'legalNotice';
 	imgPrefix = isDevMode() ? '../../../assets/img/' : './assets/img/';
+	baseUrl = environment.urlNeufra;
 
 	constructor(
 		private translate: TranslateService,
