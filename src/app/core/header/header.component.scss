@@ -46,17 +46,18 @@
     }
 
     &__burger-menu {
-        display: block;
         margin-left: auto;
+        display: flex;
+        transform: rotate(90deg);
         
-        i {
+        span {
             font-weight: $font-weight-bold;
             font-size: 2*$font-size-base;
             color: $primary;
+        }
 
-            &:hover {
-                color: $secondary;
-            }
+        &:hover span {
+            color: $secondary;
         }
 
         @include for-desktop-up {

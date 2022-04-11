@@ -92,7 +92,11 @@
 .vert-to-right,
 .vert-to-left,
 .rot-to-left,
-.rot-to-right {
+.rot-to-right,
+.left-to-hor,
+.inclined75-to-vert,
+.inclined-45-to-vert,
+.inclined-25-to-vert  {
     transform-origin: center center;
     animation-duration: 600ms;
     animation-timing-function: linear;
@@ -106,6 +110,18 @@
 
 .vert-to-left {
     animation-name: to-45-left;
+}
+
+.inclined75-to-vert {
+    animation-name: from75-to-vert;
+}
+
+.inclined-45-to-vert {
+    animation-name: from-45-to-vert;
+}
+
+.inclined-25-to-vert {
+    animation-name: from-25-to-vert;
 }
 
 .rot-to-left {
