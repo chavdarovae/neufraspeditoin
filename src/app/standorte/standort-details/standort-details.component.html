@@ -3,34 +3,34 @@
         <div class="card card--branch">
             <h4 class="card__title mb-5">{{getNameOfTheCompany()}}</h4>
             <div class="card__address">
-                <img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/location.svg'"/>
+                <img class="show-on-tablet-portrait" [src]="urlPrefix + 'assets/icons/location.svg'"/>
                 <span class="column">
                     <span>{{branch[0]?.address}}</span>
                     <span>{{branch[0]?.city}}</span>
                 </span>
             </div>
             <div class="card__email">
-                <span  class="hide-on-mobile" translate="locations.email"></span>
-                <img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/email.svg'"/>
+                <span  class="hide-on-tablet-portrait" translate="locations.email"></span>
+                <img class="show-on-tablet-portrait" [src]="urlPrefix + 'assets/icons/email.svg'"/>
                 <a [href]="'mailto:' + branch[0]?.email">{{branch[0]?.email}}</a>
             </div>
             <div class="card__phone">
-                <span class="hide-on-mobile" translate="locations.phone"></span>
-                <img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/phone.svg'"/>
+                <span class="hide-on-tablet-portrait" translate="locations.phone"></span>
+                <img class="show-on-tablet-portrait" [src]="urlPrefix + 'assets/icons/phone.svg'"/>
                 <a [href]="'tel:' + branch[0]?.phone">{{branch[0]?.phone}}</a>
             </div>
             <div class="card__fax">
-                <span class="hide-on-mobile" translate="locations.fax"></span>
-                <img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/fax.svg'"/>
+                <span class="hide-on-tablet-portrait" translate="locations.fax"></span>
+                <img class="show-on-tablet-portrait" [src]="urlPrefix + 'assets/icons/fax.svg'"/>
                 <a>{{branch[0]?.fax}}</a>
             </div>
         </div>
         <div class="card card--person">
             <h5 class="mb-20" translate="locations.branchManagement"></h5>
-            <span class="link-with-icon mb-10"><img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/person.svg'"/> {{branch[1]?.branchLeader}}</span>
-            <a class="link-with-icon mb-10" [href]="'tel:' + branch[1]?.phone"><img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/phone.svg'"/> {{branch[1]?.phone}}</a>
-            <a class="link-with-icon mb-10" [href]="'tel:' + branch[1]?.fax"><img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/mobile.svg'"/>{{branch[1]?.fax}}</a>
-            <a class="link-with-icon mb-10" [href]="'mailto:' + branch[1]?.email"><img class="show-on-mobile" [src]="urlPrefix + 'assets/icons/email.svg'"/> {{branch[1]?.email}}</a>
+            <span class="link-with-icon mb-10"><img class="show-on-tablet-portrait" [src]="urlPrefix + 'assets/icons/person.svg'"/> {{branch[1]?.branchLeader}}</span>
+            <a class="link-with-icon mb-10" [href]="'tel:' + branch[1]?.phone"><img class="show-on-tablet-portrait" [src]="urlPrefix + 'assets/icons/phone.svg'"/> {{branch[1]?.phone}}</a>
+            <a class="link-with-icon mb-10" [href]="'tel:' + branch[1]?.fax"><img class="show-on-tablet-portrait" [src]="urlPrefix + 'assets/icons/mobile.svg'"/>{{branch[1]?.fax}}</a>
+            <a class="link-with-icon mb-10" [href]="'mailto:' + branch[1]?.email"><img class="show-on-tablet-portrait" [src]="urlPrefix + 'assets/icons/email.svg'"/> {{branch[1]?.email}}</a>
         </div>
     </div>
 
