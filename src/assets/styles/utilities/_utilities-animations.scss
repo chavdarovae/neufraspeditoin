@@ -76,19 +76,7 @@
     
 }
 
-// icon rotation on expand
-.fa-angle-down{
-    transform: rotate(0deg);
-    transition: transform 600ms linear;
-}
-  
-.fa-angle-down.expand {
-    transform: rotate(-180deg);
-    transition: transform 600ms linear;
-}
-
 // rotation
-
 .vert-to-45right ,
 .vert-to-45left,
 .inclined75-to-vert,

@@ -141,6 +141,18 @@
         &__toggle {
             grid-area: toggle;
             width: 30px;
+            transition: transform 600ms linear;
+            transform-origin: center center;
+            transform-style: preserve-3D;
+            width: fit-content;
+
+            &.fa-angle-down{
+                transform: rotate(0deg);
+            }
+              
+            &.fa-angle-down.expand {
+                transform: rotate(180deg);
+            }
         }
     
         &__descripion {
