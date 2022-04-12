@@ -27,7 +27,7 @@ const inputData = {
   },
   "zooming": {
     "enable_zooming": 1,
-    "max_zoom": 2,
+    "max_zoom": 4,
     "enable_zoom_buttons": 1,
     "enable_navigator": 0
   },
