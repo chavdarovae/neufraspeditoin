@@ -1,12 +1,10 @@
 @import "../../../assets/styles/app-variables";
 @import "../../../assets/styles/settings/settings-breakpoints";
-.loc ::ng-deep {
+.loc::ng-deep {
     display: flex;
     flex-flow: column;
-    // overflow-y: scroll;
 
     @include for-tablet-portrait-up {
-    
     }
 
     @include for-tablet-landscape-up {
@@ -55,9 +53,8 @@
     }
 
     .card {
-        background-color: $secondary;
         padding: 10px;
-        margin-bottom: 10px;
+        background-color: $secondary;
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
@@ -79,6 +76,14 @@
         &--person {
             background-color: $primary;
 
+            .link-with-icon {
+                margin-bottom: 5px;
+
+                @include for-tablet-portrait-up {
+                    margin-bottom: 10px;
+                }
+            }
+
             @include for-tablet-portrait-up {
                 flex-grow: 1;
                 min-width: 250px;
@@ -86,26 +91,23 @@
         }
 
         &--branch {
+            margin-bottom: 10px;
+
             & > * {
                 display: flex;
                 flex-flow: row wrap;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
+
+                @include for-tablet-portrait-up {
+                    margin-bottom: 10px;
+                }
             }
 
             @include for-tablet-portrait-up {
                 flex-grow: 1.5;
                 margin-right: 20px;
-                // display: grid;
-                // grid-template-columns: 1fr 1fr;
-                // column-gap: 10px;
-                // grid-template-areas:
-                //     "title title"
-                //     "address phone"
-                //     "email fax";
+                margin-bottom: 0;
 
-                // & > * {
-                //     flex-flow: column wrap;
-                // }
                 span.hide-on-tablet-portrait::after {
                     content: ":";
                     display: inline-block;
@@ -116,6 +118,7 @@
             @include for-desktop-up {
                 display: flex;
                 margin-right: 0;
+                margin-bottom: 10px;
                 flex-grow: unset;
                 height: 100%;
                 & > * {
@@ -143,40 +146,6 @@
         }
         &__fax {
             grid-area: fax;
-        }
-    }
-
-    mat-tab-group.tab {
-        .mat-tab-label {
-            width: min-content;
-            opacity: 1;
-            border: 3px solid $text-color-thirdery;
-            margin: 0 5px 0 0;
-            padding: 0 10px;
-            min-width: 120px;
-
-            .mat-tab-label-content {
-                background-color: $body-bg;
-                color: $text-color-thirdery;
-                font-family: "Roboto";
-                font-size: 1 * $font-size-base;
-                padding: 0;
-                margin: 0;
-            }
-        }
-
-        .mat-tab-label.mat-tab-label-active {
-            background-color: $primary;
-
-            .mat-tab-label-content {
-                background-color: $primary;
-                color: $text-color-secondary;
-                font-weight: $font-weight-bold;
-            }
-        }
-
-        .mat-ink-bar {
-            background-color: transparent;
         }
     }
 
