@@ -45,6 +45,7 @@
 
 // standort dialog styles
 .dialog {
+    width: 85vw !important;
     max-width: 85vw !important;
 
     @include for-desktop-up {
