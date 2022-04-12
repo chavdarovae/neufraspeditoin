@@ -27,9 +27,9 @@ const inputData = {
   },
   "zooming": {
     "enable_zooming": 1,
-    "max_zoom": 4,
-    "enable_zoom_buttons": 1,
-    "enable_navigator": 0
+    "max_zoom": 6,
+    "enable_zoom_buttons": 0,
+    "enable_navigator": 1
   },
   "spots": [{
     "id": "path-7644",
