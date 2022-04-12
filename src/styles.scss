@@ -49,6 +49,7 @@
     max-width: 85vw !important;
     max-height: 85vh;
     max-height: calc(var(--vh, 1vh) * 90);
+    touch-action: pan-y;
 
     @include for-desktop-up {
         max-width: 95vw !important;
