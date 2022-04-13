@@ -1,4 +1,4 @@
-<div class="header row row--centered">
+<div class="header row row--centered" [ngClass]="{'header--reduced': activeTab==='standorte'}">
     <div class="container">
         <a [href]="baseUrl + 'home'" class="header__logo logo">
             <div class="logo__img"><img [src]="imgPrefix + 'Logo Neufra small.jpg'" alt="Logo Neufra"></div>

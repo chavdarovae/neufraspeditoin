@@ -4,6 +4,7 @@
 .header {
     width: 100%;
     
+    
     .container {
         height: $header-height-phone;
         display: flex;
@@ -118,6 +119,15 @@
 
     &__img {
         overflow: hidden;
+    }
+
+    &--reduced {
+        height: min-content !important;
+        box-shadow: $primary-shadow;
+
+        .header__img {
+            display: none;
+        }
     }
 }
 

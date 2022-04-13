@@ -2,6 +2,12 @@
 
 .locations__info {
     margin-bottom: 50px;
+
+    @include for-desktop-up {
+        p {
+            margin-left: 250px;
+        }
+    }
 }
 .locations__map {
     height: 450px;
