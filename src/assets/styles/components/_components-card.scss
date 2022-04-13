@@ -6,6 +6,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        align-self: center;
+
+        img {
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__svg--square {
@@ -14,23 +21,23 @@
         background-color: inherit;
 
         @include for-tablet-portrait-up {
+            width: 75px;
+            height: 75px;
+        }
+
+        @include for-tablet-landscape-up {
+            width: 75px;
+            height: 75px;
+        }
+
+        @include for-desktop-up {
             width: 80px;
             height: 80px;
         }
 
-        @include for-tablet-landscape-up {
-            width: 90px;
-            height: 90px;
-        }
-
-        @include for-desktop-up {
-            width: 100px;
-            height: 100px;
-        }
-
         img {
-            width: 100%;
-            height: 100%;
+            max-width: 70%;
+            max-height: 60%;
         }
     }
 
@@ -38,33 +45,32 @@
         background-color: $primary;
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         width: 120px;
-        height: 105px;
+        height: calc(15/17*120px);
 
         @include for-tablet-portrait-up {
-            width: 120px;
-            height: 105px;
+            width: 140px;
+            height: calc(15/17*140px);
         }
 
         @include for-tablet-landscape-up {
-            width: 130px;
-            height: 115px;
+            width: 150px;
+            height: calc(15/17*150px);
         }
 
         @include for-desktop-up {
-            width: 130px;
-            height: 115px;
+            width: 170px;
+            height: calc(15/17*170px);
         }
 
         img {
-            width: 60px;
-            height: auto;
+            width: 50px;
 
             @include for-tablet-portrait-up {
-                width: 60px;
+                width: 65px;
             }
 
             @include for-tablet-landscape-up {
-                width: 70px;
+                width: 60px;
             }
 
             @include for-desktop-up {
@@ -75,39 +81,6 @@
 
     &__svg--small {
         background-color: inherit;
-        width: 70px;
-        height: 70px;
-
-        @include for-tablet-portrait-up {
-            width: 80px;
-            height: 80px;
-        }
-
-        @include for-tablet-landscape-up {
-            width: 90px;
-            height: 90px;
-        }
-
-        @include for-desktop-up {
-            width: 100px;
-            height: 100px;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-
-            // @include for-tablet-portrait-up {
-            //     width: 100px;
-            // }
-
-            // @include for-tablet-landscape-up {
-            //     width: 100px;
-            // }
-
-            // @include for-desktop-up {
-            //     width: 100px;
-            // }
-        }
+        width: 60px;
     }
 }
