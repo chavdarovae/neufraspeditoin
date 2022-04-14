@@ -103,5 +103,11 @@
 		i {
 			color: $primary;
 		}
+
+		a {
+			* {
+				color: $primary;
+			}
+		}
 	}
 }

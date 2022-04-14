@@ -11,6 +11,7 @@ import { CsvService } from '../shared/csv.service';
 export class UnternehmenComponent implements OnInit, AfterViewInit {
 	urlPrefix = isDevMode() ? '../../' : './';
 	docuList: any[] = [];
+	downloadUrlPrefix = isDevMode() ? '../../assets/files/documents/' : 'https://github.com/chavdarovae/new-website/tree/gh-pages/assets/files/documents/';
 
 	constructor(
 		private scroller: ViewportScroller,
