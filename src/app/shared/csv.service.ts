@@ -21,4 +21,8 @@ export class CsvService {
 	getLocationList() {
 		return this.http.get(`${this.urlPrefix}assets/files/locations/Locations.xlsx - coordinates.csv`, { responseType: 'text' });
 	}
+
+	getDocumentList() {
+		return this.http.get(`${this.urlPrefix}assets/files/documents/Document.xlsx - List.csv`, { responseType: 'text' });
+	}
 }

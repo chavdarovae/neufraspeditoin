@@ -33,6 +33,14 @@
             clip-path: polygon($center-pos 0, 100% calc($footer-height-desktop/3), 100% 100%, 0 100%,0 calc($footer-height-desktop/3));
         }
 
+        // &-arrow {
+        //     position: absolute;
+        //     top: 100%;
+        //     left: 100%;
+        //     transform: translate(-65%, -36%) rotate(-45deg) scale(0.70);
+        //     z-index: 100;
+        // }
+
         &::before,
         &::after {
             content: "";

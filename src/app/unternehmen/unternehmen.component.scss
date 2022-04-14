@@ -68,6 +68,31 @@
 	}
 
 	.history-holder {
-		margin-top: 80px;
+		margin: 70px 0;
+	}
+
+
+	.document-holder {
+		width: 100%;
+        border-top: 3px solid $primary;
+        border-bottom: 3px solid $primary;
+		padding: 20px 50px;
+	}
+
+	.document {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 50px 1fr 150px 110px;
+		justify-items: start;
+		align-items: center;
+
+
+		& + .document {
+			margin-top: 20px;
+		}
+
+		i {
+			color: $primary;
+		}
 	}
 }

@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { AfterViewInit, Component, isDevMode, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CsvService } from '../shared/csv.service';
 
 @Component({
 	selector: 'app-unternehmen',
@@ -9,13 +10,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UnternehmenComponent implements OnInit, AfterViewInit {
 	urlPrefix = isDevMode() ? '../../' : './';
+	docuList: any[] = [];
 
 	constructor(
 		private scroller: ViewportScroller,
-		private activatedRoute: ActivatedRoute
+		private activatedRoute: ActivatedRoute,
+		private csvService: CsvService
 	) { }
 
 	ngOnInit(): void {
+		this.csvService.getDocumentList().subscribe(data => {
+			this.docuList = data.split('\r\n');
+			this.docuList.shift();
+			this.docuList = this.docuList.map((x: string )=> x.split(','));
+		});
 	}
 
 	ngAfterViewInit() {
