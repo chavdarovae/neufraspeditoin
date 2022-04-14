@@ -84,9 +84,10 @@
 	}
 
 	.document {
+		max-width: 100%;
 		width: 100%;
 		display: grid;
-		grid-template-columns: 30px 250px 20px;
+		grid-template-columns: 30px 1fr 20px;
 		justify-items: start;
 		align-items: center;
 
