@@ -72,8 +72,11 @@
             <article class="document"  *ngFor="let document of docuList">
                 <i class="fa-regular fa-file-pdf"></i>
                 <span>{{document[0]}}</span>
-                <span>({{document[2]}}kB)</span>
-                <a [href]="urlPrefix + 'assets/files/documents/' + document[0]" [download]="document[0]">Download</a>
+                <span class="hide-on-mobile">({{document[2]}}kB)</span>
+                <a [href]="urlPrefix + 'assets/files/documents/' + document[0]" [download]="document[0]">
+                    <i class="fa-solid fa-angle-down show-on-mobile"></i>
+                    <span class="hide-on-mobile">Download</span>
+                </a>
             </article>
         </div>
     </section>

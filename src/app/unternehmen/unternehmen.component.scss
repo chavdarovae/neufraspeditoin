@@ -76,15 +76,23 @@
 		width: 100%;
         border-top: 3px solid $primary;
         border-bottom: 3px solid $primary;
-		padding: 20px 50px;
+		padding: 20px 10px;
+
+		@include for-tablet-landscape-up {
+			padding: 20px 50px;
+		}
 	}
 
 	.document {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 50px 1fr 150px 110px;
+		grid-template-columns: 30px 250px 20px;
 		justify-items: start;
 		align-items: center;
+
+		@include for-tablet-landscape-up {
+			grid-template-columns: 50px 1fr 150px 110px;
+		}
 
 
 		& + .document {
