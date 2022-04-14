@@ -54,8 +54,8 @@
     "phone": "Telefon",
     "fax": "Telefax",
     "branchManagement": "Niederlassungsleitung",
-    "nationalDisposition": "Import",
-    "internationalDisposition": "Export",
+    "nationalDisposition": "Disposition National",
+    "internationalDisposition": "Disposition International",
     "management": "Verwaltung",
     "humanResources": "Personalabteilung",
     "accounting": "Buchhaltung",
@@ -269,15 +269,15 @@
       "Waren": "Waren",
       "Kehl": "Kehl",
       "Deggendorf": "Deggendorf",
-      "Milano": "Mailand",
+      "Milano": "Milano",
       "Verona": "Verona",
-      "Wien": "Vienna",
+      "Wien": "Wien",
       "Linz": "Linz",
-      "Poznan": "Posen",
+      "Poznan": "Poznan",
       "Barcelona": "Barcelona",
       "Budapest": "Budapest",
       "Bregenz": "Bregenz",
-      "Decin": "Děčín"
+      "Decin": "Decin"
     }
   },
   "services": {
