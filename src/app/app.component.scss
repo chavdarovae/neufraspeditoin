@@ -1,13 +1,13 @@
 @import "../assets/styles/app-variables";
 @import "../assets/styles/settings/settings-breakpoints";
 
-:host {
+.app {
     min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     row-gap: 30px;
-    
-    @include for-tablet-portrait-up  {
+
+    @include for-tablet-portrait-up {
         // grid-template-rows: calc($poster-height-tablet-portrait + $header-height-tablet-portrait) 1fr 130px;
     }
 
@@ -17,10 +17,11 @@
 
     @include for-desktop-up {
         // grid-template-rows: calc($poster-height-desktop + $header-height-desktop) 1fr 130px;
-        row-gap: 70px;
+        row-gap: 50px;
     }
-    
-    // @include for-desktop-up {
-    //     grid-template-rows: 540px 1fr 330px;
-    // }
+
+    &--standorte {
+        row-gap: 0px;
+
+    }
 }

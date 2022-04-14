@@ -126,7 +126,19 @@
         box-shadow: $primary-shadow;
 
         .header__img {
-            display: none;
+            height: 190px;
+
+            @include for-tablet-portrait-up {
+                height: 180px;
+            }
+    
+            @include for-tablet-landscape-up {
+                height: 160px;
+            }
+    
+            @include for-desktop-up {
+                top: 150px;
+            }
         }
     }
 }
