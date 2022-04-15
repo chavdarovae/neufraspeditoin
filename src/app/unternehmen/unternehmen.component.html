@@ -69,7 +69,7 @@
     <section>
         <h2>Wichtige NEUFRA-Formulare zum Downloaden</h2>
         <div class="document-holder">
-            <article class="document"  *ngFor="let document of docuList">
+            <article class="document" *ngFor="let document of docuList">
                 <i class="fa-regular fa-file-pdf"></i>
                 <span>{{document[0]}}</span>
                 <span class="hide-on-mobile">({{document[2]}}kB)</span>
@@ -79,9 +79,11 @@
                     <span class="hide-on-mobile">Download</span>
                 </a> -->
 
-                <a [href]="'assets/files/documents/' + document[0] + '.' + document[1]" 
+                <!-- <a [href]="'assets/files/documents/' + document[0] + '.' + document[1]" 
                 [download]="document[0]+ '.' + document[1]" 
-                title="download {{ document[0]+ '.' + document[1]}}">Download</a>
+                title="download {{ document[0]+ '.' + document[1]}}">Download</a> -->
+                <a [href]="urlPrefix + 'assets/files/documents/Versicherungsbestätigung_2021.pdf'" 
+                download="Versicherungsbestätigung_2021">Download</a>
             </article>
         </div>
     </section>
