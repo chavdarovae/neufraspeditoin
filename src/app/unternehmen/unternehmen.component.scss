@@ -91,10 +91,17 @@
 		justify-items: start;
 		align-items: center;
 
-		@include for-tablet-landscape-up {
+		@include for-tablet-portrait-up {
 			grid-template-columns: 50px 1fr 150px 110px;
 		}
+		&__name {
+			width: 95%;
+			word-break: break-word;
+		}
 
+		&__size {
+			color: $nav-text-color;
+		}
 
 		& + .document {
 			margin-top: 20px;
