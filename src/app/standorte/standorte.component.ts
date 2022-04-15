@@ -1,4 +1,4 @@
-import { Component, ElementRef, isDevMode, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, isDevMode, OnInit, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { CsvService } from '../shared/csv.service';
@@ -15,7 +15,6 @@ declare let inputCode: any;
 })
 export class StandorteComponent implements OnInit {
 	urlPrefix = isDevMode() ? '../../' : './';
-	@ViewChild('map') map: ElementRef;
 
 	constructor(
 		private matDialog: MatDialog,
@@ -28,18 +27,6 @@ export class StandorteComponent implements OnInit {
 		translate.onLangChange.subscribe((event: LangChangeEvent) => {
 			this.loadMap();
         });
-
-		this.renderer.listen('window', 'touchstart',(e:Event)=>{
-			
-			// if (this.map.nativeElement.contains(e.target)) {
-			// 	this.windowScrollingService.disable();
-			// 	e.preventDefault();
-			// 	e.stopPropagation();
-			// } else {
-			// 	this.windowScrollingService.enable();
-			// }
-			
-		});
 	}
 
 	ngOnInit(): void {
@@ -70,19 +57,15 @@ export class StandorteComponent implements OnInit {
 		});
 	}
 
-	onMapClick() {
-		// this.windowScrollingService.disable();
-	}
-
 	showLocationDetails(location: any) {
-		this.windowScrollingService.disable();
+		// this.windowScrollingService.disable();
 		const dialogRef = this.matDialog.open(StandortDetailsComponent, {
 			data: { location: location },
 			panelClass: 'dialog'
 		});
 
-		dialogRef.afterClosed().subscribe(result => {
-			this.windowScrollingService.enable();
+		dialogRef.afterClosed().subscribe(() => {
+			// this.windowScrollingService.enable();
 		});
 	}
 }

@@ -1,10 +1,12 @@
-<div class="location">
-	<!-- <section class="locations__info container">
+<div class="location" id="locationInfo">
+	<section class="locations__info container">
 		<p>{{'locations.info' | translate}}</p>
-	</section> -->
-	<section class="locations__map" id="locationMap" (click)="onMapClick()">
-		<button #showDetailsBtn class="hidden" id="showDetailsBtn" (click)="showLocationDetails(showDetailsBtn.textContent)">Location Name</button>
-		<div #map class="map" id="image-map-pro-container"></div>
+	</section>
+	<section class="locations__map" id="locationMap">
+		<!-- Location Name Button hidden, used to transfer information from the map -->
+		<button #showDetailsBtn class="hidden" id="showDetailsBtn" 
+				(click)="showLocationDetails(showDetailsBtn.textContent)"></button>
+		<div class="map" id="image-map-pro-container"></div>
 	</section>
 </div>
 

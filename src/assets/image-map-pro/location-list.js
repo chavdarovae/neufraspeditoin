@@ -5,8 +5,8 @@ locations.forEach(loc => {
         "type": "oval",
         "x": loc.x,
         "y": loc.y,
-        "width": 1,
-        "height": 1*1.18,
+        "width": mobileVersion ? 0.7 : 1,
+        "height": mobileVersion ? 0.7*1.18 : 1*1.18,
         "x_image_background": loc.x,
         "y_image_background": loc.y,
         "width_image_background": 0.518,
@@ -18,11 +18,11 @@ locations.forEach(loc => {
         "default_style": {
             "background_color": "#007032",
             "background_opacity": 1,
-            "border_width": 2
+            "border_width": mobileVersion ? 1 : 2
         },
         "mouseover_style": {
             "background_color": "#007032",
-            "border_width": 4
+            "border_width": mobileVersion ? 2 : 4
         },
         "tooltip_content": {
             "squares_settings": {
@@ -50,9 +50,9 @@ locations.forEach(loc => {
         "title": loc.name + "Name",
         "type": "text",
         "x": mobileVersion ? loc.x - 0.2 :loc.x - 0.3,
-        "y": loc.y + 1.2,
+        "y": mobileVersion ? loc.y + 0.9 : loc.y + 1.2,
         "x_image_background": mobileVersion ? loc.x - 0.2 :loc.x - 0.3,
-        "y_image_background": loc.y + 1.2,
+        "y_image_background":  mobileVersion ? loc.y + 0.9 : loc.y + 1.2,
         "text": {
             "text": loc.name,
             "font_family": "Roboto",
