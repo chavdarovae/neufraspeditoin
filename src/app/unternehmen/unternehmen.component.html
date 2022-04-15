@@ -73,17 +73,17 @@
                 <i class="fa-regular fa-file-pdf"></i>
                 <span>{{document[0]}}</span>
                 <span class="hide-on-mobile">({{document[2]}}kB)</span>
-                <!-- <a [href]="'assets/files/documents/' + document[0] + '.' + document[1]" 
-                    [download]="document[0]+ '.' + document[1]">
+                <a [href]="urlPrefix + 'assets/files/documents/' + document[0] + '.' + document[1]" 
+                    [download]="document[0]">
                      <i class="fas fa-arrow-down show-on-mobile"></i>
                     <span class="hide-on-mobile">Download</span>
-                </a> -->
+                </a>
 
                 <!-- <a [href]="'assets/files/documents/' + document[0] + '.' + document[1]" 
                 [download]="document[0]+ '.' + document[1]" 
                 title="download {{ document[0]+ '.' + document[1]}}">Download</a> -->
-                <a [href]="urlPrefix + 'assets/files/documents/Versicherungsbestätigung_2021.pdf'" 
-                download="Versicherungsbestätigung_2021">Download</a>
+                <!-- <a [href]="urlPrefix + 'assets/files/documents/Insurance.pdf'" 
+                [download]="'Insurance'">Download</a> -->
             </article>
         </div>
     </section>
