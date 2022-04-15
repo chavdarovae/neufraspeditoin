@@ -15,35 +15,7 @@
         }
     }
 
-    &__svg--square {
-        width: 70px;
-        height: 70px;
-        background-color: inherit;
-
-        @include for-tablet-portrait-up {
-            width: 75px;
-            height: 75px;
-        }
-
-        @include for-tablet-landscape-up {
-            width: 75px;
-            height: 75px;
-        }
-
-        @include for-desktop-up {
-            width: 80px;
-            height: 80px;
-        }
-
-        img {
-            max-width: 70%;
-            max-height: 70%;
-        }
-
-        img.smaller {
-            max-height: 65%;
-        }
-    }
+    
 
     &__svg--hexgonal {
         background-color: $primary;
