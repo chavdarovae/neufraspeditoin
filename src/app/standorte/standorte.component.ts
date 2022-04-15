@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { CsvService } from '../shared/csv.service';
 import { ScriptService } from '../shared/script.service';
+import { WindowScrollingService } from '../shared/window-scrolling.service';
 import { StandortDetailsComponent } from './standort-details/standort-details.component';
 declare let locations: any;
 declare let inputData: any;
@@ -20,7 +21,8 @@ export class StandorteComponent implements OnInit {
 		private renderer: Renderer2,
 		private scriptService: ScriptService,
 		private csvService: CsvService,
-		private translate: TranslateService
+		private translate: TranslateService,
+		private windowScrollingService: WindowScrollingService
 	) {
 		translate.onLangChange.subscribe((event: LangChangeEvent) => {
 			this.loadMap();
@@ -55,10 +57,19 @@ export class StandorteComponent implements OnInit {
 		});
 	}
 
+	onMapClick() {
+		// this.windowScrollingService.disable();
+	}
+
 	showLocationDetails(location: any) {
-		this.matDialog.open(StandortDetailsComponent, {
+		this.windowScrollingService.disable();
+		const dialogRef = this.matDialog.open(StandortDetailsComponent, {
 			data: { location: location },
 			panelClass: 'dialog'
+		});
+
+		dialogRef.afterClosed().subscribe(result => {
+			this.windowScrollingService.enable();
 		});
 	}
 }
