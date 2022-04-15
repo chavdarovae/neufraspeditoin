@@ -13,7 +13,8 @@
     height: 450px;
     overflow: hidden;
     position: relative;
-    touch-action: pan-x pan-y pinch-zoom;
+    touch-action: none;
+    z-index: 30;
 
 
     @include for-tablet-portrait-up {
