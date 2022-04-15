@@ -23,7 +23,12 @@ export class UnternehmenComponent implements OnInit, AfterViewInit {
 		this.csvService.getDocumentList().subscribe(data => {
 			this.docuList = data.split('\r\n');
 			this.docuList.shift();
-			this.docuList = this.docuList.map((x: string )=> x.split(','));
+			this.docuList = this.docuList.map((x: string )=> x.split(','))
+			this.docuList .forEach( x => {
+				for (let i = 0; i < x.length; i++) {
+					x[i] = x[i].trim();
+				}
+			});
 		});
 	}
 
