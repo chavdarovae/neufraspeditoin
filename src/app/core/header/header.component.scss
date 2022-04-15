@@ -121,26 +121,26 @@
         overflow: hidden;
     }
 
-    &--reduced {
-        height: min-content !important;
-        box-shadow: $primary-shadow;
+    // &--reduced {
+    //     height: min-content !important;
+    //     box-shadow: $primary-shadow;
 
-        .header__img {
-            height: 190px;
+    //     .header__img {
+    //         height: 190px;
 
-            @include for-tablet-portrait-up {
-                height: 180px;
-            }
+    //         @include for-tablet-portrait-up {
+    //             height: 180px;
+    //         }
     
-            @include for-tablet-landscape-up {
-                height: 160px;
-            }
+    //         @include for-tablet-landscape-up {
+    //             height: 160px;
+    //         }
     
-            @include for-desktop-up {
-                top: 150px;
-            }
-        }
-    }
+    //         @include for-desktop-up {
+    //             top: 150px;
+    //         }
+    //     }
+    // }
 }
 
 select.lang-bar {

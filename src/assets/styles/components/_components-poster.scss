@@ -89,10 +89,12 @@
 
             @include for-tablet-portrait-up {
                 font-size: 2.2 * $font-size-base;
+                padding: 5px 30px;
             }
 
             @include for-tablet-landscape-up {
                 font-size: 2.4 * $font-size-base;
+                padding: 5px 40px;
             }
 
             @include for-desktop-up {
@@ -102,7 +104,8 @@
         }
 
         &-title--primary,
-        &-title--secondary {
+        &-title--secondary,
+        &-title--text {
             display: none;
             text-transform: none;
             left: unset;
@@ -126,6 +129,17 @@
 
             @include for-desktop-up {
                 font-size: 1.7 * $font-size-base;
+            }
+        }
+
+        &-title--text {
+            transform: translateY(40px);
+            font-weight: $font-weight-normal;
+            font-size: 0.7 * $font-size-base;
+
+
+            @include for-desktop-up {
+                font-size: 1 * $font-size-base;
             }
         }
 
