@@ -72,7 +72,7 @@
             <h4>{{'header.home-subtitle' | translate}}</h4>
             <i class="fa fa-angle-down animation-bounce" (click)="showDetails()"></i>
         </div>
-        <div *ngIf="activeTab === 'standorte' && !(sharedService.locationInfoSeen$ | async)" 
+        <div *ngIf="activeTab === 'standorte' && !isInfoSeenForCurrentSession()" 
             class="poster__img-title--home show-on-mobile">
             <p>{{'locations.info' | translate}}</p>
             

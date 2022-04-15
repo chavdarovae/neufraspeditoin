@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
 		private translate: TranslateService,
 		private scroller: ViewportScroller,
 		public sharedService: SharedService
-	) { }
+	) {}
 
 	ngOnInit(): void {
 	}
@@ -33,7 +33,11 @@ export class HeaderComponent implements OnInit {
 	}
 
 	showMap() {
-		this.sharedService.setLocationInfoSeen(true);
+		sessionStorage.setItem('setLocationInfoSeen', 'true')
+	}
+
+	isInfoSeenForCurrentSession() {
+		return !!sessionStorage.getItem('setLocationInfoSeen');
 	}
 
 	//Switch language
