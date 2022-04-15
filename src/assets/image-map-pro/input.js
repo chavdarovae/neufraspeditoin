@@ -27,7 +27,7 @@ const inputData = {
   },
   "zooming": {
     "enable_zooming": notDesktopVersion ? 1 : 0,
-    "max_zoom": mobileVersion ? 4 : notDesktopVersion ? 2 : 1,
+    "max_zoom": mobileVersion ? 4 : notDesktopVersion ? 3 : 1,
     "enable_zoom_buttons": 0,
     "enable_navigator": 1
   },
