@@ -41,6 +41,7 @@
 
         &-text {
             width: calc(100vw - 20px);
+           
             position: absolute;
             top: 190px;
             left: 10px;
@@ -104,8 +105,7 @@
         }
 
         &-title--primary,
-        &-title--secondary,
-        &-title--text {
+        &-title--secondary {
             display: none;
             text-transform: none;
             left: unset;
@@ -133,18 +133,30 @@
         }
 
         &-title--text {
-            transform: translateY(40px);
+            display: none;
+            // right: calc((100vw - $container-width-desktop)/2);
+            // padding-bottom: 60px;
+            transform: translate(-50%, 70px);
+            // clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+           
             font-weight: $font-weight-normal;
-            font-size: 0.7 * $font-size-base;
+            font-size: 1 * $font-size-base;
+            word-wrap: break-word;
+            white-space: unset; 
 
+            @include for-tablet-portrait-up {
+                display: block;
+                right: 50px;
+            }
 
             @include for-desktop-up {
+                max-width: 1200px;
                 font-size: 1 * $font-size-base;
             }
         }
 
         &-title--home {
-            min-height: 40vh;
+            min-height: calc(100% - $header-height-phone - $poster-height-phone);
             background-color: rgba($primary, 0.8);
             padding: 20px 20px;
             position: absolute;
@@ -152,20 +164,25 @@
             left: 0;
             display: flex;
             flex-flow: column nowrap;
+            z-index: 30;
 
             * {
                 color: $text-color-secondary;
                 text-align: start;
             }
 
-            *:nth-child(2) {
+            h4, p {
                 font-weight: $font-weight-normal;
+            }
+
+            a, 
+            i {
+                align-self: center;
             }
 
             i {
                 font-size: 4 * $font-size-base;
                 font-weight: $font-weight-normal;
-                align-self: center;
             }
         }
     }

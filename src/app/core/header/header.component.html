@@ -59,16 +59,26 @@
         <div class="poster__img" [ngClass]="{'poster__img--home': activeTab === 'home'}">
             <h1 class="poster__img-title" [ngClass]="{'poster__img-title--primary': activeTab === 'home'}">
                 {{('header.' + pageTitle) | translate}}</h1>
-            <h1 *ngIf="activeTab === 'home'" class="poster__img-title poster__img-title--secondary">
+            <h4 *ngIf="activeTab === 'home'" class="poster__img-title poster__img-title--secondary">
                 {{'header.home-subtitle' | translate}}
-            </h1>
-            <!-- <p class="poster__img-title poster__img-title--text" *ngIf="activeTab === 'standorte'">{{'locations.info' | translate}}</p> -->
+            </h4>
+            <p *ngIf="activeTab === 'standorte'" class="poster__img-title poster__img-title--text">
+                {{'locations.info' | translate}}
+            </p>
             <img class="poster__img-pic" [src]="imgPrefix + 'poster-' + activeTab + '.jpg'" alt="Poster photo">
         </div>
         <div *ngIf="activeTab === 'home'" class="poster__img-title--home show-on-mobile">
             <h1>{{'header.home' | translate}}</h1>
-            <h1>{{'header.home-subtitle' | translate}}</h1>
+            <h4>{{'header.home-subtitle' | translate}}</h4>
             <i class="fa fa-angle-down animation-bounce" (click)="showDetails()"></i>
+        </div>
+        <div *ngIf="activeTab === 'standorte' && !(sharedService.locationInfoSeen$ | async)" 
+            class="poster__img-title--home show-on-mobile">
+            <p>{{'locations.info' | translate}}</p>
+            
+            <a [href]="baseUrl + 'standorte#locationMap'">
+                <i class="fa fa-angle-down animation-bounce" (click)="showMap()"></i>
+            </a>
         </div>
     </div>
 </div>

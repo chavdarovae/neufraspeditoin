@@ -17,6 +17,10 @@ import { HomeComponent } from './home/home.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { KarriereComponent } from './karriere/karriere.component';
 import { NichtGefundenComponent } from './nicht-gefunden/nicht-gefunden.component';
+import { CsvService } from './shared/csv.service';
+import { ScriptService } from './shared/script.service';
+import { SharedService } from './shared/shared.service';
+import { WindowScrollingService } from './shared/window-scrolling.service';
 import { StandortDetailsComponent } from './standorte/standort-details/standort-details.component';
 import { StandorteComponent } from './standorte/standorte.component';
 import { TransportunternehmerComponent } from './transportunternehmer/transportunternehmer.component';
@@ -62,7 +66,12 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     MatTabsModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [
+    SharedService,
+    CsvService,
+    ScriptService,
+    WindowScrollingService
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
