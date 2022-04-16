@@ -29,7 +29,8 @@ const inputData = {
     "enable_zooming": notDesktopVersion ? 1 : 0,
     "max_zoom": mobileVersion ? 4 : notDesktopVersion ? 3 : 1,
     "enable_zoom_buttons": 0,
-    "enable_navigator": 1
+    "enable_navigator": 0,
+    "hold_ctrl_to_zoom":1
   },
   "spots": [{
     "id": "path-7644",
