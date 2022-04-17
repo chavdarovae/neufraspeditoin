@@ -7,7 +7,12 @@
     height: 450px;
     overflow: hidden;
     position: relative;
-    // z-index: 3;
+    z-index: 2;
+    
+    &.active {
+        z-index: 30;
+        border: 1px solid red;
+    }
 
 
     @include for-tablet-portrait-up {

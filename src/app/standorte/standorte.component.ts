@@ -1,4 +1,4 @@
-import { Component, isDevMode, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, isDevMode, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { CsvService } from '../shared/csv.service';
@@ -15,6 +15,8 @@ declare let inputCode: any;
 })
 export class StandorteComponent implements OnInit {
 	urlPrefix = isDevMode() ? '../../' : './';
+	@ViewChild('mapContainer') mapContainer: ElementRef;
+	isMapActive = false;
 
 	constructor(
 		private matDialog: MatDialog,
@@ -26,7 +28,25 @@ export class StandorteComponent implements OnInit {
 	) {
 		translate.onLangChange.subscribe((event: LangChangeEvent) => {
 			this.loadMap();
-        });
+		});
+		this.renderer.listen('window', 'touchmove', (e: Event) => {
+			if (this.mapContainer.nativeElement.contains(e.target)) {
+				this.isMapActive = true;
+			}
+		});
+
+		this.renderer.listen('window', 'touchend', (e: Event) => {
+			if (this.mapContainer.nativeElement.contains(e.target)) {
+				this.isMapActive = false;
+			}
+		});
+
+		this.renderer.listen('window', 'touchstart', (e: Event) => {
+			
+			if (this.mapContainer.nativeElement.contains(e.target)) {
+				this.isMapActive = false;
+			}
+		});
 	}
 
 	ngOnInit(): void {
@@ -39,7 +59,7 @@ export class StandorteComponent implements OnInit {
 			locationsList.shift();
 			locations = [];
 			inputCode = JSON.parse(JSON.stringify(inputData));
-			locationsList.forEach((x, index)=> {
+			locationsList.forEach((x, index) => {
 				const translatedName = this.translate.instant('locations.branch.' + x.split(',')[0]);
 				locations.push({
 					name: translatedName,
@@ -49,7 +69,7 @@ export class StandorteComponent implements OnInit {
 					id: index
 				})
 			});
-			
+
 			const inputMapObj = this.scriptService.loadJsScript(this.renderer, (this.urlPrefix + 'assets/image-map-pro/location-list.js'));
 			inputMapObj.onload = () => {
 				this.scriptService.loadJsScript(this.renderer, (this.urlPrefix + 'assets/image-map-pro/map.js'));
