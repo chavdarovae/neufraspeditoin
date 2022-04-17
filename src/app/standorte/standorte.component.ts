@@ -29,17 +29,25 @@ export class StandorteComponent implements OnInit {
 		translate.onLangChange.subscribe((event: LangChangeEvent) => {
 			this.loadMap();
 		});
-		this.renderer.listen('window', 'touchmove', (e: Event) => {
+		this.renderer.listen('window', 'touchstart', (e: Event) => {
 			if (this.mapContainer.nativeElement.contains(e.target)) {
 				this.isMapActive = true;
+			} else {
+				this.isMapActive = false;
 			}
 		});
 
-		this.renderer.listen('window', 'touchend', (e: Event) => {
+		this.renderer.listen('window', 'touchmove', (e: Event) => {
 			if (this.mapContainer.nativeElement.contains(e.target)) {
 				this.isMapActive = false;
 			}
 		});
+
+		// this.renderer.listen('window', 'touchend', (e: Event) => {
+		// 	if (this.mapContainer.nativeElement.contains(e.target)) {
+		// 		this.isMapActive = false;
+		// 	}
+		// });
 
 		// this.renderer.listen('window', 'touchstart', (e: Event) => {
 			

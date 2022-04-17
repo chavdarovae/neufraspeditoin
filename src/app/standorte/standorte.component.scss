@@ -7,13 +7,13 @@
     height: 450px;
     overflow: hidden;
     position: relative;
-    z-index: 4;
-    touch-action: pinch-zoom;
+    z-index: 0;
+    touch-action: pan-y;
     
-    // &.active {
-    //     z-index: 40;
-    //     border: 1px solid red;
-    // }
+    &.active {
+        z-index: 4;
+        border: 1px solid red;
+    }
 
     .map {
         touch-action: pinch-zoom;
