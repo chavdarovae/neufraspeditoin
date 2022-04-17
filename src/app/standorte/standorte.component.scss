@@ -7,10 +7,10 @@
     height: 450px;
     overflow: hidden;
     position: relative;
-    // z-index: 2;
+    z-index: 3;
     
     &.active {
-        z-index: 30;
+        z-index: 4;
         border: 1px solid red;
     }
 

@@ -44,7 +44,7 @@ export class StandorteComponent implements OnInit {
 		// this.renderer.listen('window', 'touchstart', (e: Event) => {
 			
 		// 	if (this.mapContainer.nativeElement.contains(e.target)) {
-		// 		this.isMapActive = false;
+		// 		this.isMapActive = true;
 		// 	}
 		// });
 	}
