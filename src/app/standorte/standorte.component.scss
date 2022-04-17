@@ -8,6 +8,7 @@
     overflow: hidden;
     position: relative;
     z-index: 4;
+    touch-action: pinch-zoom;
     
     // &.active {
     //     z-index: 40;
