@@ -7,12 +7,16 @@
     height: 450px;
     overflow: hidden;
     position: relative;
-    z-index: 30;
+    z-index: 4;
     
     // &.active {
     //     z-index: 40;
     //     border: 1px solid red;
     // }
+
+    .map {
+        touch-action: pinch-zoom;
+    }
 
 
     @include for-tablet-portrait-up {
