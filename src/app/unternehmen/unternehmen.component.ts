@@ -21,6 +21,7 @@ export class UnternehmenComponent implements OnInit, AfterViewInit {
 		private csvService: CsvService,
 		private translate: TranslateService
 	) { 
+		this.currentLanguage = this.translate.currentLang;
 		translate.onLangChange.subscribe((event: LangChangeEvent) => {
             this.currentLanguage = event.lang;
 			this.loadDocuments();
