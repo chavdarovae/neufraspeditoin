@@ -29,30 +29,11 @@ export class StandorteComponent implements OnInit {
 		translate.onLangChange.subscribe((event: LangChangeEvent) => {
 			this.loadMap();
 		});
-		this.renderer.listen('window', 'touchstart', (e: Event) => {
-			if (this.mapContainer.nativeElement.contains(e.target)) {
-				this.isMapActive = true;
-			} else {
-				this.isMapActive = false;
-			}
-		});
-
-		this.renderer.listen('window', 'touchmove', (e: Event) => {
-			if (this.mapContainer.nativeElement.contains(e.target)) {
-				this.isMapActive = false;
-			}
-		});
-
-		// this.renderer.listen('window', 'touchend', (e: Event) => {
-		// 	if (this.mapContainer.nativeElement.contains(e.target)) {
-		// 		this.isMapActive = false;
-		// 	}
-		// });
-
 		// this.renderer.listen('window', 'touchstart', (e: Event) => {
-			
 		// 	if (this.mapContainer.nativeElement.contains(e.target)) {
 		// 		this.isMapActive = true;
+		// 	} else {
+		// 		this.isMapActive = false;
 		// 	}
 		// });
 	}
@@ -86,14 +67,14 @@ export class StandorteComponent implements OnInit {
 	}
 
 	showLocationDetails(location: any) {
-		this.windowScrollingService.disable();
+		// this.windowScrollingService.disable();
 		const dialogRef = this.matDialog.open(StandortDetailsComponent, {
 			data: { location: location },
 			panelClass: 'dialog'
 		});
 
 		dialogRef.afterClosed().subscribe(() => {
-			this.windowScrollingService.enable();
+			// this.windowScrollingService.enable();
 		});
 	}
 }

@@ -67,7 +67,8 @@
             </p>
             <img class="poster__img-pic" [src]="imgPrefix + 'poster-' + activeTab + '.jpg'" alt="Poster photo">
         </div>
-        <div *ngIf="activeTab === 'home'" class="poster__img-title--home show-on-mobile">
+        <div #wellcomeMessage *ngIf="activeTab === 'home' && showWellcomeMessage"
+        class="poster__img-title--home show-on-mobile">
             <h1>{{'header.home' | translate}}</h1>
             <h4>{{'header.home-subtitle' | translate}}</h4>
             <i class="fa fa-angle-down animation-bounce" (click)="showDetails()"></i>
