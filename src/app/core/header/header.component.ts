@@ -26,6 +26,7 @@ export class HeaderComponent implements OnInit {
 		this.renderer.listen('window', 'touchstart', (e: Event) => {
 			if (this.showWellcomeMessage && this.wellcomeMessage.nativeElement.contains(e.target)) {
 				this.showWellcomeMessage = false;
+				this.showDetails();
 			}
 		});
 	}
