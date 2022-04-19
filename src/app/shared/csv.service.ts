@@ -11,7 +11,7 @@ export class CsvService {
 	constructor(private http: HttpClient) { }
 
 	getLocationDetails(abr: string) {
-		const inlandOrAbroad = abr.length === 3 ? 'DE' : 'Ausland'
+		const inlandOrAbroad = abr.length === 3 ? 'DE' : 'Toechter';
 		return this.http.get(`${this.urlPrefix}assets/files/locations/Personal ${inlandOrAbroad}.xlsx - ${abr}.csv`, { responseType: 'text' });
 	}
 
