@@ -138,6 +138,7 @@
             font-size: 1 * $font-size-base;
             word-wrap: break-word;
             white-space: unset; 
+            text-transform: none;
 
             @include for-tablet-portrait-up {
                 transform: translate(-50%, 40px);
