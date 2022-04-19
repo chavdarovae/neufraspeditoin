@@ -18,10 +18,10 @@ export class TransportunternehmerComponent implements OnInit {
 
 	goTo() {
 		if (!!sessionStorage.getItem('setLocationInfoSeen')) {
-			window.location.href = `${this.baseUrl}standorte#locationMap`;
+			this.router.navigate(['/standorte']);
 			// this.router.navigate(['/standorte'], {fragment: 'locationMap'});
 		} else {
-			this.router.navigate(['/standorte']);
+			window.location.href = `${this.baseUrl}standorte#locationMap`;
 			// window.location.href = `${this.baseUrl}standorte`;
 		}
 	}
