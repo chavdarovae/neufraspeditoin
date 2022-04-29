@@ -1,8 +1,11 @@
-import { Component, ElementRef, isDevMode, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, isDevMode, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { CsvService } from '../shared/csv.service';
 import { ScriptService } from '../shared/script.service';
+import { SharedService } from '../shared/shared.service';
 import { WindowScrollingService } from '../shared/window-scrolling.service';
 import { StandortDetailsComponent } from './standort-details/standort-details.component';
 declare let locations: any;
@@ -13,10 +16,11 @@ declare let inputCode: any;
 	templateUrl: './standorte.component.html',
 	styleUrls: ['./standorte.component.scss']
 })
-export class StandorteComponent implements OnInit {
+export class StandorteComponent implements OnInit, AfterViewInit {
 	urlPrefix = isDevMode() ? '../../' : './';
-	@ViewChild('mapContainer') mapContainer: ElementRef;
 	isMapActive = false;
+	infoSeen = false;
+	@ViewChild('mapContainer') mapContainer: ElementRef;
 
 	constructor(
 		private matDialog: MatDialog,
@@ -25,21 +29,35 @@ export class StandorteComponent implements OnInit {
 		private csvService: CsvService,
 		private translate: TranslateService,
 		private windowScrollingService: WindowScrollingService,
+		private scroller: ViewportScroller,
+		private activatedRoute: ActivatedRoute,
+		private sharedService: SharedService
 	) {
 		translate.onLangChange.subscribe((event: LangChangeEvent) => {
 			this.loadMap();
 		});
-		// this.renderer.listen('window', 'touchstart', (e: Event) => {
-		// 	if (this.mapContainer.nativeElement.contains(e.target)) {
-		// 		this.isMapActive = true;
-		// 	} else {
-		// 		this.isMapActive = false;
-		// 	}
-		// });
 	}
 
 	ngOnInit(): void {
 		this.loadMap();
+		this.infoSeen = !!sessionStorage.getItem('setLocationInfoSeen');
+		this.activatedRoute.fragment.subscribe(fragment => {
+			if (!fragment) {
+				this.scroller.scrollToPosition([0,0]);
+			}
+		});
+	}
+
+	ngAfterViewInit(): void {
+		this.renderer.listen('window', 'touchstart', (e: Event) => {
+			if (this.mapContainer.nativeElement.contains(e.target)) {
+				this.infoSeen = true;
+				this.windowScrollingService.disableFreeze();
+			}
+		});
+		if(this.sharedService.isMobileDevice() && !sessionStorage.getItem('setLocationInfoSeen')) {
+			this.windowScrollingService.enableFreeze();
+		}
 	}
 
 	loadMap() {

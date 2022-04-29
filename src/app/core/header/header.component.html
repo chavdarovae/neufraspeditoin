@@ -9,7 +9,7 @@
             <span class="inclined-25-to-vert">|</span>
             <span class="inclined-45-to-vert">|</span>
         </label>
-        <ul class="header__menu menu animations-come-from-right">
+        <ul class="header__menu menu animations-come-from-right" (click)="disableFreeze()">
             <li class="menu__item menu__item--close show-on-tablet vert-to-hor" (click)="menuToggle.click()">
                 <span class="vert-to-45right">|</span>
                 <span class="vert-to-45left">|</span>
@@ -65,10 +65,9 @@
             <p *ngIf="activeTab === 'standorte'" class="poster__img-title poster__img-title--text">
                 {{'locations.info' | translate}}
             </p>
-            <img class="poster__img-pic" [src]="imgPrefix + 'poster-' + activeTab + '.jpg'" alt="Poster photo">
+            <img class="poster__img-pic" [src]="imgPrefix + 'poster-' + activeTab + mobileSuffix + '.jpg'" alt="Poster photo">
         </div>
-        <div #wellcomeMessage *ngIf="activeTab === 'home' && showWellcomeMessage"
-        class="poster__img-title--home show-on-mobile">
+        <div #wellcomeMessage *ngIf="activeTab === 'home' && showWellcomeMessage" class="poster__img-title--home show-on-mobile">
             <h1>{{'header.home' | translate}}</h1>
             <h4>{{'header.home-subtitle' | translate}}</h4>
             <i class="fa fa-angle-down animation-bounce" (click)="showDetails()"></i>
@@ -76,7 +75,6 @@
         <div *ngIf="activeTab === 'standorte' && !isInfoSeenForCurrentSession()" 
             class="poster__img-title--home show-on-mobile">
             <p>{{'locations.info' | translate}}</p>
-            
             <a [href]="baseUrl + 'standorte#locationMap'">
                 <i class="fa fa-angle-down animation-bounce" (click)="showMap()"></i>
             </a>

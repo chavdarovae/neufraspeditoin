@@ -14,4 +14,8 @@ export class SharedService {
 	setLocationInfoSeen(val: boolean) {
 		this.infoSeen$.next(val);
 	}
+
+	isMobileDevice(): boolean {
+		return window.innerWidth < 500;
+	}
 }
