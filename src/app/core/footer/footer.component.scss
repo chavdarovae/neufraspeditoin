@@ -54,35 +54,35 @@
             background-image: linear-gradient(to bottom, $primary, $secondary);
             border-radius: 50%;
             z-index: 2;
-            border: 6px solid $body-bg;
+            border: 3px solid $body-bg;
             transform: translate(-30%, -35%);
             width: calc($container-width-phone);
             height: calc($container-width-phone);
 
             @include for-tablet-portrait-up {
                 transform: translate(-60%, -33%);
-                border: 8px solid $body-bg;
+                border: 5px solid $body-bg;
                 width: calc($container-width-tablet-portrait);
                 height: calc($container-width-tablet-portrait);
             }
         
             @include for-tablet-landscape-up {
                 transform: translate(-60%, -28%);
-                border: 10px solid $body-bg;
+                border: 6px solid $body-bg;
                 height: $container-width-tablet-landscape;
                 width: $container-width-tablet-landscape;
             }
 
             @include for-desktop-up {
                 transform: translate(-60%, -25%);
-                border: 13px solid $body-bg;
+                border: 8px solid $body-bg;
                 width: $container-width-desktop;
                 height: $container-width-desktop;
             }
 
             @include for-big-desktop-up {
                 transform: translate(-60%, -25%);
-                border: 15px solid $body-bg;
+                border: 11px solid $body-bg;
                 width: $container-width-big-desktop;
                 height: $container-width-big-desktop;
             }
@@ -97,45 +97,46 @@
             top: 100%;
             left: 100%;
             z-index: 3;
+            transform-origin: center center;
             transform: translate(-50%, -50%) 
-            translateX(calc(-1*(0.35355339 + 0.30 - 0.5)*($container-width-phone - 8px))) 
-            translateY(calc(-1*(0.35355339 + 0.35 - 0.5)*($container-width-phone - 8px)))
-            rotate(45deg);
+            translateX(calc(-1*(0.4330127523 + 0.30 - 0.5)*($container-width-phone - 8px))) 
+            translateY(calc(-1*(0.4330127523 * 0.57735 + 0.35 - 0.5)*($container-width-phone - 8px)))
+            rotate(30deg);
 
             @include for-tablet-portrait-up {
                 height: 50px;
                 width: 50px;
                 transform: translate(-50%, -50%) 
-                translateX(calc(-1*(0.35355339 + 0.6 - 0.5)*($container-width-tablet-portrait - 11px))) 
-                translateY(calc(-1*(0.35355339 + 0.33 - 0.5)*($container-width-tablet-portrait - 11px)))
-                rotate(45deg);
+                translateX(calc(-1*(0.4095755484 + 0.6 - 0.5)*($container-width-tablet-portrait - 6px))) 
+                translateY(calc(-1*(0.4095755484 * 0.70021 + 0.33 - 0.5)*($container-width-tablet-portrait - 6px)))
+                rotate(35deg);
             }
 
             @include for-tablet-landscape-up {
                 height: 60px;
                 width: 60px;
                 transform: translate(-50%, -50%) 
-                translateX(calc(-1*(0.35355339 + 0.6 - 0.5)*($container-width-tablet-landscape - 12px))) 
-                translateY(calc(-1*(0.35355339 + 0.28 - 0.5)*($container-width-tablet-landscape - 12px)))
-                rotate(45deg);
+                translateX(calc(-1*(0.38302215199 + 0.6 - 0.5)*($container-width-tablet-landscape - 8px))) 
+                translateY(calc(-1*(0.38302215199 * 0.8391 + 0.28 - 0.5)*($container-width-tablet-landscape - 8px)))
+                rotate(40deg);
             }
 
             @include for-desktop-up {
                 height: 70px;
                 width: 70px;
                 transform: translate(-50%, -50%) 
-                translateX(calc(-1*(0.35355339 + 0.6 - 0.5)*($container-width-desktop - 15px))) 
-                translateY(calc(-1*(0.35355339 + 0.25 - 0.5)*($container-width-desktop - 15px)))
-                rotate(45deg);
+                translateX(calc(-1*(0.38302215199 + 0.6 - 0.5)*($container-width-desktop - 12px))) 
+                translateY(calc(-1*(0.38302215199 * 0.8391 + 0.25 - 0.5)*($container-width-desktop - 12px)))
+                rotate(40deg);
             }
 
             @include for-big-desktop-up {
                 height: 80px;
                 width: 80px;
                 transform: translate(-50%, -50%) 
-                translateX(calc(-1*(0.35355339 + 0.6 - 0.5)*($container-width-big-desktop - 17px))) 
-                translateY(calc(-1*(0.35355339 + 0.25 - 0.5)*($container-width-big-desktop - 17px)))
-                rotate(45deg);
+                translateX(calc(-1*(0.38302215199 + 0.6 - 0.5)*($container-width-big-desktop - 14px))) 
+                translateY(calc(-1*(0.38302215199 * 0.8391 + 0.25 - 0.5)*($container-width-big-desktop - 14px)))
+                rotate(40deg);
             }
         }
 

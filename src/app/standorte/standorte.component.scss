@@ -1,3 +1,4 @@
+@import "../../assets/styles/app-variables";
 @import "../../assets/styles/settings/settings-breakpoints";
 
 .locations__info {
@@ -58,6 +59,42 @@
             width: 120%;
             transform: translate(-43%, -62%);
         }
+    }
+} 
+
+.container {
+    padding: 20px 0 0 0;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $primary;
+    box-shadow: $primary-shadow;
+    margin-right: 10px;
+    border: 1px solid #FFFFFF;
+    position: relative;
+
+    @include for-tablet-portrait-up {
+        width: 13px;
+        height: 13px;
+    }
+
+    @include for-tablet-landscape-up {
+        width: 16px;
+        height: 16px;
+    }
+
+    @include for-desktop-up {
+        width: 22px;
+        height: 22px;
+        border: 2px solid #FFFFFF;
+    }
+
+    @include for-big-desktop-up {
+        width: 25px;
+        height: 25px;
     }
 }
 

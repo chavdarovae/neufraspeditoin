@@ -156,3 +156,47 @@ body {
 .no-scroll {
     touch-action: pan-x;
 }
+
+
+#oval-3024,
+.dot {
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        
+    }
+    
+    
+    &::before {
+        left: 0;
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 0.5px;
+        transform: translateY(-50%) rotate(-45deg);
+
+        @include for-desktop-up {
+            height: 1px;
+        }
+    }
+
+    &::after {
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-top: 1.5px solid transparent;
+        border-left: 3px solid #FFFFFF;
+        border-bottom: 1.5px solid transparent;
+        transform-origin: center right;
+        transform: translate(-100%, -50%) rotate(-45deg);
+
+
+        @include for-desktop-up {
+            border-top: 3px solid transparent;
+            border-left: 5px solid #FFFFFF;
+            border-bottom: 3px solid transparent;
+        }
+    }
+}
